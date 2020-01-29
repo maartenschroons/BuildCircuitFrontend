@@ -3881,7 +3881,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
 
-    var baselink = "http://localhost/backend_pcfruit/api/";
+    var baselink = "http://192.168.0.105/backend_pcfruit/api/";
 
     var ServicesService =
     /*#__PURE__*/

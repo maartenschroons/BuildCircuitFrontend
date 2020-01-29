@@ -2228,7 +2228,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const baselink = "http://localhost/backend_pcfruit/api/";
+const baselink = "http://192.168.0.105/backend_pcfruit/api/";
 let ServicesService = class ServicesService {
     constructor(http) {
         this.http = http;
