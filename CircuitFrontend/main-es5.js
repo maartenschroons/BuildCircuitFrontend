@@ -71,7 +71,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <div >\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" formControlName=\"disable\">Disable</mat-checkbox>\r\n    </section>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" [disabled]=\"true\"\r\n            placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n\r\n\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -91,7 +91,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <div >\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field >\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" formControlName=\"disable\">Disable</mat-checkbox>\r\n    </section>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" [disabled]=\"true\" placeholder=\"Minimumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\"  placeholder=\"Maximumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n\r\n\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -111,7 +111,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <div >\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field >\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" formControlName=\"disable\">Disable</mat-checkbox>\r\n    </section>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" [disabled]=\"true\" placeholder=\"Minimumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\"  placeholder=\"Maximumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n\r\n\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -131,7 +131,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <div >\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field >\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n<section class=\"example-section\">\r\n    <mat-checkbox class=\"example-margin\"  formControlName=\"disable\" >Disable</mat-checkbox>\r\n</section>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" [disabled]=\"true\" placeholder=\"Minimumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\"  placeholder=\"Maximumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n\r\n\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -151,7 +151,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <div >\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" formControlName=\"disable\">Disable</mat-checkbox>\r\n    </section>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" [disabled]=\"true\"\r\n            placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n\r\n\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -171,7 +171,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>\r\n    <mat-form-field>\r\n        <mat-label>Kies een gebruiker</mat-label>\r\n        <mat-select >\r\n            <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n               {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n            </mat-option>\r\n        </mat-select>\r\n    </mat-form-field>\r\n</p>\r\n<p> \r\n    <mat-form-field>\r\n           <mat-label>Kies een vat</mat-label>\r\n           <mat-select >\r\n               <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                   {{proces.vat?.nummer}}\r\n               </mat-option>\r\n           </mat-select>\r\n       </mat-form-field> \r\n   </p>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een gebruiker</mat-label>\r\n            <mat-select (selectionChange)=\"onSelect($event.value)\" formControlName=\"gebruiker\" [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n                <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                    {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" [(ngModel)]=\"proces\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -191,7 +191,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n\r\n                        <a mat-list-item routerLink=\"/\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <a mat-list-item routerLink=\"/createProcess\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                process</a>\r\n                        <a mat-list-item routerLink=\"/afsluiten\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een proces\r\n                                af</a>\r\n                        <a mat-list-item routerLink=\"/dashboard\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard 2</a>\r\n                        <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                       Vinfi\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                        <mat-menu #vini=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/actief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Actieve vinificaties</button>\r\n                                <button mat-menu-item routerLink=\"/nonactief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide vinificaties</button>\r\n                        </mat-menu>\r\n                \r\n                        <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                Data toevoegen aan een proces\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #menu=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/addMeting\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                        toe aan een proces</button>\r\n                                <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                        toe aan een proces</button>\r\n                        </mat-menu>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                Alarmering aanpassen\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #alarm=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/alarmdata\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                        alarmeringswaarden</button>\r\n                                <button mat-menu-item routerLink=\"/alarmpersonen\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                        alarmeringspersonen</button>\r\n                        </mat-menu>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
+    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n\r\n                        <a mat-list-item routerLink=\"/\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <a mat-list-item routerLink=\"/createProcess\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                process</a>\r\n                        <a mat-list-item routerLink=\"/afsluiten\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een proces\r\n                                af</a>\r\n                        <a mat-list-item routerLink=\"/dashboard\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard 2</a>\r\n                        <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                Vinfi\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #vini=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/actief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Actieve vinificaties</button>\r\n                                <button mat-menu-item routerLink=\"/nonactief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide vinificaties</button>\r\n                        </mat-menu>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                Data toevoegen aan een proces\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #menu=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/addMeting\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                        toe aan een proces</button>\r\n                                <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                        toe aan een proces</button>\r\n                        </mat-menu>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                Alarmering aanpassen\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #alarm=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/alarmdata\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                        alarmeringswaarden</button>\r\n                                <button mat-menu-item routerLink=\"/alarmpersonen\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                        alarmeringspersonen</button>\r\n                        </mat-menu>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
     /***/
   },
 
@@ -969,7 +969,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FsYXJtZXJpbmcvYWxhcm1lcmluZy1kYXRhL2FsYXJtZXJpbmctZGF0YS5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9hbGFybWVyaW5nLWRhdGEuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -1048,7 +1048,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FsYXJtZXJpbmcvYWxhcm1lcmluZy1kYXRhL2NvL2NvLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9jby9jby5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1116,11 +1116,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.fb = fb;
         this._service = _service;
-        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_5__["AlarmData"](null, null, null, null, null);
+        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_5__["AlarmData"](null, null, null, null, null, 0);
+        this.checked = false;
         this.alarmForm = this.fb.group({
+          disable: [],
           proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-          minimum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-          maximum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+          minimum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+          maximum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
         }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
 
         this.processenl = new Array();
@@ -1164,20 +1172,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this2 = this;
+
+          this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
+            if (v) {
+              _this2.alarmForm.get('minimum').disable();
+
+              _this2.alarmForm.get('maximum').disable();
+
+              _this2.checked = true;
+            } else {
+              _this2.alarmForm.get('minimum').enable();
+
+              _this2.alarmForm.get('maximum').enable();
+
+              _this2.checked = false;
+            }
+          });
+        }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this2 = this;
+          var _this3 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 2).subscribe(function (result) {
-            _this2.alarmdataModel = result;
-            console.log(_this2.alarmdataModel);
+            _this3.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          if (this.checked) {
+            this.alarmdataModel.actief = 0;
+          } else {
+            this.alarmdataModel.actief = 1;
+          }
+
           this._service.updateAlarmData(this.alarmdataModel);
         }
       }]);
@@ -1221,7 +1252,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FsYXJtZXJpbmcvYWxhcm1lcmluZy1kYXRhL2RydWsvZHJ1ay5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9kcnVrL2RydWsuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -1289,12 +1320,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.fb = fb;
         this._service = _service;
-        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null);
+        this.checked = false;
+        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
+          disable: [],
           proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          minimum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          maximum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
-        });
+          minimum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
+          maximum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
+        }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
+
         this.processenl = new Array();
         this.instantiateLists();
       }
@@ -1302,21 +1342,33 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(DrukComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this3 = this;
+          var _this4 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this3._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this4._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this3.processenl.push(proces);
+                _this4.processenl.push(proces);
               }
             });
-            _this3.processen = _this3.makeObservable();
+            _this4.processen = _this4.makeObservable();
           });
-        }
+        } // greaterThan(minimumKey: string, maximumKey: string) {
+        //   return (group: FormGroup) => {
+        //     let minimum = group.controls[minimumKey];
+        //     let maximum = group.controls[maximumKey];
+        //     if (minimum.value > maximum.value) {
+        //       return minimum.setErrors({ notEquivalent: true })
+        //     }
+        //     else {
+        //       minimum.setErrors(minimum.validator(minimum))
+        //     }
+        //   }
+        // }
+
       }, {
         key: "makeObservable",
         value: function makeObservable() {
@@ -1324,20 +1376,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this5 = this;
+
+          this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
+            if (v) {
+              _this5.alarmForm.get('minimum').disable();
+
+              _this5.alarmForm.get('maximum').disable();
+
+              _this5.checked = true;
+            } else {
+              _this5.alarmForm.get('minimum').enable();
+
+              _this5.alarmForm.get('maximum').enable();
+
+              _this5.checked = false;
+            }
+          });
+        }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this4 = this;
+          var _this6 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 4).subscribe(function (result) {
-            _this4.alarmdataModel = result;
-            console.log(_this4.alarmdataModel);
+            _this6.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          if (this.checked) {
+            this.alarmdataModel.actief = 0;
+          } else {
+            this.alarmdataModel.actief = 1;
+          }
+
           this._service.updateAlarmData(this.alarmdataModel);
         }
       }]);
@@ -1381,7 +1456,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FsYXJtZXJpbmcvYWxhcm1lcmluZy1kYXRhL2V0aGFub2wvZXRoYW5vbC5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9ldGhhbm9sL2V0aGFub2wuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -1449,12 +1524,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.fb = fb;
         this._service = _service;
-        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null);
+        this.checked = false;
+        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
+          disable: [],
           proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          minimum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          maximum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
-        });
+          minimum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
+          maximum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
+        }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
+
         this.processenl = new Array();
         this.instantiateLists();
       }
@@ -1462,21 +1546,33 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(EthanolComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this5 = this;
+          var _this7 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this5._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this7._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this5.processenl.push(proces);
+                _this7.processenl.push(proces);
               }
             });
-            _this5.processen = _this5.makeObservable();
+            _this7.processen = _this7.makeObservable();
           });
-        }
+        } // greaterThan(minimumKey: string, maximumKey: string) {
+        //   return (group: FormGroup) => {
+        //     let minimum = group.controls[minimumKey];
+        //     let maximum = group.controls[maximumKey];
+        //     if (minimum.value > maximum.value) {
+        //       return minimum.setErrors({ notEquivalent: true })
+        //     }
+        //     else {
+        //       minimum.setErrors(minimum.validator(minimum))
+        //     }
+        //   }
+        // }
+
       }, {
         key: "makeObservable",
         value: function makeObservable() {
@@ -1484,20 +1580,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this8 = this;
+
+          this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
+            if (v) {
+              _this8.alarmForm.get('minimum').disable();
+
+              _this8.alarmForm.get('maximum').disable();
+
+              _this8.checked = true;
+            } else {
+              _this8.alarmForm.get('minimum').enable();
+
+              _this8.alarmForm.get('maximum').enable();
+
+              _this8.checked = false;
+            }
+          });
+        }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this6 = this;
+          var _this9 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 3).subscribe(function (result) {
-            _this6.alarmdataModel = result;
-            console.log(_this6.alarmdataModel);
+            _this9.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          if (this.checked) {
+            this.alarmdataModel.actief = 0;
+          } else {
+            this.alarmdataModel.actief = 1;
+          }
+
           this._service.updateAlarmData(this.alarmdataModel);
         }
       }]);
@@ -1541,7 +1660,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FsYXJtZXJpbmcvYWxhcm1lcmluZy1kYXRhL3RlbXBlcmF0dXVyL3RlbXBlcmF0dXVyLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90ZW1wZXJhdHV1ci90ZW1wZXJhdHV1ci5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1609,12 +1728,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.fb = fb;
         this._service = _service;
-        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null);
+        this.checked = false;
+        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
+          disable: [],
           proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          minimum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          maximum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
-        });
+          minimum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
+          maximum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
+        }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
+
         this.processenl = new Array();
         this.instantiateLists();
       }
@@ -1622,21 +1750,33 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(TemperatuurComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this7 = this;
+          var _this10 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this7._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this10._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this7.processenl.push(proces);
+                _this10.processenl.push(proces);
               }
             });
-            _this7.processen = _this7.makeObservable();
+            _this10.processen = _this10.makeObservable();
           });
-        }
+        } // greaterThan(minimumKey: string, maximumKey: string) {
+        //   return (group: FormGroup) => {
+        //     let minimum = group.controls[minimumKey];
+        //     let maximum = group.controls[maximumKey];
+        //     if (minimum.value > maximum.value) {
+        //       return minimum.setErrors({ notEquivalent: true })
+        //     }
+        //     else {
+        //       minimum.setErrors(minimum.validator(minimum))
+        //     }
+        //   }
+        // }
+
       }, {
         key: "makeObservable",
         value: function makeObservable() {
@@ -1644,20 +1784,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this11 = this;
+
+          this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
+            if (v) {
+              _this11.alarmForm.get('minimum').disable();
+
+              _this11.alarmForm.get('maximum').disable();
+
+              _this11.checked = true;
+            } else {
+              _this11.alarmForm.get('minimum').enable();
+
+              _this11.alarmForm.get('maximum').enable();
+
+              _this11.checked = false;
+            }
+          });
+        }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this8 = this;
+          var _this12 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 1).subscribe(function (result) {
-            _this8.alarmdataModel = result;
-            console.log(_this8.alarmdataModel);
+            _this12.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          if (this.checked) {
+            this.alarmdataModel.actief = 0;
+          } else {
+            this.alarmdataModel.actief = 1;
+          }
+
           this._service.updateAlarmData(this.alarmdataModel);
         }
       }]);
@@ -1701,7 +1864,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FsYXJtZXJpbmcvYWxhcm1lcmluZy1kYXRhL3Ryb2ViZWxoZWlkL3Ryb2ViZWxoZWlkLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90cm9lYmVsaGVpZC90cm9lYmVsaGVpZC5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1769,12 +1932,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.fb = fb;
         this._service = _service;
-        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null);
+        this.checked = false;
+        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
+          disable: [],
           proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          minimum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-          maximum: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
-        });
+          minimum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
+          maximum: [{
+            value: '',
+            disabled: false
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
+        }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
+
         this.processenl = new Array();
         this.instantiateLists();
       }
@@ -1782,21 +1954,33 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(TroebelheidComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this9 = this;
+          var _this13 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this9._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this13._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this9.processenl.push(proces);
+                _this13.processenl.push(proces);
               }
             });
-            _this9.processen = _this9.makeObservable();
+            _this13.processen = _this13.makeObservable();
           });
-        }
+        } // greaterThan(minimumKey: string, maximumKey: string) {
+        //   return (group: FormGroup) => {
+        //     let minimum = group.controls[minimumKey];
+        //     let maximum = group.controls[maximumKey];
+        //     if (minimum.value > maximum.value) {
+        //       return minimum.setErrors({ notEquivalent: true })
+        //     }
+        //     else {
+        //       minimum.setErrors(minimum.validator(minimum))
+        //     }
+        //   }
+        // }
+
       }, {
         key: "makeObservable",
         value: function makeObservable() {
@@ -1804,20 +1988,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this14 = this;
+
+          this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
+            if (v) {
+              _this14.alarmForm.get('minimum').disable();
+
+              _this14.alarmForm.get('maximum').disable();
+
+              _this14.checked = true;
+            } else {
+              _this14.alarmForm.get('minimum').enable();
+
+              _this14.alarmForm.get('maximum').enable();
+
+              _this14.checked = false;
+            }
+          });
+        }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this10 = this;
+          var _this15 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 5).subscribe(function (result) {
-            _this10.alarmdataModel = result;
-            console.log(_this10.alarmdataModel);
+            _this15.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          if (this.checked) {
+            this.alarmdataModel.actief = 0;
+          } else {
+            this.alarmdataModel.actief = 1;
+          }
+
           this._service.updateAlarmData(this.alarmdataModel);
         }
       }]);
@@ -1861,7 +2068,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FsYXJtZXJpbmcvYWxhcm1lcmluZy1wZXJzb25lbi9hbGFybWVyaW5nLXBlcnNvbmVuLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctcGVyc29uZW4vYWxhcm1lcmluZy1wZXJzb25lbi5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1914,6 +2121,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var src_app_models_alarm_data_gebruiker_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! src/app/models/alarm-data-gebruiker.model */
+    "./src/app/models/alarm-data-gebruiker.model.ts");
 
     var AlarmeringPersonenComponent =
     /*#__PURE__*/
@@ -1924,6 +2137,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.fb = fb;
         this._service = _service;
         this.gebruikersl = new Array();
+        this.alarmForm = this.fb.group({
+          gebruiker: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.adgl = new Array();
+        this.AlarmDataGebruikerModel = new src_app_models_alarm_data_gebruiker_model__WEBPACK_IMPORTED_MODULE_5__["AlarmDataGebruiker"](null, null);
         this.processenl = new Array();
         this.instantiateLists();
       }
@@ -1931,28 +2150,32 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(AlarmeringPersonenComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this11 = this;
+          var _this16 = this;
 
           this._service.getAllGebruikers().subscribe(function (result) {
             result.records.forEach(function (gebruiker) {
-              _this11.gebruikersl.push(gebruiker);
+              _this16.gebruikersl.push(gebruiker);
             });
-            _this11.gebruikers = _this11.makeObservableGebruiker();
+            _this16.gebruikers = _this16.makeObservableGebruiker();
           });
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this11._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this16._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this11.processenl.push(proces);
+                _this16.processenl.push(proces);
               }
             });
-            _this11.processen = _this11.makeObservable();
-            console.log(_this11.processen);
+            _this16.processen = _this16.makeObservable();
           });
+        }
+      }, {
+        key: "makeObservableAdg",
+        value: function makeObservableAdg() {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.adgl);
         }
       }, {
         key: "makeObservableGebruiker",
@@ -1967,6 +2190,30 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "onSelect",
+        value: function onSelect(id) {// this.adgl= new Array<AlarmDataGebruiker[]>();
+          // this.gebruiker = id;
+          // this._service.getAllAlarmDataGebruikersByGebruiker(id).subscribe(result => {
+          //   result.records.forEach(proces => {
+          //     this.adgl.push(proces);
+          //   });
+          //   this.adg = this.makeObservableAdg();
+          // })
+        }
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          var _this17 = this;
+
+          this._service.getAlarmDataByProces(this.proces).subscribe(function (result) {
+            result.records.forEach(function (element) {
+              _this17.AlarmDataGebruikerModel.alarmdataId = element.id;
+
+              _this17._service.addAlarmDataGebruiker(_this17.AlarmDataGebruikerModel).subscribe();
+            });
+          });
+        }
       }]);
 
       return AlarmeringPersonenComponent;
@@ -2156,7 +2403,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "mat-sidenav-container {\r\n  position: fixed;\r\n  height: 100%;\r\n  min-height: 100%;\r\n  width: 100%;\r\n  min-width: 100%;\r\n}\r\n\r\n\r\n      body { \r\n        font-family: Roboto, Arial, sans-serif;\r\n        margin: 0;\r\n      }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFlO0VBQ2YsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gsZUFBZTtBQUNqQjs7O01BR007UUFDRSxzQ0FBc0M7UUFDdEMsU0FBUztNQUNYIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtc2lkZW5hdi1jb250YWluZXIge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogMTAwJTtcclxuICB3aWR0aDogMTAwJTtcclxuICBtaW4td2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcblxyXG4gICAgICBib2R5IHsgXHJcbiAgICAgICAgZm9udC1mYW1pbHk6IFJvYm90bywgQXJpYWwsIHNhbnMtc2VyaWY7XHJcbiAgICAgICAgbWFyZ2luOiAwO1xyXG4gICAgICB9Il19 */";
+    __webpack_exports__["default"] = "mat-sidenav-container {\r\n  position: fixed;\r\n  height: 100%;\r\n  min-height: 100%;\r\n  width: 100%;\r\n  min-width: 100%;\r\n}\r\n\r\n\r\n      body { \r\n        font-family: Roboto, Arial, sans-serif;\r\n        margin: 0;\r\n      }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2FwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGVBQWU7QUFDakI7OztNQUdNO1FBQ0Usc0NBQXNDO1FBQ3RDLFNBQVM7TUFDWCIsImZpbGUiOiIuLi9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1zaWRlbmF2LWNvbnRhaW5lciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1pbi13aWR0aDogMTAwJTtcclxufVxyXG5cclxuXHJcbiAgICAgIGJvZHkgeyBcclxuICAgICAgICBmb250LWZhbWlseTogUm9ib3RvLCBBcmlhbCwgc2Fucy1zZXJpZjtcclxuICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgIH0iXX0= */";
     /***/
   },
 
@@ -2447,7 +2694,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -2572,6 +2819,42 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/models/alarm-data-gebruiker.model.ts":
+  /*!******************************************************!*\
+    !*** ./src/app/models/alarm-data-gebruiker.model.ts ***!
+    \******************************************************/
+
+  /*! exports provided: AlarmDataGebruiker */
+
+  /***/
+  function srcAppModelsAlarmDataGebruikerModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AlarmDataGebruiker", function () {
+      return AlarmDataGebruiker;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var AlarmDataGebruiker = function AlarmDataGebruiker(alarmdataId, gebruikerId) {
+      _classCallCheck(this, AlarmDataGebruiker);
+
+      this.alarmdataId = alarmdataId;
+      this.gebruikerId = gebruikerId;
+    };
+    /***/
+
+  },
+
+  /***/
   "./src/app/models/alarm-data.model.ts":
   /*!********************************************!*\
     !*** ./src/app/models/alarm-data.model.ts ***!
@@ -2597,7 +2880,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! tslib */
     "./node_modules/tslib/tslib.es6.js");
 
-    var AlarmData = function AlarmData(id, soortAlarmId, vinificatieId, maximumwaarde, minimumwaarde) {
+    var AlarmData = function AlarmData(id, soortAlarmId, vinificatieId, maximumwaarde, minimumwaarde, actief) {
       _classCallCheck(this, AlarmData);
 
       this.id = id;
@@ -2605,6 +2888,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.vinificatieId = vinificatieId;
       this.maximumwaarde = maximumwaarde;
       this.minimumwaarde = minimumwaarde;
+      this.actief = actief;
     };
     /***/
 
@@ -2747,7 +3031,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2Nlc3MvYWRkLWFjdGllL2FkZC1hY3RpZS5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2FkZC1hY3RpZS9hZGQtYWN0aWUuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -2811,7 +3095,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function AddActieComponent(fb, _service) {
-        var _this12 = this;
+        var _this18 = this;
 
         _classCallCheck(this, AddActieComponent);
 
@@ -2832,14 +3116,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 proces.vat = vat;
               });
 
-              _this12.processenl.push(proces);
+              _this18.processenl.push(proces);
             }
           });
-          _this12.processen = _this12.makeObservable();
+          _this18.processen = _this18.makeObservable();
         });
 
         _service.getAllEventsoorten().subscribe(function (result) {
-          _this12.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          _this18.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
         });
       }
 
@@ -2897,7 +3181,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2Nlc3MvYWRkLW1ldGluZy9hZGQtbWV0aW5nLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2FkZC1tZXRpbmcvYWRkLW1ldGluZy5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -2980,23 +3264,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(AddMetingComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this13 = this;
+          var _this19 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this13._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this19._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this13.processenl.push(proces);
+                _this19.processenl.push(proces);
               }
             });
-            _this13.processen = _this13.makeObservable();
+            _this19.processen = _this19.makeObservable();
           });
 
           this._service.getAllMetingsoorten().subscribe(function (result) {
-            _this13.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
+            _this19.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
           });
         }
       }, {
@@ -3054,7 +3338,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2Nlc3MvYWZzbHVpdGVuL2Fmc2x1aXRlbi5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2Fmc2x1aXRlbi9hZnNsdWl0ZW4uY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -3116,22 +3400,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(AfsluitenComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this14 = this;
+          var _this20 = this;
 
           this.processenl = new Array();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this14._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this20._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this14.processenl.push(proces);
+                _this20.processenl.push(proces);
               }
             });
-            _this14.processen = _this14.makeObservable();
-            console.log(_this14.processen);
+            _this20.processen = _this20.makeObservable();
+            console.log(_this20.processen);
           });
         }
       }, {
@@ -3145,17 +3429,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "Sluit",
         value: function Sluit(proces) {
-          var _this15 = this;
+          var _this21 = this;
 
           proces.actief = 0;
 
           this._service.updateProcess(proces).subscribe(function (result) {
-            proces.vat = _this15._service.getVatById(proces.vatId);
+            proces.vat = _this21._service.getVatById(proces.vatId);
             proces.vat.subscribe(function (result) {
               result.inGebruik = 0;
 
-              _this15._service.updateVat(result).subscribe(function (result) {
-                _this15.instantiateLists();
+              _this21._service.updateVat(result).subscribe(function (result) {
+                _this21.instantiateLists();
               });
             });
           });
@@ -3199,7 +3483,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2Nlc3MvY3JlYXRlLXByb2Nlc3MvY3JlYXRlLXByb2Nlc3MuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzLmNvbXBvbmVudC5jc3MifQ== */";
     /***/
   },
 
@@ -3258,6 +3542,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! src/app/models/alarm-data.model */
+    "./src/app/models/alarm-data.model.ts");
 
     var CreateProcessComponent =
     /*#__PURE__*/
@@ -3283,25 +3573,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(CreateProcessComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this16 = this;
+          var _this22 = this;
 
           this.vatenl = new Array();
 
           this._service.getAllVaten().subscribe(function (result) {
             result.records.forEach(function (vat) {
               if (vat.inGebruik == 0) {
-                _this16.vatenl.push(vat);
+                _this22.vatenl.push(vat);
               }
             });
-            _this16.vaten = _this16.makeObservable();
+            _this22.vaten = _this22.makeObservable();
           });
 
           this._service.getAllDruifsoorten().subscribe(function (result) {
-            _this16.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this22.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
 
           this._service.getAllPersMethodes().subscribe(function (result) {
-            _this16.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this22.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
         }
       }, {
@@ -3315,16 +3605,39 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this17 = this;
+          var _this23 = this;
 
           this._service.addProces(this.procesModel).subscribe(function (result) {
-            _this17.procesModel.vat = _this17._service.getVatById(_this17.procesModel.vatId);
+            _this23.procesModel.vat = _this23._service.getVatById(_this23.procesModel.vatId);
 
-            _this17.procesModel.vat.subscribe(function (result) {
+            _this23.procesModel.vat.subscribe(function (result) {
               result.inGebruik = 1;
 
-              _this17._service.updateVat(result).subscribe(function (result) {
-                _this17.instantiateLists();
+              _this23._service.updateVat(result).subscribe(function (result) {
+                _this23._service.getLastProcess().subscribe(function (result) {
+                  console.log(result);
+                  var co = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 2, result.id, 15, 1, 1);
+
+                  _this23._service.addAlarmData(co);
+
+                  var druk = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 4, result.id, 15, 1, 1);
+
+                  _this23._service.addAlarmData(druk);
+
+                  var temp = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 1, result.id, 15, 1, 1);
+
+                  _this23._service.addAlarmData(temp);
+
+                  var alc = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 3, result.id, 15, 1, 1);
+
+                  _this23._service.addAlarmData(alc);
+
+                  var troeb = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 5, result.id, 15, 1, 1);
+
+                  _this23._service.addAlarmData(troeb);
+
+                  _this23.instantiateLists();
+                });
               });
             });
           });
@@ -3370,7 +3683,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2Nlc3MvcHJvY2Vzcy5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL3Byb2Nlc3MuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -3610,6 +3923,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             },
             method: 'PUT'
           }));
+        }
+      }, {
+        key: "getLastProcess",
+        value: function getLastProcess() {
+          return this.http.get(baselink + "Vinificatie/getLast.php");
         } //Metingen
 
       }, {
@@ -3695,6 +4013,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } //alarmdata
 
       }, {
+        key: "getAlarmDataById",
+        value: function getAlarmDataById(id) {
+          return this.http.get(baselink + "AlarmData/read_one.php?id=" + id);
+        }
+      }, {
+        key: "getAlarmDataByProces",
+        value: function getAlarmDataByProces(id) {
+          return this.http.get(baselink + "AlarmData/getByVinificatie.php?vinificatieId=" + id);
+        }
+      }, {
         key: "addAlarmData",
         value: function addAlarmData(alarmdata) {
           return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
@@ -3710,7 +4038,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getAlarmDataByVinAndSoort",
         value: function getAlarmDataByVinAndSoort(vinId, alarmId) {
-          return this.http.get(baselink + "AlarmData/getByVinificatie.php?vinificatieId=" + vinId + "&soortAlarmId=" + alarmId);
+          return this.http.get(baselink + "AlarmData/getByVinificatieSoort.php?vinificatieId=" + vinId + "&soortAlarmId=" + alarmId);
         }
       }, {
         key: "updateAlarmData",
@@ -3729,6 +4057,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getAllGebruikers",
         value: function getAllGebruikers() {
           return this.http.get(baselink + "Gebruiker/read.php");
+        } //alarmdatagebruikers
+
+      }, {
+        key: "getAllAlarmDataGebruikersByGebruiker",
+        value: function getAllAlarmDataGebruikersByGebruiker(id) {
+          return this.http.get(baselink + "AlarmDataGebruiker/getByGebruikerId.php?gebruikerId=" + id);
+        }
+      }, {
+        key: "addAlarmDataGebruiker",
+        value: function addAlarmDataGebruiker(item) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "AlarmDataGebruiker/create.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
         }
       }]);
 
@@ -3828,7 +4175,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [],
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__["FlexLayoutModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBadgeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"]],
-      exports: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__["FlexLayoutModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBadgeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"]]
+      exports: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__["FlexLayoutModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBadgeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"]]
     })], SharedModule);
     /***/
   },
@@ -3849,7 +4196,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rvb24tZGFzaGJvYXJkL3Rvb24tZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLWRhc2hib2FyZC90b29uLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -3989,7 +4336,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMvdG9vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLWFjdGlldmUtdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -4068,7 +4415,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tZGV0YWlscy12aW5pZmljYXRpZXMvdG9vbi1kZXRhaWxzLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLWRldGFpbHMtdmluaWZpY2F0aWVzL3Rvb24tZGV0YWlscy12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -4147,7 +4494,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tbm9uLWFjdGlldmUtdmluaWZpY2F0aWVzL3Rvb24tbm9uLWFjdGlldmUtdmluaWZpY2F0aWVzLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLW5vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy90b29uLW5vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
