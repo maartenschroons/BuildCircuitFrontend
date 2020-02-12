@@ -36,6 +36,286 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/admin-overzicht.component.html":
+  /*!************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/admin-overzicht.component.html ***!
+    \************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminOverzichtAdminOverzichtComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alarmeringswaarden aanpassen</h1>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <app-druif-beheren></app-druif-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <app-event-beheren></app-event-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <app-methode-beheren></app-methode-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <app-meting-beheren></app-meting-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <app-vat-beheren></app-vat-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <app-gebruiker-beheren></app-gebruiker-beheren>\r\n    </mat-tab>\r\n</mat-tab-group>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.html":
+  /*!************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.html ***!
+    \************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminOverzichtDruifBeherenDruifBeherenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alle druiven</h1>\r\n<ul>\r\n    <li *ngFor=\"let druif of (druiven | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{druif.druifsoort}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, druif)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(druif)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Druifsoort:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.html":
+  /*!************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.html ***!
+    \************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminOverzichtEventBeherenEventBeherenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alle Events</h1>\r\n<ul>\r\n    <li *ngFor=\"let event of (events | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{event.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, event)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(event)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Event:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam event\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Event\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.html":
+  /*!********************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.html ***!
+    \********************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminOverzichtGebruikerBeherenGebruikerBeherenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alle Gebruikers</h1>\r\n<ul>\r\n    <li *ngFor=\"let gebruiker of (gebruikers | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, gebruiker)\">Edit</button>\r\n                </div>\r\n               \r\n                <div fxFlex=\"80%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Gebruiker:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"Model.voornaam\"\r\n                                formControlName=\"voornaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"Model.naam\"\r\n                                formControlName=\"achternaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n\r\n                    <div>\r\n                        <mat-form-field style=\"width:400px\">\r\n                            <input matInput placeholder=\"Email\" [(ngModel)]=\"Model.email\" formControlName=\"email\"\r\n                                type=\"text\" name=\"Email\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                    <div>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Telefoonnummer\" [(ngModel)]=\"Model.telefoonnummer\"\r\n                                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.html":
+  /*!****************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.html ***!
+    \****************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminOverzichtMethodeBeherenMethodeBeherenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alle methodes</h1>\r\n<ul>\r\n    <li *ngFor=\"let methode of (methodes | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{methode.methode}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, methode)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(methode)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Persmethode:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam persmethode\" [(ngModel)]=\"Model.methode\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"Methode\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.html":
+  /*!**************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.html ***!
+    \**************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminOverzichtMetingBeherenMetingBeherenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alle Metingsoorten</h1>\r\n<ul>\r\n    <li *ngFor=\"let meting of (metingen | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{meting.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, meting)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(meting)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Soort meting:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam meting\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.html":
+  /*!********************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.html ***!
+    \********************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminOverzichtVatBeherenVatBeherenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alle vaten</h1>\r\n<ul>\r\n    <li *ngFor=\"let vat of (vaten | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{vat.nummer}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, vat)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\" *ngIf=\"vat.inGebruik==0\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(vat)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"80%\" *ngIf=\"vat.inGebruik==1\">\r\n\r\n                </div>\r\n                <div fxFlex=\"75%\" *ngIf=\"vat.inGebruik==0\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Vat:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam event\" [(ngModel)]=\"Model.nummer\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Vat\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/admin-toevoegen.component.html":
+  /*!************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/admin-toevoegen.component.html ***!
+    \************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminToevoegenAdminToevoegenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h1>Alarmeringswaarden aanpassen</h1>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <app-druif-soort-toevoegen></app-druif-soort-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <app-event-toevoegen></app-event-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <app-methode-toevoegen></app-methode-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <app-meting-toevoegen></app-meting-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <app-vat-toevoegen></app-vat-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <app-gebruiker-toevoegen></app-gebruiker-toevoegen>\r\n    </mat-tab>\r\n</mat-tab-group>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.html":
+  /*!****************************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.html ***!
+    \****************************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminToevoegenDruifSoortToevoegenDruifSoortToevoegenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe druifsoort aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\" formControlName=\"naam\"\r\n                type=\"text\" name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!createDruifSoortForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.html":
+  /*!****************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.html ***!
+    \****************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminToevoegenEventToevoegenEventToevoegenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe event aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Eventbeschrijving\" [(ngModel)]=\"model.naam\" formControlName=\"naam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.html":
+  /*!************************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.html ***!
+    \************************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminToevoegenGebruikerToevoegenGebruikerToevoegenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe gebruiker aan</h1>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een rol</mat-label>\r\n            <mat-select formControlName=\"rol\" [(ngModel)]=\"model.rolId\">\r\n                <mat-option *ngFor=\"let rol of (rollen | async)\" [value]=\"rol.id\">\r\n                    {{rol.rolnaam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"model.voornaam\" formControlName=\"voornaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"model.naam\" formControlName=\"achternaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Email\" [(ngModel)]=\"model.email\" formControlName=\"email\" type=\"text\"\r\n                name=\"Email\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Telefoonnummer\" [(ngModel)]=\"model.telefoonnummer\"\r\n                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Wachtwoord\" [(ngModel)]=\"model.wachtwoord\" formControlName=\"wachtwoord\"\r\n                type=\"text\" name=\"Wachtwoord\" type=\"password\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Confirm Wachtwoord\" formControlName=\"wachtwoordc\" type=\"text\"\r\n                name=\"Wachtwoordc\" type=\"password\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.html":
+  /*!********************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.html ***!
+    \********************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminToevoegenMethodeToevoegenMethodeToevoegenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe persmethode aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Methode naam\" [(ngModel)]=\"model.methode\" formControlName=\"naam\" type=\"text\"\r\n                name=\"Methode\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.html":
+  /*!******************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.html ***!
+    \******************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminToevoegenMetingToevoegenMetingToevoegenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe metingSoort aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Meting soort\" [(ngModel)]=\"model.naam\" formControlName=\"naam\" type=\"text\"\r\n                name=\"Methode\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.html":
+  /*!************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.html ***!
+    \************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAdminAdminToevoegenVatToevoegenVatToevoegenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe druifsoort aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Naam van het vat\" [(ngModel)]=\"model.nummer\" formControlName=\"naam\" type=\"text\"\r\n                name=\"VatNaam\" />\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Locatie van het vat\" [(ngModel)]=\"model.locatie\" formControlName=\"locatie\"\r\n                type=\"text\" name=\"VatNaam\" />\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Volume van het vat\" [(ngModel)]=\"model.volume\" formControlName=\"volume\"\r\n                type=\"text\" name=\"VatNaam\" />\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een rol</mat-label>\r\n            <mat-select formControlName=\"materiaal\" [(ngModel)]=\"model.materiaalId\">\r\n                <mat-option *ngFor=\"let materiaal of (materialen | async)\" [value]=\"materiaal.id\">\r\n                    {{materiaal.naam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"model.deksel\" formControlName=\"deksel\">Gesloten vat?\r\n        </mat-checkbox>\r\n    </section>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"model.koelmantel\" formControlName=\"koelmantel\">Koelmantel?\r\n        </mat-checkbox>\r\n    </section>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"model.mangat\" formControlName=\"mangat\">Mangat?</mat-checkbox>\r\n    </section>\r\n\r\n    <div>\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/alarmering-data.component.html":
   /*!*****************************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/alarmering-data.component.html ***!
@@ -171,7 +451,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een gebruiker</mat-label>\r\n            <mat-select (selectionChange)=\"onSelect($event.value)\" formControlName=\"gebruiker\" [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n                <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                    {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" [(ngModel)]=\"proces\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<p>\r\n    <mat-form-field>\r\n        <mat-label>Kies een gebruiker</mat-label>\r\n        <mat-select (selectionChange)=\"onSelect($event.value)\" [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n            <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n            </mat-option>\r\n        </mat-select>\r\n    </mat-form-field>\r\n</p>\r\n<div>\r\n    <div>\r\n        Alarm\r\n        <div *ngFor=\"let proces of (processenSub | async)\">\r\n            {{proces.vat?.nummer}} <button (click)=\"delete(proces)\">Delete alarm</button>\r\n        </div>\r\n    </div>\r\n    <div>Geen alarm\r\n        <div *ngFor=\"let proces of (processenNot | async)\">\r\n            {{proces.vat?.nummer}}<button (click)=\"add(proces)\">Add alarm</button>\r\n        </div>\r\n    </div>\r\n</div>";
     /***/
   },
 
@@ -191,7 +471,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n\r\n                        <a mat-list-item routerLink=\"/\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <a mat-list-item routerLink=\"/createProcess\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                process</a>\r\n                        <a mat-list-item routerLink=\"/afsluiten\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een proces\r\n                                af</a>\r\n                        <a mat-list-item routerLink=\"/dashboard\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard 2</a>\r\n                        <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                Vinfi\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #vini=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/actief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Actieve vinificaties</button>\r\n                                <button mat-menu-item routerLink=\"/nonactief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide vinificaties</button>\r\n                        </mat-menu>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                Data toevoegen aan een proces\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #menu=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/addMeting\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                        toe aan een proces</button>\r\n                                <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                        toe aan een proces</button>\r\n                        </mat-menu>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                Alarmering aanpassen\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #alarm=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/alarmdata\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                        alarmeringswaarden</button>\r\n                                <button mat-menu-item routerLink=\"/alarmpersonen\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                        alarmeringspersonen</button>\r\n                        </mat-menu>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
+    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <div>\r\n                                <a mat-list-item routerLink=\"/createProcess\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        process</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een proces\r\n                                        af</a>\r\n                                <a mat-list-item routerLink=\"/dashboard\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard 1</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinfi\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/actief\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button mat-menu-item routerLink=\"/nonactief\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/addMeting\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n\r\n                                <!-- <div *ngIf=\"admin\">\r\n                                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                                Admin Data\r\n                                                <mat-icon>expand_more</mat-icon>\r\n                                        </a>\r\n                                        <mat-menu #admin=\"matMenu\">\r\n                                                <button mat-menu-item routerLink=\"/adminToevoegen\"\r\n                                                        routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        toevoegen</button>\r\n                                                <button mat-menu-item routerLink=\"/adminEdit\" routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        beheren</button>\r\n                                        </mat-menu>\r\n                                </div> -->\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                Admin Data\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #admin=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/adminToevoegen\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                        toevoegen</button>\r\n                                <button mat-menu-item routerLink=\"/adminEdit\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                        beheren</button>\r\n                        </mat-menu>\r\n\r\n\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
     /***/
   },
 
@@ -212,6 +492,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     __webpack_exports__["default"] = "<h1>Vinificatie Monitoring</h1>\r\n<h2>Home pagina</h2>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html":
+  /*!**********************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html ***!
+    \**********************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppLoginLoginComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<mat-card class=\"login-card\">\r\n    <mat-card-title class=\"login-card-title\">Login to continue</mat-card-title>\r\n\r\n    <form (ngSubmit)=\"onSubmit()\">\r\n\r\n        <div class=\"login-container\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Email\" type=\"email\" name=\"email\" [(ngModel)]=\"login.email\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Password\" type=\"password\" name=\"password\"\r\n                        [(ngModel)]=\"login.wachtwoord\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n\r\n            <mat-card-actions>\r\n                <div>\r\n                    <button mat-raised-button color=\"primary\" class=\"login-card-button\" type=\"submit\">Login</button>\r\n                </div>\r\n\r\n            </mat-card-actions>\r\n\r\n        </div>\r\n    </form>\r\n</mat-card>";
     /***/
   },
 
@@ -291,7 +591,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Start een nieuw proces</h1>\r\n    <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n        <div fxFlex=\"20%\">\r\n          <p> \r\n             <mat-form-field>\r\n                    <mat-label>Kies een vat</mat-label>\r\n                    <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                        <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                            {{vat.nummer}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field> \r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een druifsoort</mat-label>\r\n                    <mat-select formControlName=\"druif\" >\r\n                        <mat-option *ngFor=\"let druif of (druiven| async)\" [value]=\"druif.id\">\r\n                            {{druif.druifsoort}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een persmethode</mat-label>\r\n                    <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                        <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                            {{pers.methode}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p> \r\n        </div>\r\n        <div fxFlex=\"20%\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\" formControlName=\"persHoeveelheid\" type=\"text\"\r\n                        name=\"persHoeveelheid\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\" [(ngModel)]=\"procesModel.oogst\"/>\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\" [(ngModel)]=\"procesModel.persDruk\"/>\r\n                </mat-form-field>\r\n            </p>\r\n        </div>\r\n        <div fxFlex=\"60%\">\r\n\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n        <p class=\"ml-4\">\r\n            <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\"\r\n                type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Start een nieuw proces</h1>\r\n    <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n        <div fxFlex=\"20%\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een vat</mat-label>\r\n                    <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                        <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                            {{vat.nummer}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <div class=\"form-group\">\r\n                <label for=\"options\">Options :</label>\r\n                <label *ngFor=\"let druif of (druiven| async)\" class=\"form-control\">\r\n                    <input type=\"checkbox\" name=\"options\" value=\"option\" (change)=\"onChange(druif)\" />\r\n                    {{druif.druifsoort}}\r\n                </label>\r\n            </div>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een persmethode</mat-label>\r\n                    <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                        <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                            {{pers.methode}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n        </div>\r\n        <div fxFlex=\"20%\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\"\r\n                        formControlName=\"persHoeveelheid\" type=\"text\" name=\"persHoeveelheid\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\"\r\n                        [(ngModel)]=\"procesModel.oogst\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\"\r\n                        [(ngModel)]=\"procesModel.persDruk\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Jaargang\" formControlName=\"jaargang\" type=\"text\" name=\"jaargang\"\r\n                        [(ngModel)]=\"procesModel.jaargang\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <mat-form-field>\r\n                <mat-label>Kies het wijntype</mat-label>\r\n                <mat-select formControlName=\"wijntype\" [(ngModel)]=\"procesModel.wijnTypeId\">\r\n                    <mat-option *ngFor=\"let wijntype of (wijntypes | async)\" [value]=\"wijntype.id\">\r\n                        {{wijntype.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n        </div>\r\n\r\n        <div fxFlex=\"60%\">\r\n\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n        <p class=\"ml-4\">\r\n            <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\"\r\n                type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n\r\n</form>";
     /***/
   },
 
@@ -331,7 +631,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<iframe src=\"http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=2\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n";
+    __webpack_exports__["default"] = "<iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(iframe)' width=\"100%\" height=\"98%\"></iframe>\r\n";
     /***/
   },
 
@@ -351,7 +651,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>toon-actieve-vinificaties works!</p>\r\n";
+    __webpack_exports__["default"] = "<mat-grid-list cols=\"3\">\r\n    <div *ngFor=\"let p of (processen | async)\">\r\n        <mat-grid-tile>          \r\n            <mat-card class=\"example-card\">\r\n                <mat-card-header>\r\n                <!-- <div mat-card-avatar class=\"example-header-image\"></div> -->\r\n                <mat-card-title>{{p.vat?.nummer}}</mat-card-title>\r\n                <mat-card-subtitle>Vinificatie {{p.id}}</mat-card-subtitle>\r\n                </mat-card-header>\r\n                <!-- <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"> -->\r\n                <iframe mat-card-image [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <ul>                    \r\n                    <li>Oogst: {{p.oogst}}Kg</li>\r\n                    <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    <li>Persmethode: {{p.persmethode?.methode}}</li>\r\n                    <!-- <li *ngFor=\"let d of (p.druif | async)\">{{d.druifsoort}}</li> -->\r\n                </ul>\r\n                <mat-card-content>\r\n                <p>\r\n                </p>\r\n                </mat-card-content>\r\n                <mat-card-actions>\r\n                <!-- <button mat-button >DASHBOARD</button> -->\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" >Dashboard</a>\r\n                <!-- <button mat-button>DETAILS</button> -->\r\n                </mat-card-actions>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </div>\r\n</mat-grid-list>";
     /***/
   },
 
@@ -391,7 +691,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>toon-non-actieve-vinificaties works!</p>\r\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n\r\n    <h1 class=\"header\">Voltooide vinificatieprocessen</h1>\r\n\r\n    <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n        <!-- vinificatienummer Column -->\r\n        <ng-container matColumnDef=\"id\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vinificatienummer </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> <a [routerLink]=\"['/detail/' + (proces.id)]\" >Vinificatie {{proces.id}}</a></td>\r\n        </ng-container>\r\n    \r\n        <!-- vat Column -->\r\n        <ng-container matColumnDef=\"vatId\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vat </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.vat?.nummer}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- oogst Column -->\r\n        <ng-container matColumnDef=\"oogst\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Oogst </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.oogst}} Kg </td>\r\n        </ng-container>\r\n    \r\n        <!-- pershoeveelheid Column -->\r\n        <ng-container matColumnDef=\"persHoeveelheid\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Pershoeveelheid </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.persHoeveelheid}} L </td>\r\n        </ng-container>\r\n\r\n\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    </table>\r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n</div>";
     /***/
   },
 
@@ -954,6 +1254,2012 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/admin/admin-overzicht/admin-overzicht.component.css":
+  /*!*********************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/admin-overzicht.component.css ***!
+    \*********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminOverzichtAdminOverzichtComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvYWRtaW4tb3ZlcnppY2h0LmNvbXBvbmVudC5jc3MifQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/admin-overzicht.component.ts":
+  /*!********************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/admin-overzicht.component.ts ***!
+    \********************************************************************/
+
+  /*! exports provided: AdminOverzichtComponent */
+
+  /***/
+  function srcAppAdminAdminOverzichtAdminOverzichtComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AdminOverzichtComponent", function () {
+      return AdminOverzichtComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var AdminOverzichtComponent =
+    /*#__PURE__*/
+    function () {
+      function AdminOverzichtComponent() {
+        _classCallCheck(this, AdminOverzichtComponent);
+      }
+
+      _createClass(AdminOverzichtComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return AdminOverzichtComponent;
+    }();
+
+    AdminOverzichtComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-admin-overzicht',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./admin-overzicht.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/admin-overzicht.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./admin-overzicht.component.css */
+      "./src/app/admin/admin-overzicht/admin-overzicht.component.css")).default]
+    })], AdminOverzichtComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.css":
+  /*!*********************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.css ***!
+    \*********************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminOverzichtDruifBeherenDruifBeherenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "button{\r\n    padding: 3;\r\n    margin: 1;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2FkbWluLW92ZXJ6aWNodC9kcnVpZi1iZWhlcmVuL2RydWlmLWJlaGVyZW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7SUFDVixTQUFTO0FBQ2IiLCJmaWxlIjoiLi4vYWRtaW4tb3ZlcnppY2h0L2RydWlmLWJlaGVyZW4vZHJ1aWYtYmVoZXJlbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYnV0dG9ue1xyXG4gICAgcGFkZGluZzogMztcclxuICAgIG1hcmdpbjogMTtcclxufSJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.ts":
+  /*!********************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.ts ***!
+    \********************************************************************************/
+
+  /*! exports provided: DruifBeherenComponent */
+
+  /***/
+  function srcAppAdminAdminOverzichtDruifBeherenDruifBeherenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DruifBeherenComponent", function () {
+      return DruifBeherenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+
+    var DruifBeherenComponent =
+    /*#__PURE__*/
+    function () {
+      function DruifBeherenComponent(fb, _service, modalService) {
+        _classCallCheck(this, DruifBeherenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createDruifSoortForm = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+      }
+
+      _createClass(DruifBeherenComponent, [{
+        key: "InstantiateLists",
+        value: function InstantiateLists() {
+          var _this = this;
+
+          this._service.getAllDruifsoorten().subscribe(function (result) {
+            _this.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
+            console.log(result);
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "Delete",
+        value: function Delete(druif) {
+          var _this2 = this;
+
+          this._service.deleteDruifSoort(druif).subscribe(function (result) {
+            _this2.InstantiateLists();
+          });
+        }
+      }, {
+        key: "open",
+        value: function open(content, druif) {
+          var _this3 = this;
+
+          this.druifModel = druif;
+          console.log(this.druifModel);
+          this.modalService.open(content, {
+            ariaLabelledBy: 'modal-basic-title'
+          }).result.then(function (result) {
+            _this3.closeResult = "Closed with: ".concat(result);
+          }, function (reason) {
+            _this3.closeResult = "Dismissed ".concat(_this3.getDismissReason(reason));
+          });
+        }
+      }, {
+        key: "getDismissReason",
+        value: function getDismissReason(reason) {
+          if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+          } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+          } else {
+            return "with: ".concat(reason);
+          }
+        }
+      }]);
+
+      return DruifBeherenComponent;
+    }();
+
+    DruifBeherenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"]
+      }];
+    };
+
+    DruifBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-druif-beheren',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./druif-beheren.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./druif-beheren.component.css */
+      "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.css")).default]
+    })], DruifBeherenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.css":
+  /*!*********************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.css ***!
+    \*********************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminOverzichtEventBeherenEventBeherenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvZXZlbnQtYmVoZXJlbi9ldmVudC1iZWhlcmVuLmNvbXBvbmVudC5jc3MifQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.ts":
+  /*!********************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.ts ***!
+    \********************************************************************************/
+
+  /*! exports provided: EventBeherenComponent */
+
+  /***/
+  function srcAppAdminAdminOverzichtEventBeherenEventBeherenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "EventBeherenComponent", function () {
+      return EventBeherenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var EventBeherenComponent =
+    /*#__PURE__*/
+    function () {
+      function EventBeherenComponent(fb, _service, modalService) {
+        _classCallCheck(this, EventBeherenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+      }
+
+      _createClass(EventBeherenComponent, [{
+        key: "InstantiateLists",
+        value: function InstantiateLists() {
+          var _this4 = this;
+
+          this._service.getAllEventsoorten().subscribe(function (result) {
+            _this4.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "Delete",
+        value: function Delete(event) {
+          var _this5 = this;
+
+          this._service.deleteEventSoort(event).subscribe(function (result) {
+            _this5.InstantiateLists();
+          });
+        }
+      }, {
+        key: "open",
+        value: function open(content, event) {
+          var _this6 = this;
+
+          this.Model = event;
+          console.log(this.Model);
+          this.modalService.open(content, {
+            ariaLabelledBy: 'modal-basic-title'
+          }).result.then(function (result) {
+            _this6.closeResult = "Closed with: ".concat(result);
+          }, function (reason) {
+            _this6.closeResult = "Dismissed ".concat(_this6.getDismissReason(reason));
+          });
+        }
+      }, {
+        key: "getDismissReason",
+        value: function getDismissReason(reason) {
+          if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+          } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+          } else {
+            return "with: ".concat(reason);
+          }
+        }
+      }]);
+
+      return EventBeherenComponent;
+    }();
+
+    EventBeherenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]
+      }];
+    };
+
+    EventBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-event-beheren',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./event-beheren.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./event-beheren.component.css */
+      "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.css")).default]
+    })], EventBeherenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.css":
+  /*!*****************************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.css ***!
+    \*****************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminOverzichtGebruikerBeherenGebruikerBeherenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvZ2VicnVpa2VyLWJlaGVyZW4vZ2VicnVpa2VyLWJlaGVyZW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.ts":
+  /*!****************************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.ts ***!
+    \****************************************************************************************/
+
+  /*! exports provided: GebruikerBeherenComponent */
+
+  /***/
+  function srcAppAdminAdminOverzichtGebruikerBeherenGebruikerBeherenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GebruikerBeherenComponent", function () {
+      return GebruikerBeherenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var GebruikerBeherenComponent =
+    /*#__PURE__*/
+    function () {
+      function GebruikerBeherenComponent(fb, _service, modalService) {
+        _classCallCheck(this, GebruikerBeherenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+          voornaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          achternaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          telefoonnummer: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+      }
+
+      _createClass(GebruikerBeherenComponent, [{
+        key: "InstantiateLists",
+        value: function InstantiateLists() {
+          var _this7 = this;
+
+          this._service.getAllGebruikers().subscribe(function (result) {
+            _this7.gebruikers = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "open",
+        value: function open(content, gebruiker) {
+          var _this8 = this;
+
+          this.Model = gebruiker;
+          console.log(this.Model);
+          this.modalService.open(content, {
+            ariaLabelledBy: 'modal-basic-title'
+          }).result.then(function (result) {
+            _this8.closeResult = "Closed with: ".concat(result);
+          }, function (reason) {
+            _this8.closeResult = "Dismissed ".concat(_this8.getDismissReason(reason));
+          });
+        }
+      }, {
+        key: "getDismissReason",
+        value: function getDismissReason(reason) {
+          if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+          } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+          } else {
+            return "with: ".concat(reason);
+          }
+        }
+      }]);
+
+      return GebruikerBeherenComponent;
+    }();
+
+    GebruikerBeherenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]
+      }];
+    };
+
+    GebruikerBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-gebruiker-beheren',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./gebruiker-beheren.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./gebruiker-beheren.component.css */
+      "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.css")).default]
+    })], GebruikerBeherenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.css":
+  /*!*************************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.css ***!
+    \*************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminOverzichtMethodeBeherenMethodeBeherenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvbWV0aG9kZS1iZWhlcmVuL21ldGhvZGUtYmVoZXJlbi5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.ts":
+  /*!************************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.ts ***!
+    \************************************************************************************/
+
+  /*! exports provided: MethodeBeherenComponent */
+
+  /***/
+  function srcAppAdminAdminOverzichtMethodeBeherenMethodeBeherenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MethodeBeherenComponent", function () {
+      return MethodeBeherenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var MethodeBeherenComponent =
+    /*#__PURE__*/
+    function () {
+      function MethodeBeherenComponent(fb, _service, modalService) {
+        _classCallCheck(this, MethodeBeherenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+      }
+
+      _createClass(MethodeBeherenComponent, [{
+        key: "InstantiateLists",
+        value: function InstantiateLists() {
+          var _this9 = this;
+
+          this._service.getAllPersMethodes().subscribe(function (result) {
+            _this9.methodes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "Delete",
+        value: function Delete(methode) {
+          var _this10 = this;
+
+          this._service.deletePersMethode(methode).subscribe(function (result) {
+            _this10.InstantiateLists();
+          });
+        }
+      }, {
+        key: "open",
+        value: function open(content, methode) {
+          var _this11 = this;
+
+          this.Model = methode;
+          console.log(this.Model);
+          this.modalService.open(content, {
+            ariaLabelledBy: 'modal-basic-title'
+          }).result.then(function (result) {
+            _this11.closeResult = "Closed with: ".concat(result);
+          }, function (reason) {
+            _this11.closeResult = "Dismissed ".concat(_this11.getDismissReason(reason));
+          });
+        }
+      }, {
+        key: "getDismissReason",
+        value: function getDismissReason(reason) {
+          if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+          } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+          } else {
+            return "with: ".concat(reason);
+          }
+        }
+      }]);
+
+      return MethodeBeherenComponent;
+    }();
+
+    MethodeBeherenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]
+      }];
+    };
+
+    MethodeBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-methode-beheren',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./methode-beheren.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./methode-beheren.component.css */
+      "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.css")).default]
+    })], MethodeBeherenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.css":
+  /*!***********************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.css ***!
+    \***********************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminOverzichtMetingBeherenMetingBeherenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvbWV0aW5nLWJlaGVyZW4vbWV0aW5nLWJlaGVyZW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.ts":
+  /*!**********************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.ts ***!
+    \**********************************************************************************/
+
+  /*! exports provided: MetingBeherenComponent */
+
+  /***/
+  function srcAppAdminAdminOverzichtMetingBeherenMetingBeherenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MetingBeherenComponent", function () {
+      return MetingBeherenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var MetingBeherenComponent =
+    /*#__PURE__*/
+    function () {
+      function MetingBeherenComponent(fb, _service, modalService) {
+        _classCallCheck(this, MetingBeherenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+      }
+
+      _createClass(MetingBeherenComponent, [{
+        key: "InstantiateLists",
+        value: function InstantiateLists() {
+          var _this12 = this;
+
+          this._service.getAllMetingsoorten().subscribe(function (result) {
+            _this12.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "Delete",
+        value: function Delete(meting) {
+          var _this13 = this;
+
+          this._service.deleteSoortMeting(meting).subscribe(function (result) {
+            _this13.InstantiateLists();
+          });
+        }
+      }, {
+        key: "open",
+        value: function open(content, meting) {
+          var _this14 = this;
+
+          this.Model = meting;
+          console.log(this.Model);
+          this.modalService.open(content, {
+            ariaLabelledBy: 'modal-basic-title'
+          }).result.then(function (result) {
+            _this14.closeResult = "Closed with: ".concat(result);
+          }, function (reason) {
+            _this14.closeResult = "Dismissed ".concat(_this14.getDismissReason(reason));
+          });
+        }
+      }, {
+        key: "getDismissReason",
+        value: function getDismissReason(reason) {
+          if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+          } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+          } else {
+            return "with: ".concat(reason);
+          }
+        }
+      }]);
+
+      return MetingBeherenComponent;
+    }();
+
+    MetingBeherenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]
+      }];
+    };
+
+    MetingBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-meting-beheren',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./meting-beheren.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./meting-beheren.component.css */
+      "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.css")).default]
+    })], MetingBeherenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.css":
+  /*!*****************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.css ***!
+    \*****************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminOverzichtVatBeherenVatBeherenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvdmF0LWJlaGVyZW4vdmF0LWJlaGVyZW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.ts":
+  /*!****************************************************************************!*\
+    !*** ./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.ts ***!
+    \****************************************************************************/
+
+  /*! exports provided: VatBeherenComponent */
+
+  /***/
+  function srcAppAdminAdminOverzichtVatBeherenVatBeherenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "VatBeherenComponent", function () {
+      return VatBeherenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var VatBeherenComponent =
+    /*#__PURE__*/
+    function () {
+      function VatBeherenComponent(fb, _service, modalService) {
+        _classCallCheck(this, VatBeherenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          locatie: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          volume: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          deksel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          koelmantel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          mangat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          materiaal: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+      }
+
+      _createClass(VatBeherenComponent, [{
+        key: "InstantiateLists",
+        value: function InstantiateLists() {
+          var _this15 = this;
+
+          this._service.getAllVaten().subscribe(function (result) {
+            _this15.vaten = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "Delete",
+        value: function Delete(vat) {
+          var _this16 = this;
+
+          this._service.deleteVat(vat).subscribe(function (result) {
+            _this16.InstantiateLists();
+          });
+        }
+      }, {
+        key: "open",
+        value: function open(content, vat) {
+          var _this17 = this;
+
+          this.Model = vat;
+          console.log(this.Model);
+          this.modalService.open(content, {
+            ariaLabelledBy: 'modal-basic-title'
+          }).result.then(function (result) {
+            _this17.closeResult = "Closed with: ".concat(result);
+          }, function (reason) {
+            _this17.closeResult = "Dismissed ".concat(_this17.getDismissReason(reason));
+          });
+        }
+      }, {
+        key: "getDismissReason",
+        value: function getDismissReason(reason) {
+          if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+          } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+          } else {
+            return "with: ".concat(reason);
+          }
+        }
+      }]);
+
+      return VatBeherenComponent;
+    }();
+
+    VatBeherenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"]
+      }];
+    };
+
+    VatBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-vat-beheren',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./vat-beheren.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./vat-beheren.component.css */
+      "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.css")).default]
+    })], VatBeherenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/admin-toevoegen.component.css":
+  /*!*********************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/admin-toevoegen.component.css ***!
+    \*********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminToevoegenAdminToevoegenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/admin-toevoegen.component.ts":
+  /*!********************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/admin-toevoegen.component.ts ***!
+    \********************************************************************/
+
+  /*! exports provided: AdminToevoegenComponent */
+
+  /***/
+  function srcAppAdminAdminToevoegenAdminToevoegenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AdminToevoegenComponent", function () {
+      return AdminToevoegenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var AdminToevoegenComponent =
+    /*#__PURE__*/
+    function () {
+      function AdminToevoegenComponent() {
+        _classCallCheck(this, AdminToevoegenComponent);
+      }
+
+      _createClass(AdminToevoegenComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return AdminToevoegenComponent;
+    }();
+
+    AdminToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-admin-toevoegen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./admin-toevoegen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/admin-toevoegen.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./admin-toevoegen.component.css */
+      "./src/app/admin/admin-toevoegen/admin-toevoegen.component.css")).default]
+    })], AdminToevoegenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.css":
+  /*!*************************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.css ***!
+    \*************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminToevoegenDruifSoortToevoegenDruifSoortToevoegenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkcnVpZi1zb29ydC10b2V2b2VnZW4vZHJ1aWYtc29vcnQtdG9ldm9lZ2VuLmNvbXBvbmVudC5jc3MifQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.ts":
+  /*!************************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.ts ***!
+    \************************************************************************************************/
+
+  /*! exports provided: DruifSoortToevoegenComponent */
+
+  /***/
+  function srcAppAdminAdminToevoegenDruifSoortToevoegenDruifSoortToevoegenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DruifSoortToevoegenComponent", function () {
+      return DruifSoortToevoegenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_models_druif_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/models/druif.model */
+    "./src/app/models/druif.model.ts");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+
+    var DruifSoortToevoegenComponent =
+    /*#__PURE__*/
+    function () {
+      function DruifSoortToevoegenComponent(fb, _service, _snackBar) {
+        _classCallCheck(this, DruifSoortToevoegenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.druifModel = new src_app_models_druif_model__WEBPACK_IMPORTED_MODULE_3__["Druif"](0, "");
+        this.createDruifSoortForm = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+      }
+
+      _createClass(DruifSoortToevoegenComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De druifsoort is aangemaakt!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          this.openSnackBar();
+
+          this._service.addDruifSoort(this.druifModel).subscribe();
+        }
+      }]);
+
+      return DruifSoortToevoegenComponent;
+    }();
+
+    DruifSoortToevoegenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
+      }];
+    };
+
+    DruifSoortToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-druif-soort-toevoegen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./druif-soort-toevoegen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./druif-soort-toevoegen.component.css */
+      "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.css")).default]
+    })], DruifSoortToevoegenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.css":
+  /*!*************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.css ***!
+    \*************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminToevoegenEventToevoegenEventToevoegenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJldmVudC10b2V2b2VnZW4vZXZlbnQtdG9ldm9lZ2VuLmNvbXBvbmVudC5jc3MifQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.ts":
+  /*!************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.ts ***!
+    \************************************************************************************/
+
+  /*! exports provided: EventToevoegenComponent */
+
+  /***/
+  function srcAppAdminAdminToevoegenEventToevoegenEventToevoegenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "EventToevoegenComponent", function () {
+      return EventToevoegenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var src_app_models_soort_event_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/models/soort-event.model */
+    "./src/app/models/soort-event.model.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+
+    var EventToevoegenComponent =
+    /*#__PURE__*/
+    function () {
+      function EventToevoegenComponent(fb, _service, _snackBar) {
+        _classCallCheck(this, EventToevoegenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_soort_event_model__WEBPACK_IMPORTED_MODULE_4__["SoortEvent"](0, "");
+        this.Form = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+      }
+
+      _createClass(EventToevoegenComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("Het soort event is aangemaakt!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          this.openSnackBar();
+
+          this._service.addEventSoort(this.model).subscribe();
+        }
+      }]);
+
+      return EventToevoegenComponent;
+    }();
+
+    EventToevoegenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
+      }];
+    };
+
+    EventToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-event-toevoegen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./event-toevoegen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./event-toevoegen.component.css */
+      "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.css")).default]
+    })], EventToevoegenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.css":
+  /*!*********************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.css ***!
+    \*********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminToevoegenGebruikerToevoegenGebruikerToevoegenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJnZWJydWlrZXItdG9ldm9lZ2VuL2dlYnJ1aWtlci10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.ts":
+  /*!********************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.ts ***!
+    \********************************************************************************************/
+
+  /*! exports provided: GebruikerToevoegenComponent */
+
+  /***/
+  function srcAppAdminAdminToevoegenGebruikerToevoegenGebruikerToevoegenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GebruikerToevoegenComponent", function () {
+      return GebruikerToevoegenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_models_gebruiker_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/models/gebruiker.model */
+    "./src/app/models/gebruiker.model.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+
+    var GebruikerToevoegenComponent =
+    /*#__PURE__*/
+    function () {
+      function GebruikerToevoegenComponent(fb, _service, _snackBar) {
+        _classCallCheck(this, GebruikerToevoegenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_gebruiker_model__WEBPACK_IMPORTED_MODULE_2__["Gebruiker"](0, 0, "", "", "j", "", "", "", "");
+        this.rollen = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
+        this.Form = this.fb.group({
+          voornaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          achternaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          telefoonnummer: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          wachtwoord: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          wachtwoordc: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          rol: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        }, {
+          validator: this.matchingPasswords('wachtwoord', 'wachtwoordc')
+        });
+        this.InstantiateLists();
+      }
+
+      _createClass(GebruikerToevoegenComponent, [{
+        key: "matchingPasswords",
+        value: function matchingPasswords(passwordKey, passwordConfirmationKey) {
+          return function (group) {
+            var passwordInput = group.controls[passwordKey];
+            var passwordConfirmationInput = group.controls[passwordConfirmationKey];
+
+            if (passwordInput.value !== passwordConfirmationInput.value) {
+              return passwordConfirmationInput.setErrors({
+                notEquivalent: true
+              });
+            } else {
+              passwordConfirmationInput.setErrors(passwordConfirmationInput.validator(passwordConfirmationInput));
+            }
+          };
+        }
+      }, {
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De gebruiker is aangemaakt!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
+        key: "InstantiateLists",
+        value: function InstantiateLists() {
+          var _this18 = this;
+
+          this._service.getAllRollen().subscribe(function (result) {
+            _this18.rollen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          this.openSnackBar();
+
+          this._service.addGebruiker(this.model).subscribe();
+        }
+      }]);
+
+      return GebruikerToevoegenComponent;
+    }();
+
+    GebruikerToevoegenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
+      }];
+    };
+
+    GebruikerToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-gebruiker-toevoegen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./gebruiker-toevoegen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./gebruiker-toevoegen.component.css */
+      "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.css")).default]
+    })], GebruikerToevoegenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.css":
+  /*!*****************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.css ***!
+    \*****************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminToevoegenMethodeToevoegenMethodeToevoegenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtZXRob2RlLXRvZXZvZWdlbi9tZXRob2RlLXRvZXZvZWdlbi5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.ts":
+  /*!****************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.ts ***!
+    \****************************************************************************************/
+
+  /*! exports provided: MethodeToevoegenComponent */
+
+  /***/
+  function srcAppAdminAdminToevoegenMethodeToevoegenMethodeToevoegenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MethodeToevoegenComponent", function () {
+      return MethodeToevoegenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_models_persmethode_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/models/persmethode.model */
+    "./src/app/models/persmethode.model.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+
+    var MethodeToevoegenComponent =
+    /*#__PURE__*/
+    function () {
+      function MethodeToevoegenComponent(fb, _service, _snackBar) {
+        _classCallCheck(this, MethodeToevoegenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_persmethode_model__WEBPACK_IMPORTED_MODULE_2__["Persmethode"](0, "");
+        this.Form = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+      }
+
+      _createClass(MethodeToevoegenComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De persmethode is aangemaakt!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          this.openSnackBar();
+
+          this._service.addMethode(this.model).subscribe();
+        }
+      }]);
+
+      return MethodeToevoegenComponent;
+    }();
+
+    MethodeToevoegenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
+      }];
+    };
+
+    MethodeToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-methode-toevoegen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./methode-toevoegen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./methode-toevoegen.component.css */
+      "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.css")).default]
+    })], MethodeToevoegenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.css":
+  /*!***************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.css ***!
+    \***************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminToevoegenMetingToevoegenMetingToevoegenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtZXRpbmctdG9ldm9lZ2VuL21ldGluZy10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.ts":
+  /*!**************************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.ts ***!
+    \**************************************************************************************/
+
+  /*! exports provided: MetingToevoegenComponent */
+
+  /***/
+  function srcAppAdminAdminToevoegenMetingToevoegenMetingToevoegenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MetingToevoegenComponent", function () {
+      return MetingToevoegenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_models_soort_meting_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/models/soort-meting.model */
+    "./src/app/models/soort-meting.model.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+
+    var MetingToevoegenComponent =
+    /*#__PURE__*/
+    function () {
+      function MetingToevoegenComponent(fb, _service, _snackBar) {
+        _classCallCheck(this, MetingToevoegenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_soort_meting_model__WEBPACK_IMPORTED_MODULE_2__["SoortMeting"](0, "");
+        this.Form = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+      }
+
+      _createClass(MetingToevoegenComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De soort meting is aangemaakt!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          this.openSnackBar();
+
+          this._service.addMetingSoort(this.model).subscribe();
+        }
+      }]);
+
+      return MetingToevoegenComponent;
+    }();
+
+    MetingToevoegenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
+      }];
+    };
+
+    MetingToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-meting-toevoegen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./meting-toevoegen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./meting-toevoegen.component.css */
+      "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.css")).default]
+    })], MetingToevoegenComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.css":
+  /*!*********************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.css ***!
+    \*********************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAdminAdminToevoegenVatToevoegenVatToevoegenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2YXQtdG9ldm9lZ2VuL3ZhdC10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.ts":
+  /*!********************************************************************************!*\
+    !*** ./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.ts ***!
+    \********************************************************************************/
+
+  /*! exports provided: VatToevoegenComponent */
+
+  /***/
+  function srcAppAdminAdminToevoegenVatToevoegenVatToevoegenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "VatToevoegenComponent", function () {
+      return VatToevoegenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_models_vat_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/models/vat.model */
+    "./src/app/models/vat.model.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+
+    var VatToevoegenComponent =
+    /*#__PURE__*/
+    function () {
+      function VatToevoegenComponent(fb, _service, _snackBar) {
+        _classCallCheck(this, VatToevoegenComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_vat_model__WEBPACK_IMPORTED_MODULE_2__["Vat"](0, "", 0, 1, "", 0, false, false, false, 0);
+        this.Form = this.fb.group({
+          naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          locatie: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          volume: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          deksel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          koelmantel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          mangat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+          materiaal: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+      }
+
+      _createClass(VatToevoegenComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("Het vat is aangemaakt!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          this.openSnackBar();
+
+          this._service.addVat(this.model).subscribe();
+        }
+      }]);
+
+      return VatToevoegenComponent;
+    }();
+
+    VatToevoegenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
+      }];
+    };
+
+    VatToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-vat-toevoegen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./vat-toevoegen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./vat-toevoegen.component.css */
+      "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.css")).default]
+    })], VatToevoegenComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/alarmering/alarmering-data/alarmering-data.component.css":
   /*!**************************************************************************!*\
     !*** ./src/app/alarmering/alarmering-data/alarmering-data.component.css ***!
@@ -969,7 +3275,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9hbGFybWVyaW5nLWRhdGEuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9hbGFybWVyaW5nLWRhdGEuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -1048,7 +3354,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9jby9jby5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9jby9jby5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1107,15 +3413,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! src/app/models/alarm-data.model */
     "./src/app/models/alarm-data.model.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var CoComponent =
     /*#__PURE__*/
     function () {
-      function CoComponent(fb, _service) {
+      function CoComponent(fb, _service, _snackBar) {
         _classCallCheck(this, CoComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_5__["AlarmData"](null, null, null, null, null, 0);
         this.checked = false;
         this.alarmForm = this.fb.group({
@@ -1129,28 +3442,37 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             value: '',
             disabled: false
           }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
-        }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
-
+        });
         this.processenl = new Array();
         this.instantiateLists();
-      }
+      } // ,{ validator: this.greaterThan('minimum', 'maximum') });
+
 
       _createClass(CoComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this = this;
+          var _this19 = this;
+
+          this.openSnackBar();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this19._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this.processenl.push(proces);
+                _this19.processenl.push(proces);
               }
             });
-            _this.processen = _this.makeObservable();
+            _this19.processen = _this19.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -1173,31 +3495,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this2 = this;
+          var _this20 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this2.alarmForm.get('minimum').disable();
+              _this20.alarmForm.get('minimum').disable();
 
-              _this2.alarmForm.get('maximum').disable();
+              _this20.alarmForm.get('maximum').disable();
 
-              _this2.checked = true;
+              _this20.checked = true;
             } else {
-              _this2.alarmForm.get('minimum').enable();
+              _this20.alarmForm.get('minimum').enable();
 
-              _this2.alarmForm.get('maximum').enable();
+              _this20.alarmForm.get('maximum').enable();
 
-              _this2.checked = false;
+              _this20.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this3 = this;
+          var _this21 = this;
 
-          this._service.getAlarmDataByVinAndSoort(procesId, 2).subscribe(function (result) {
-            _this3.alarmdataModel = result;
+          this._service.getAlarmDataByVinAndSoort(procesId, 3).subscribe(function (result) {
+            _this21.alarmdataModel = result;
           });
         }
       }, {
@@ -1207,6 +3529,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             this.alarmdataModel.actief = 0;
           } else {
             this.alarmdataModel.actief = 1;
+          }
+
+          if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
           }
 
           this._service.updateAlarmData(this.alarmdataModel);
@@ -1221,6 +3547,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -1252,7 +3580,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9kcnVrL2RydWsuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9kcnVrL2RydWsuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -1311,15 +3639,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var DrukComponent =
     /*#__PURE__*/
     function () {
-      function DrukComponent(fb, _service) {
+      function DrukComponent(fb, _service, _snackBar) {
         _classCallCheck(this, DrukComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.checked = false;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
@@ -1333,28 +3668,37 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             value: '',
             disabled: false
           }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
-        }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
-
+        });
         this.processenl = new Array();
         this.instantiateLists();
-      }
+      } // ,{ validator: this.greaterThan('minimum', 'maximum') });
+
 
       _createClass(DrukComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this4 = this;
+          var _this22 = this;
+
+          this.openSnackBar();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this4._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this22._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this4.processenl.push(proces);
+                _this22.processenl.push(proces);
               }
             });
-            _this4.processen = _this4.makeObservable();
+            _this22.processen = _this22.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -1377,31 +3721,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this5 = this;
+          var _this23 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this5.alarmForm.get('minimum').disable();
+              _this23.alarmForm.get('minimum').disable();
 
-              _this5.alarmForm.get('maximum').disable();
+              _this23.alarmForm.get('maximum').disable();
 
-              _this5.checked = true;
+              _this23.checked = true;
             } else {
-              _this5.alarmForm.get('minimum').enable();
+              _this23.alarmForm.get('minimum').enable();
 
-              _this5.alarmForm.get('maximum').enable();
+              _this23.alarmForm.get('maximum').enable();
 
-              _this5.checked = false;
+              _this23.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this6 = this;
+          var _this24 = this;
 
-          this._service.getAlarmDataByVinAndSoort(procesId, 4).subscribe(function (result) {
-            _this6.alarmdataModel = result;
+          this._service.getAlarmDataByVinAndSoort(procesId, 1).subscribe(function (result) {
+            _this24.alarmdataModel = result;
           });
         }
       }, {
@@ -1411,6 +3755,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             this.alarmdataModel.actief = 0;
           } else {
             this.alarmdataModel.actief = 1;
+          }
+
+          if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
           }
 
           this._service.updateAlarmData(this.alarmdataModel);
@@ -1425,6 +3773,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -1456,7 +3806,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9ldGhhbm9sL2V0aGFub2wuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9ldGhhbm9sL2V0aGFub2wuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -1515,15 +3865,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var EthanolComponent =
     /*#__PURE__*/
     function () {
-      function EthanolComponent(fb, _service) {
+      function EthanolComponent(fb, _service, _snackBar) {
         _classCallCheck(this, EthanolComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.checked = false;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
@@ -1544,21 +3901,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
 
       _createClass(EthanolComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this7 = this;
+          var _this25 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this7._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this25._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this7.processenl.push(proces);
+                _this25.processenl.push(proces);
               }
             });
-            _this7.processen = _this7.makeObservable();
+            _this25.processen = _this25.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -1581,40 +3945,46 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this8 = this;
+          var _this26 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this8.alarmForm.get('minimum').disable();
+              _this26.alarmForm.get('minimum').disable();
 
-              _this8.alarmForm.get('maximum').disable();
+              _this26.alarmForm.get('maximum').disable();
 
-              _this8.checked = true;
+              _this26.checked = true;
             } else {
-              _this8.alarmForm.get('minimum').enable();
+              _this26.alarmForm.get('minimum').enable();
 
-              _this8.alarmForm.get('maximum').enable();
+              _this26.alarmForm.get('maximum').enable();
 
-              _this8.checked = false;
+              _this26.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this9 = this;
+          var _this27 = this;
 
-          this._service.getAlarmDataByVinAndSoort(procesId, 3).subscribe(function (result) {
-            _this9.alarmdataModel = result;
+          this._service.getAlarmDataByVinAndSoort(procesId, 2).subscribe(function (result) {
+            _this27.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          this.openSnackBar();
+
           if (this.checked) {
             this.alarmdataModel.actief = 0;
           } else {
             this.alarmdataModel.actief = 1;
+          }
+
+          if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
           }
 
           this._service.updateAlarmData(this.alarmdataModel);
@@ -1629,6 +3999,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -1660,7 +4032,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90ZW1wZXJhdHV1ci90ZW1wZXJhdHV1ci5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90ZW1wZXJhdHV1ci90ZW1wZXJhdHV1ci5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1719,15 +4091,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var TemperatuurComponent =
     /*#__PURE__*/
     function () {
-      function TemperatuurComponent(fb, _service) {
+      function TemperatuurComponent(fb, _service, _snackBar) {
         _classCallCheck(this, TemperatuurComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.checked = false;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
@@ -1748,21 +4127,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
 
       _createClass(TemperatuurComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this10 = this;
+          var _this28 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this10._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this28._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this10.processenl.push(proces);
+                _this28.processenl.push(proces);
               }
             });
-            _this10.processen = _this10.makeObservable();
+            _this28.processen = _this28.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -1785,40 +4171,46 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this11 = this;
+          var _this29 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this11.alarmForm.get('minimum').disable();
+              _this29.alarmForm.get('minimum').disable();
 
-              _this11.alarmForm.get('maximum').disable();
+              _this29.alarmForm.get('maximum').disable();
 
-              _this11.checked = true;
+              _this29.checked = true;
             } else {
-              _this11.alarmForm.get('minimum').enable();
+              _this29.alarmForm.get('minimum').enable();
 
-              _this11.alarmForm.get('maximum').enable();
+              _this29.alarmForm.get('maximum').enable();
 
-              _this11.checked = false;
+              _this29.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this12 = this;
+          var _this30 = this;
 
-          this._service.getAlarmDataByVinAndSoort(procesId, 1).subscribe(function (result) {
-            _this12.alarmdataModel = result;
+          this._service.getAlarmDataByVinAndSoort(procesId, 5).subscribe(function (result) {
+            _this30.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          this.openSnackBar();
+
           if (this.checked) {
             this.alarmdataModel.actief = 0;
           } else {
             this.alarmdataModel.actief = 1;
+          }
+
+          if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
           }
 
           this._service.updateAlarmData(this.alarmdataModel);
@@ -1833,6 +4225,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -1864,7 +4258,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90cm9lYmVsaGVpZC90cm9lYmVsaGVpZC5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90cm9lYmVsaGVpZC90cm9lYmVsaGVpZC5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1923,15 +4317,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var TroebelheidComponent =
     /*#__PURE__*/
     function () {
-      function TroebelheidComponent(fb, _service) {
+      function TroebelheidComponent(fb, _service, _snackBar) {
         _classCallCheck(this, TroebelheidComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.checked = false;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
@@ -1945,28 +4346,35 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             value: '',
             disabled: false
           }, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]
-        }); // ,{ validator: this.greaterThan('minimum', 'maximum') });
-
+        });
         this.processenl = new Array();
         this.instantiateLists();
-      }
+      } // ,{ validator: this.greaterThan('minimum', 'maximum') });
+
 
       _createClass(TroebelheidComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this13 = this;
+          var _this31 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this13._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this31._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this13.processenl.push(proces);
+                _this31.processenl.push(proces);
               }
             });
-            _this13.processen = _this13.makeObservable();
+            _this31.processen = _this31.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -1989,40 +4397,46 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this14 = this;
+          var _this32 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this14.alarmForm.get('minimum').disable();
+              _this32.alarmForm.get('minimum').disable();
 
-              _this14.alarmForm.get('maximum').disable();
+              _this32.alarmForm.get('maximum').disable();
 
-              _this14.checked = true;
+              _this32.checked = true;
             } else {
-              _this14.alarmForm.get('minimum').enable();
+              _this32.alarmForm.get('minimum').enable();
 
-              _this14.alarmForm.get('maximum').enable();
+              _this32.alarmForm.get('maximum').enable();
 
-              _this14.checked = false;
+              _this32.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this15 = this;
+          var _this33 = this;
 
-          this._service.getAlarmDataByVinAndSoort(procesId, 5).subscribe(function (result) {
-            _this15.alarmdataModel = result;
+          this._service.getAlarmDataByVinAndSoort(procesId, 4).subscribe(function (result) {
+            _this33.alarmdataModel = result;
           });
         }
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          this.openSnackBar();
+
           if (this.checked) {
             this.alarmdataModel.actief = 0;
           } else {
             this.alarmdataModel.actief = 1;
+          }
+
+          if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
           }
 
           this._service.updateAlarmData(this.alarmdataModel);
@@ -2037,6 +4451,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -2068,7 +4484,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctcGVyc29uZW4vYWxhcm1lcmluZy1wZXJzb25lbi5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctcGVyc29uZW4vYWxhcm1lcmluZy1wZXJzb25lbi5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -2127,55 +4543,82 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var src_app_models_alarm_data_gebruiker_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! src/app/models/alarm-data-gebruiker.model */
     "./src/app/models/alarm-data-gebruiker.model.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var AlarmeringPersonenComponent =
     /*#__PURE__*/
     function () {
-      function AlarmeringPersonenComponent(fb, _service) {
+      function AlarmeringPersonenComponent(fb, _service, _snackBar) {
         _classCallCheck(this, AlarmeringPersonenComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.gebruikersl = new Array();
+        this.bestaat = false;
         this.alarmForm = this.fb.group({
           gebruiker: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
           proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
-        this.adgl = new Array();
         this.AlarmDataGebruikerModel = new src_app_models_alarm_data_gebruiker_model__WEBPACK_IMPORTED_MODULE_5__["AlarmDataGebruiker"](null, null);
         this.processenl = new Array();
         this.instantiateLists();
       }
 
       _createClass(AlarmeringPersonenComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar(message) {
+          this._snackBar.open(message, "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this16 = this;
+          var _this34 = this;
+
+          this.processenl = [];
+          this.gebruikersl = [];
 
           this._service.getAllGebruikers().subscribe(function (result) {
             result.records.forEach(function (gebruiker) {
-              _this16.gebruikersl.push(gebruiker);
+              _this34.gebruikersl.push(gebruiker);
             });
-            _this16.gebruikers = _this16.makeObservableGebruiker();
+            _this34.gebruikers = _this34.makeObservableGebruiker();
           });
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this16._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this34._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this16.processenl.push(proces);
+                _this34.processenl.push(proces);
               }
             });
-            _this16.processen = _this16.makeObservable();
+            _this34.processen = _this34.makeObservable();
           });
+
+          this.processenNotl = [];
+          this.processenSubl = [];
+          this.processenNotl = this.processenl;
+          this.bestaat = false;
         }
       }, {
-        key: "makeObservableAdg",
-        value: function makeObservableAdg() {
-          return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.adgl);
+        key: "makeObservableSub",
+        value: function makeObservableSub() {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenSubl);
+        }
+      }, {
+        key: "makeObservableNot",
+        value: function makeObservableNot() {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenNotl);
         }
       }, {
         key: "makeObservableGebruiker",
@@ -2192,25 +4635,103 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {}
       }, {
         key: "onSelect",
-        value: function onSelect(id) {// this.adgl= new Array<AlarmDataGebruiker[]>();
-          // this.gebruiker = id;
-          // this._service.getAllAlarmDataGebruikersByGebruiker(id).subscribe(result => {
-          //   result.records.forEach(proces => {
-          //     this.adgl.push(proces);
-          //   });
-          //   this.adg = this.makeObservableAdg();
-          // })
+        value: function onSelect(id) {
+          var _this35 = this;
+
+          this.instantiateLists();
+
+          this._service.getAllAlarmDataGebruikers().subscribe(function (result) {
+            result.records.forEach(function (el) {
+              _this35.checkIfExists(el, id);
+            });
+
+            if (_this35.bestaat) {
+              _this35.gebruiker = id;
+
+              _this35._service.getAllAlarmDataGebruikerByGebruiker(id).subscribe(function (result) {
+                result.records.forEach(function (element) {
+                  _this35.CheckIfContains(element.alarmData_vinificatieId);
+
+                  _this35.processenNotl.forEach(function (el) {
+                    if (el.id == element.alarmData_vinificatieId) {
+                      _this35.processenNotl.splice(_this35.processenNotl.indexOf(el), 1);
+                    }
+                  });
+                });
+              });
+
+              _this35.processenNot = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(_this35.processenl);
+            } else {
+              _this35.processenl = [];
+              _this35.processenNot = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Observable"]();
+
+              _this35._service.getAllProcessen().subscribe(function (result) {
+                result.records.forEach(function (proces) {
+                  if (proces.actief == 1) {
+                    _this35._service.getVatById(proces.vatId).subscribe(function (vat) {
+                      proces.vat = vat;
+                    });
+
+                    _this35.processenl.push(proces);
+                  }
+                });
+                _this35.processen = _this35.makeObservable();
+                _this35.processenNot = _this35.processen;
+              });
+            }
+          });
+
+          this.processenSub = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenSubl);
         }
       }, {
-        key: "onSubmit",
-        value: function onSubmit() {
-          var _this17 = this;
+        key: "checkIfExists",
+        value: function checkIfExists(el, id) {
+          if (el.gebruikerId == id) {
+            this.bestaat = true;
+          }
+        }
+      }, {
+        key: "add",
+        value: function add(proces) {
+          var _this36 = this;
 
-          this._service.getAlarmDataByProces(this.proces).subscribe(function (result) {
+          var message = "Deze persoon krijgt vanaf nu meldingen van het proces";
+          this.openSnackBar(message);
+
+          this._service.getAlarmDataByProces(proces.id).subscribe(function (result) {
             result.records.forEach(function (element) {
-              _this17.AlarmDataGebruikerModel.alarmdataId = element.id;
+              _this36.AlarmDataGebruikerModel.alarmdataId = element.id;
 
-              _this17._service.addAlarmDataGebruiker(_this17.AlarmDataGebruikerModel).subscribe();
+              _this36._service.addAlarmDataGebruiker(_this36.AlarmDataGebruikerModel).subscribe();
+            });
+          });
+        }
+      }, {
+        key: "delete",
+        value: function _delete(proces) {
+          var _this37 = this;
+
+          var message = "Deze persoon zal geen meldingen mee krijgen van het proces";
+          this.openSnackBar(message);
+
+          this._service.getAlarmDataByProces(proces.id).subscribe(function (result) {
+            result.records.forEach(function (element) {
+              _this37.AlarmDataGebruikerModel.alarmdataId = element.id;
+
+              _this37._service.deleteAlarmDataGebruiker(_this37.AlarmDataGebruikerModel).subscribe();
+            });
+          });
+        }
+      }, {
+        key: "CheckIfContains",
+        value: function CheckIfContains(id) {
+          var _this38 = this;
+
+          this.processen.subscribe(function (result) {
+            result.forEach(function (el) {
+              if (el.id == id) {
+                _this38.processenSubl.push(el);
+              }
             });
           });
         }
@@ -2224,6 +4745,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -2403,7 +4926,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "mat-sidenav-container {\r\n  position: fixed;\r\n  height: 100%;\r\n  min-height: 100%;\r\n  width: 100%;\r\n  min-width: 100%;\r\n}\r\n\r\n\r\n      body { \r\n        font-family: Roboto, Arial, sans-serif;\r\n        margin: 0;\r\n      }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2FwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGVBQWU7QUFDakI7OztNQUdNO1FBQ0Usc0NBQXNDO1FBQ3RDLFNBQVM7TUFDWCIsImZpbGUiOiIuLi9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1zaWRlbmF2LWNvbnRhaW5lciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1pbi13aWR0aDogMTAwJTtcclxufVxyXG5cclxuXHJcbiAgICAgIGJvZHkgeyBcclxuICAgICAgICBmb250LWZhbWlseTogUm9ib3RvLCBBcmlhbCwgc2Fucy1zZXJpZjtcclxuICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgIH0iXX0= */";
+    __webpack_exports__["default"] = "mat-sidenav-container {\r\n  position: fixed;\r\n  height: 100%;\r\n  min-height: 100%;\r\n  width: 100%;\r\n  min-width: 100%;\r\n}\r\n\r\n\r\n      body { \r\n        font-family: Roboto, Arial, sans-serif;\r\n        margin: 0;\r\n      }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGVBQWU7QUFDakI7OztNQUdNO1FBQ0Usc0NBQXNDO1FBQ3RDLFNBQVM7TUFDWCIsImZpbGUiOiIuLi8uLi9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1zaWRlbmF2LWNvbnRhaW5lciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1pbi13aWR0aDogMTAwJTtcclxufVxyXG5cclxuXHJcbiAgICAgIGJvZHkgeyBcclxuICAgICAgICBmb250LWZhbWlseTogUm9ib3RvLCBBcmlhbCwgc2Fucy1zZXJpZjtcclxuICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgIH0iXX0= */";
     /***/
   },
 
@@ -2444,12 +4967,80 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
 
-    var AppComponent = function AppComponent() {
-      _classCallCheck(this, AppComponent);
 
-      this.opened = false;
-      this.title = 'CircuitFrontend';
+    var _services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/cdk/layout */
+    "./node_modules/@angular/cdk/esm2015/layout.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+
+    var AppComponent =
+    /*#__PURE__*/
+    function () {
+      function AppComponent(_service, router, breakpointObserver) {
+        var _this39 = this;
+
+        _classCallCheck(this, AppComponent);
+
+        this._service = _service;
+        this.router = router;
+        this.breakpointObserver = breakpointObserver;
+        this.opened = false;
+        this.title = 'CircuitFrontend';
+        this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__["Breakpoints"].Handset).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (result) {
+          return result.matches;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["shareReplay"])());
+
+        this._service.isLoggedin.subscribe(function (e) {
+          _this39.login = e.valueOf();
+        });
+
+        this._service.isAdmin.subscribe(function (e) {
+          _this39.admin = e.valueOf();
+        });
+      }
+
+      _createClass(AppComponent, [{
+        key: "logOut",
+        value: function logOut() {
+          localStorage.removeItem("token");
+
+          this._service.isLoggedin.next(!this.login ? true : false);
+
+          this.router.navigate(["/"]);
+          console.log(this._service.isLoggedin.value);
+        }
+      }]);
+
+      return AppComponent;
+    }();
+
+    AppComponent.ctorParameters = function () {
+      return [{
+        type: _services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }, {
+        type: _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__["BreakpointObserver"]
+      }];
     };
 
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSidenav"], {
@@ -2624,6 +5215,96 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
     /*! ./toon-vinificaties/toon-details-vinificaties/toon-details-vinificaties.component */
     "./src/app/toon-vinificaties/toon-details-vinificaties/toon-details-vinificaties.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_toevoegen_druif_soort_toevoegen_druif_soort_toevoegen_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    /*! ./admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component */
+    "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_toevoegen_vat_toevoegen_vat_toevoegen_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
+    /*! ./admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component */
+    "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_toevoegen_event_toevoegen_event_toevoegen_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    /*! ./admin/admin-toevoegen/event-toevoegen/event-toevoegen.component */
+    "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_toevoegen_methode_toevoegen_methode_toevoegen_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+    /*! ./admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component */
+    "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_toevoegen_meting_toevoegen_meting_toevoegen_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
+    /*! ./admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component */
+    "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_toevoegen_gebruiker_toevoegen_gebruiker_toevoegen_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
+    /*! ./admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component */
+    "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.ts");
+    /* harmony import */
+
+
+    var _login_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
+    /*! ./login/login.component */
+    "./src/app/login/login.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_toevoegen_admin_toevoegen_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
+    /*! ./admin/admin-toevoegen/admin-toevoegen.component */
+    "./src/app/admin/admin-toevoegen/admin-toevoegen.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_overzicht_admin_overzicht_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
+    /*! ./admin/admin-overzicht/admin-overzicht.component */
+    "./src/app/admin/admin-overzicht/admin-overzicht.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_overzicht_druif_beheren_druif_beheren_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
+    /*! ./admin/admin-overzicht/druif-beheren/druif-beheren.component */
+    "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_overzicht_event_beheren_event_beheren_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
+    /*! ./admin/admin-overzicht/event-beheren/event-beheren.component */
+    "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_overzicht_gebruiker_beheren_gebruiker_beheren_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
+    /*! ./admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component */
+    "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_overzicht_methode_beheren_methode_beheren_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
+    /*! ./admin/admin-overzicht/methode-beheren/methode-beheren.component */
+    "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_overzicht_meting_beheren_meting_beheren_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
+    /*! ./admin/admin-overzicht/meting-beheren/meting-beheren.component */
+    "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.ts");
+    /* harmony import */
+
+
+    var _admin_admin_overzicht_vat_beheren_vat_beheren_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
+    /*! ./admin/admin-overzicht/vat-beheren/vat-beheren.component */
+    "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.ts");
 
     var appRoutes = [{
       path: '',
@@ -2650,7 +5331,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       path: 'alarmpersonen',
       component: _alarmering_alarmering_personen_alarmering_personen_component__WEBPACK_IMPORTED_MODULE_17__["AlarmeringPersonenComponent"]
     }, {
-      path: 'dashboard',
+      path: 'dashboard/:id',
       component: _toon_dashboard_toon_dashboard_component__WEBPACK_IMPORTED_MODULE_13__["ToonDashboardComponent"]
     }, {
       path: 'actief',
@@ -2659,8 +5340,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       path: 'nonactief',
       component: _toon_vinificaties_toon_non_actieve_vinificaties_toon_non_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_21__["ToonNonActieveVinificatiesComponent"]
     }, {
-      path: 'detail',
+      path: 'detail/:id',
       component: _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__["ToonDetailsVinificatiesComponent"]
+    }, {
+      path: 'adminToevoegen',
+      component: _admin_admin_toevoegen_admin_toevoegen_component__WEBPACK_IMPORTED_MODULE_30__["AdminToevoegenComponent"]
+    }, {
+      path: 'login',
+      component: _login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"]
+    }, {
+      path: 'adminEdit',
+      component: _admin_admin_overzicht_admin_overzicht_component__WEBPACK_IMPORTED_MODULE_31__["AdminOverzichtComponent"]
     }];
 
     var AppModule = function AppModule() {
@@ -2668,7 +5358,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _toon_vinificaties_toon_actieve_vinificaties_toon_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_20__["ToonActieveVinificatiesComponent"], _toon_vinificaties_toon_non_actieve_vinificaties_toon_non_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_21__["ToonNonActieveVinificatiesComponent"], _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__["ToonDetailsVinificatiesComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _toon_vinificaties_toon_actieve_vinificaties_toon_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_20__["ToonActieveVinificatiesComponent"], _toon_vinificaties_toon_non_actieve_vinificaties_toon_non_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_21__["ToonNonActieveVinificatiesComponent"], _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__["ToonDetailsVinificatiesComponent"], _admin_admin_toevoegen_druif_soort_toevoegen_druif_soort_toevoegen_component__WEBPACK_IMPORTED_MODULE_23__["DruifSoortToevoegenComponent"], _admin_admin_toevoegen_vat_toevoegen_vat_toevoegen_component__WEBPACK_IMPORTED_MODULE_24__["VatToevoegenComponent"], _admin_admin_toevoegen_event_toevoegen_event_toevoegen_component__WEBPACK_IMPORTED_MODULE_25__["EventToevoegenComponent"], _admin_admin_toevoegen_methode_toevoegen_methode_toevoegen_component__WEBPACK_IMPORTED_MODULE_26__["MethodeToevoegenComponent"], _admin_admin_toevoegen_meting_toevoegen_meting_toevoegen_component__WEBPACK_IMPORTED_MODULE_27__["MetingToevoegenComponent"], _admin_admin_toevoegen_gebruiker_toevoegen_gebruiker_toevoegen_component__WEBPACK_IMPORTED_MODULE_28__["GebruikerToevoegenComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"], _admin_admin_toevoegen_admin_toevoegen_component__WEBPACK_IMPORTED_MODULE_30__["AdminToevoegenComponent"], _admin_admin_overzicht_admin_overzicht_component__WEBPACK_IMPORTED_MODULE_31__["AdminOverzichtComponent"], _admin_admin_overzicht_druif_beheren_druif_beheren_component__WEBPACK_IMPORTED_MODULE_32__["DruifBeherenComponent"], _admin_admin_overzicht_event_beheren_event_beheren_component__WEBPACK_IMPORTED_MODULE_33__["EventBeherenComponent"], _admin_admin_overzicht_gebruiker_beheren_gebruiker_beheren_component__WEBPACK_IMPORTED_MODULE_34__["GebruikerBeherenComponent"], _admin_admin_overzicht_methode_beheren_methode_beheren_component__WEBPACK_IMPORTED_MODULE_35__["MethodeBeherenComponent"], _admin_admin_overzicht_meting_beheren_meting_beheren_component__WEBPACK_IMPORTED_MODULE_36__["MetingBeherenComponent"], _admin_admin_overzicht_vat_beheren_vat_beheren_component__WEBPACK_IMPORTED_MODULE_37__["VatBeherenComponent"]],
       imports: [_home_home_module__WEBPACK_IMPORTED_MODULE_14__["HomeModule"], _process_process_module__WEBPACK_IMPORTED_MODULE_15__["ProcessModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_8__["SharedModule"], _alarmering_alarmering_module__WEBPACK_IMPORTED_MODULE_18__["AlarmeringModule"], _toon_dashboard_toon_dashboard_module__WEBPACK_IMPORTED_MODULE_19__["ToonDashboardModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(appRoutes, {
         enableTracing: false
       })],
@@ -2694,7 +5384,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -2819,6 +5509,149 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/login/login.component.css":
+  /*!*******************************************!*\
+    !*** ./src/app/login/login.component.css ***!
+    \*******************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppLoginLoginComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9sb2dpbi9sb2dpbi5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/login/login.component.ts":
+  /*!******************************************!*\
+    !*** ./src/app/login/login.component.ts ***!
+    \******************************************/
+
+  /*! exports provided: LoginComponent */
+
+  /***/
+  function srcAppLoginLoginComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "LoginComponent", function () {
+      return LoginComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _models_user_login_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../models/user-login.model */
+    "./src/app/models/user-login.model.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _services_services_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../services/services.service */
+    "./src/app/services/services.service.ts");
+
+    var LoginComponent =
+    /*#__PURE__*/
+    function () {
+      function LoginComponent(fb, _service, router) {
+        _classCallCheck(this, LoginComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.router = router;
+        this.login = new _models_user_login_model__WEBPACK_IMPORTED_MODULE_2__["UserLogin"]("", "");
+        this.loginForm = this.fb.group({
+          email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email]],
+          password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+      }
+
+      _createClass(LoginComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          var _this40 = this;
+
+          this._service.Authenticate(this.login).subscribe(function (result) {
+            _this40._service.isLoggedin.next(result.id ? true : false);
+
+            localStorage.setItem("token", result.id.toString());
+
+            _this40.router.navigateByUrl('/dashboard');
+
+            _this40._service.setUser(result);
+
+            if (result.rolId == 1) {
+              _this40._service.setIsAdmin(true);
+            } else {
+              _this40._service.setIsAdmin(false);
+            }
+          });
+        }
+      }]);
+
+      return LoginComponent;
+    }();
+
+    LoginComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }, {
+        type: _services_services_service__WEBPACK_IMPORTED_MODULE_5__["ServicesService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }];
+    };
+
+    LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-login',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./login.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./login.component.css */
+      "./src/app/login/login.component.css")).default]
+    })], LoginComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/models/alarm-data-gebruiker.model.ts":
   /*!******************************************************!*\
     !*** ./src/app/models/alarm-data-gebruiker.model.ts ***!
@@ -2895,6 +5728,42 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/models/druif.model.ts":
+  /*!***************************************!*\
+    !*** ./src/app/models/druif.model.ts ***!
+    \***************************************/
+
+  /*! exports provided: Druif */
+
+  /***/
+  function srcAppModelsDruifModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "Druif", function () {
+      return Druif;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var Druif = function Druif(id, druifsoort) {
+      _classCallCheck(this, Druif);
+
+      this.id = id;
+      this.druifsoort = druifsoort;
+    };
+    /***/
+
+  },
+
+  /***/
   "./src/app/models/event.model.ts":
   /*!***************************************!*\
     !*** ./src/app/models/event.model.ts ***!
@@ -2928,6 +5797,49 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.vinificatieId = vinificatieId;
       this.gebruikerId = gebruikerId;
       this.datum = datum;
+    };
+    /***/
+
+  },
+
+  /***/
+  "./src/app/models/gebruiker.model.ts":
+  /*!*******************************************!*\
+    !*** ./src/app/models/gebruiker.model.ts ***!
+    \*******************************************/
+
+  /*! exports provided: Gebruiker */
+
+  /***/
+  function srcAppModelsGebruikerModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "Gebruiker", function () {
+      return Gebruiker;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var Gebruiker = function Gebruiker(id, rolId, voornaam, naam, gebruikersnaam, wachtwoord, email, telefoonnummer, jwt) {
+      _classCallCheck(this, Gebruiker);
+
+      this.id = id;
+      this.rolId = rolId;
+      this.voornaam = voornaam;
+      this.naam = naam;
+      this.gebruikersnaam = gebruikersnaam;
+      this.wachtwoord = wachtwoord;
+      this.email = email;
+      this.telefoonnummer = telefoonnummer;
+      this.jwt = jwt;
     };
     /***/
 
@@ -2974,6 +5886,42 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/models/persmethode.model.ts":
+  /*!*********************************************!*\
+    !*** ./src/app/models/persmethode.model.ts ***!
+    \*********************************************/
+
+  /*! exports provided: Persmethode */
+
+  /***/
+  function srcAppModelsPersmethodeModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "Persmethode", function () {
+      return Persmethode;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var Persmethode = function Persmethode(id, methode) {
+      _classCallCheck(this, Persmethode);
+
+      this.id = id;
+      this.methode = methode;
+    };
+    /***/
+
+  },
+
+  /***/
   "./src/app/models/process.model.ts":
   /*!*****************************************!*\
     !*** ./src/app/models/process.model.ts ***!
@@ -2999,7 +5947,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! tslib */
     "./node_modules/tslib/tslib.es6.js");
 
-    var Process = function Process(id, vatId, persmethodeId, actief, persHoeveelheid, oogst, persDruk, vat) {
+    var Process = function Process(id, vatId, persmethodeId, actief, persHoeveelheid, oogst, persDruk, vat, druif, jaargang, wijnTypeId) {
       _classCallCheck(this, Process);
 
       this.id = id;
@@ -3010,6 +5958,233 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.oogst = oogst;
       this.persDruk = persDruk;
       this.vat = vat;
+      this.druif = druif;
+      this.jaargang = jaargang;
+      this.wijnTypeId = wijnTypeId;
+    };
+    /***/
+
+  },
+
+  /***/
+  "./src/app/models/soort-event.model.ts":
+  /*!*********************************************!*\
+    !*** ./src/app/models/soort-event.model.ts ***!
+    \*********************************************/
+
+  /*! exports provided: SoortEvent */
+
+  /***/
+  function srcAppModelsSoortEventModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SoortEvent", function () {
+      return SoortEvent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var SoortEvent = function SoortEvent(soortEventId, naam) {
+      _classCallCheck(this, SoortEvent);
+
+      this.soortEventId = soortEventId;
+      this.naam = naam;
+    };
+    /***/
+
+  },
+
+  /***/
+  "./src/app/models/soort-meting.model.ts":
+  /*!**********************************************!*\
+    !*** ./src/app/models/soort-meting.model.ts ***!
+    \**********************************************/
+
+  /*! exports provided: SoortMeting */
+
+  /***/
+  function srcAppModelsSoortMetingModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SoortMeting", function () {
+      return SoortMeting;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var SoortMeting = function SoortMeting(id, naam) {
+      _classCallCheck(this, SoortMeting);
+
+      this.id = id;
+      this.naam = naam;
+    };
+    /***/
+
+  },
+
+  /***/
+  "./src/app/models/user-login.model.ts":
+  /*!********************************************!*\
+    !*** ./src/app/models/user-login.model.ts ***!
+    \********************************************/
+
+  /*! exports provided: UserLogin */
+
+  /***/
+  function srcAppModelsUserLoginModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UserLogin", function () {
+      return UserLogin;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var UserLogin = function UserLogin(email, wachtwoord) {
+      _classCallCheck(this, UserLogin);
+
+      this.email = email;
+      this.wachtwoord = wachtwoord;
+    };
+    /***/
+
+  },
+
+  /***/
+  "./src/app/models/vat.model.ts":
+  /*!*************************************!*\
+    !*** ./src/app/models/vat.model.ts ***!
+    \*************************************/
+
+  /*! exports provided: Vat */
+
+  /***/
+  function srcAppModelsVatModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "Vat", function () {
+      return Vat;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var Vat = function Vat(id, nummer, inGebruik, gelinkt, locatie, volume, deksel, koelmantel, mangat, materiaalId) {
+      _classCallCheck(this, Vat);
+
+      this.id = id;
+      this.nummer = nummer;
+      this.inGebruik = inGebruik;
+      this.gelinkt = gelinkt;
+      this.locatie = locatie;
+      this.volume = volume;
+      this.deksel = deksel;
+      this.koelmantel = koelmantel;
+      this.mangat = mangat;
+      this.materiaalId = materiaalId;
+    };
+    /***/
+
+  },
+
+  /***/
+  "./src/app/models/vinificatie-druif.model.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/models/vinificatie-druif.model.ts ***!
+    \***************************************************/
+
+  /*! exports provided: VinificatieDruif */
+
+  /***/
+  function srcAppModelsVinificatieDruifModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "VinificatieDruif", function () {
+      return VinificatieDruif;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var VinificatieDruif = function VinificatieDruif(vinificatieId, druifsoortId) {
+      _classCallCheck(this, VinificatieDruif);
+
+      this.vinificatieId = vinificatieId;
+      this.druifsoortId = druifsoortId;
+    };
+    /***/
+
+  },
+
+  /***/
+  "./src/app/models/wijn-type.model.ts":
+  /*!*******************************************!*\
+    !*** ./src/app/models/wijn-type.model.ts ***!
+    \*******************************************/
+
+  /*! exports provided: WijnType */
+
+  /***/
+  function srcAppModelsWijnTypeModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "WijnType", function () {
+      return WijnType;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var WijnType = function WijnType(id, naam) {
+      _classCallCheck(this, WijnType);
+
+      this.id = id;
+      this.naam = naam;
     };
     /***/
 
@@ -3031,7 +6206,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2FkZC1hY3RpZS9hZGQtYWN0aWUuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2FkZC1hY3RpZS9hZGQtYWN0aWUuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -3090,17 +6265,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var AddActieComponent =
     /*#__PURE__*/
     function () {
-      function AddActieComponent(fb, _service) {
-        var _this18 = this;
+      function AddActieComponent(fb, _service, _snackBar) {
+        var _this41 = this;
 
         _classCallCheck(this, AddActieComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.processenl = new Array();
         this.eventModel = new src_app_models_event_model__WEBPACK_IMPORTED_MODULE_3__["Event"](0, null, 0, "1", new Date());
         this.addEventForm = this.fb.group({
@@ -3116,18 +6298,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 proces.vat = vat;
               });
 
-              _this18.processenl.push(proces);
+              _this41.processenl.push(proces);
             }
           });
-          _this18.processen = _this18.makeObservable();
+          _this41.processen = _this41.makeObservable();
         });
 
         _service.getAllEventsoorten().subscribe(function (result) {
-          _this18.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          _this41.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
         });
       }
 
       _createClass(AddActieComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De actie is toegevoegd aan het proces!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
       }, {
@@ -3138,6 +6327,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          this.openSnackBar();
           this._service.addEvent(this.eventModel).subscribe;
         }
       }]);
@@ -3150,6 +6340,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -3181,7 +6373,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2FkZC1tZXRpbmcvYWRkLW1ldGluZy5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2FkZC1tZXRpbmcvYWRkLW1ldGluZy5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -3240,15 +6432,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var src_app_models_meting_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! src/app/models/meting.model */
     "./src/app/models/meting.model.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var AddMetingComponent =
     /*#__PURE__*/
     function () {
-      function AddMetingComponent(fb, _service) {
+      function AddMetingComponent(fb, _service, _snackBar) {
         _classCallCheck(this, AddMetingComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.processenl = new Array();
         this.metingModel = new src_app_models_meting_model__WEBPACK_IMPORTED_MODULE_5__["Meting"](0, null, null, null, null, new Date());
         this.addMetingForm = this.fb.group({
@@ -3262,25 +6461,32 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
 
       _createClass(AddMetingComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("De meting is toegevoegd aan het proces!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this19 = this;
+          var _this42 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this19._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this42._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this19.processenl.push(proces);
+                _this42.processenl.push(proces);
               }
             });
-            _this19.processen = _this19.makeObservable();
+            _this42.processen = _this42.makeObservable();
           });
 
           this._service.getAllMetingsoorten().subscribe(function (result) {
-            _this19.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
+            _this42.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
           });
         }
       }, {
@@ -3294,6 +6500,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          this.openSnackBar();
           this.metingModel.gebruikerId = "1";
           this._service.addMeting(this.metingModel).subscribe;
         }
@@ -3307,6 +6514,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]
       }];
     };
 
@@ -3338,7 +6547,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2Fmc2x1aXRlbi9hZnNsdWl0ZW4uY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2Fmc2x1aXRlbi9hZnNsdWl0ZW4uY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -3385,37 +6594,51 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var AfsluitenComponent =
     /*#__PURE__*/
     function () {
-      function AfsluitenComponent(_service) {
+      function AfsluitenComponent(_service, _snackBar) {
         _classCallCheck(this, AfsluitenComponent);
 
         this._service = _service;
+        this._snackBar = _snackBar;
         this.processenl = new Array();
         this.instantiateLists();
       }
 
       _createClass(AfsluitenComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("Het proces is afgesloten!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this20 = this;
+          var _this43 = this;
 
           this.processenl = new Array();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this20._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this43._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this20.processenl.push(proces);
+                _this43.processenl.push(proces);
               }
             });
-            _this20.processen = _this20.makeObservable();
-            console.log(_this20.processen);
+            _this43.processen = _this43.makeObservable();
+            console.log(_this43.processen);
           });
         }
       }, {
@@ -3429,17 +6652,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "Sluit",
         value: function Sluit(proces) {
-          var _this21 = this;
+          var _this44 = this;
 
+          this.openSnackBar();
           proces.actief = 0;
 
           this._service.updateProcess(proces).subscribe(function (result) {
-            proces.vat = _this21._service.getVatById(proces.vatId);
+            proces.vat = _this44._service.getVatById(proces.vatId);
             proces.vat.subscribe(function (result) {
               result.inGebruik = 0;
 
-              _this21._service.updateVat(result).subscribe(function (result) {
-                _this21.instantiateLists();
+              _this44._service.updateVat(result).subscribe(function (result) {
+                console.log(result);
+
+                _this44.instantiateLists();
               });
             });
           });
@@ -3452,6 +6678,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     AfsluitenComponent.ctorParameters = function () {
       return [{
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"]
       }];
     };
 
@@ -3483,7 +6711,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzLmNvbXBvbmVudC5jc3MifQ== */";
     /***/
   },
 
@@ -3548,50 +6776,93 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! src/app/models/alarm-data.model */
     "./src/app/models/alarm-data.model.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! src/app/models/vinificatie-druif.model */
+    "./src/app/models/vinificatie-druif.model.ts");
+    /* harmony import */
+
+
+    var src_app_models_wijn_type_model__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! src/app/models/wijn-type.model */
+    "./src/app/models/wijn-type.model.ts");
 
     var CreateProcessComponent =
     /*#__PURE__*/
     function () {
-      function CreateProcessComponent(fb, _service) {
+      function CreateProcessComponent(fb, _service, _snackBar) {
         _classCallCheck(this, CreateProcessComponent);
 
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.vatenl = new Array();
-        this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null);
+        this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null, null, null, 0);
+        this.druivenLijst = new Array();
+        this.wijntypes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])([new src_app_models_wijn_type_model__WEBPACK_IMPORTED_MODULE_9__["WijnType"](1, "rood"), new src_app_models_wijn_type_model__WEBPACK_IMPORTED_MODULE_9__["WijnType"](2, "rosé")]);
         this.createProcessForm = this.fb.group({
           vat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-          druif: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
           pers: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
           persHoeveelheid: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
           oogst: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-          bar: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+          bar: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          jaargang: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          wijntype: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
         this.instantiateLists();
       }
 
       _createClass(CreateProcessComponent, [{
+        key: "openSnackBar",
+        value: function openSnackBar() {
+          this._snackBar.open("Het proces is aangemaakt!", "Close", {
+            duration: 5000
+          });
+        }
+      }, {
+        key: "onChange",
+        value: function onChange(value) {
+          var index = this.druivenLijst.indexOf(value);
+
+          if (index == -1) {
+            this.druivenLijst.push(value);
+          } else {
+            this.druivenLijst.splice(index, 1);
+          }
+
+          console.log(this.druivenLijst);
+        }
+      }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this22 = this;
+          var _this45 = this;
 
+          this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null, null, null, 0);
           this.vatenl = new Array();
 
           this._service.getAllVaten().subscribe(function (result) {
             result.records.forEach(function (vat) {
               if (vat.inGebruik == 0) {
-                _this22.vatenl.push(vat);
+                _this45.vatenl.push(vat);
               }
             });
-            _this22.vaten = _this22.makeObservable();
+            _this45.vaten = _this45.makeObservable();
           });
 
           this._service.getAllDruifsoorten().subscribe(function (result) {
-            _this22.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this45.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
 
           this._service.getAllPersMethodes().subscribe(function (result) {
-            _this22.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this45.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
         }
       }, {
@@ -3605,38 +6876,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this23 = this;
+          var _this46 = this;
+
+          this.openSnackBar();
 
           this._service.addProces(this.procesModel).subscribe(function (result) {
-            _this23.procesModel.vat = _this23._service.getVatById(_this23.procesModel.vatId);
+            _this46.procesModel.vat = _this46._service.getVatById(_this46.procesModel.vatId);
 
-            _this23.procesModel.vat.subscribe(function (result) {
+            _this46.procesModel.vat.subscribe(function (result) {
               result.inGebruik = 1;
 
-              _this23._service.updateVat(result).subscribe(function (result) {
-                _this23._service.getLastProcess().subscribe(function (result) {
-                  console.log(result);
-                  var co = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 2, result.id, 15, 1, 1);
+              _this46._service.updateVat(result).subscribe(function (result) {
+                _this46.instantiateLists();
 
-                  _this23._service.addAlarmData(co);
+                _this46._service.getLastProcess().subscribe(function (result) {
+                  for (var i = 1; i < 6; i++) {
+                    _this46._service.addAlarmData(new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, i, result.id, 51, 1, 1)).subscribe();
+                  }
 
-                  var druk = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 4, result.id, 15, 1, 1);
-
-                  _this23._service.addAlarmData(druk);
-
-                  var temp = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 1, result.id, 15, 1, 1);
-
-                  _this23._service.addAlarmData(temp);
-
-                  var alc = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 3, result.id, 15, 1, 1);
-
-                  _this23._service.addAlarmData(alc);
-
-                  var troeb = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 5, result.id, 15, 1, 1);
-
-                  _this23._service.addAlarmData(troeb);
-
-                  _this23.instantiateLists();
+                  _this46.druivenLijst.forEach(function (el) {
+                    _this46._service.addVinificatieDruif(new src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__["VinificatieDruif"](result.id, el.id));
+                  });
                 });
               });
             });
@@ -3652,6 +6912,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }, {
         type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"]
       }];
     };
 
@@ -3683,7 +6945,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL3Byb2Nlc3MuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL3Byb2Nlc3MuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -3880,6 +7142,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _models_gebruiker_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../models/gebruiker.model */
+    "./src/app/models/gebruiker.model.ts");
 
     var baselink = "http://192.168.0.105/api/";
 
@@ -3889,7 +7157,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function ServicesService(http) {
         _classCallCheck(this, ServicesService);
 
-        this.http = http;
+        this.http = http; //gebruikers
+
+        this.isLoggedin = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
+        this.userSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](new _models_gebruiker_model__WEBPACK_IMPORTED_MODULE_4__["Gebruiker"](null, null, '', '', '', '', '', '', ''));
+        this.user = this.userSubject.asObservable();
+        this.isAdminSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
+        this.isAdmin = this.isAdminSubject.asObservable();
       } //Vinificatieprocessen
 
 
@@ -3897,6 +7171,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getAllProcessen",
         value: function getAllProcessen() {
           return this.http.get(baselink + "Vinificatie/read.php");
+        }
+      }, {
+        key: "getAllInactieveProcessen",
+        value: function getAllInactieveProcessen() {
+          return this.http.get(baselink + "Vinificatie/nietActief.php");
         }
       }, {
         key: "addProces",
@@ -3928,6 +7207,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getLastProcess",
         value: function getLastProcess() {
           return this.http.get(baselink + "Vinificatie/getLast.php");
+        }
+      }, {
+        key: "addVinificatieDruif",
+        value: function addVinificatieDruif(druif) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "VinificatieDruif/create.php", {
+            body: JSON.stringify(druif),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
+        }
+      }, {
+        key: "getProcesById",
+        value: function getProcesById(id) {
+          return this.http.get(baselink + "Vinificatie/read_one.php?id=" + id);
         } //Metingen
 
       }, {
@@ -3986,30 +7283,168 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             },
             method: 'PUT'
           }));
+        }
+      }, {
+        key: "addVat",
+        value: function addVat(vat) {
+          //return this.http.post<Event>(baselink + "", event);
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "Vat/create.php", {
+            body: JSON.stringify(vat),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
+        }
+      }, {
+        key: "deleteVat",
+        value: function deleteVat(item) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "Vat/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }));
         } //persmethodes
 
       }, {
         key: "getAllPersMethodes",
         value: function getAllPersMethodes() {
           return this.http.get(baselink + "PersMethode/read.php");
+        }
+      }, {
+        key: "getPersmethodeById",
+        value: function getPersmethodeById(id) {
+          return this.http.get(baselink + "Persmethode/read_one.php?id=" + id);
+        }
+      }, {
+        key: "addMethode",
+        value: function addMethode(methode) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "PersMethode/create.php", {
+            body: JSON.stringify(methode),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
+        }
+      }, {
+        key: "deletePersMethode",
+        value: function deletePersMethode(item) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "PersMethode/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }));
         } //druifsoorten
 
       }, {
         key: "getAllDruifsoorten",
         value: function getAllDruifsoorten() {
           return this.http.get(baselink + "DruifSoort/read.php");
+        }
+      }, {
+        key: "getAllDruifsoortenByVinificatieId",
+        value: function getAllDruifsoortenByVinificatieId(id) {
+          return this.http.get(baselink + "VinificatieDruif/getDruif.php?id=" + id);
+        }
+      }, {
+        key: "addDruifSoort",
+        value: function addDruifSoort(druif) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "DruifSoort/create.php", {
+            body: JSON.stringify(druif),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
+        }
+      }, {
+        key: "deleteDruifSoort",
+        value: function deleteDruifSoort(item) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "DruifSoort/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }));
         } //metingsoorten
 
       }, {
         key: "getAllMetingsoorten",
         value: function getAllMetingsoorten() {
           return this.http.get(baselink + "SoortMeting/read.php");
+        }
+      }, {
+        key: "addMetingSoort",
+        value: function addMetingSoort(meting) {
+          //return this.http.post<Event>(baselink + "", event);
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "SoortMeting/create.php", {
+            body: JSON.stringify(meting),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
+        }
+      }, {
+        key: "deleteSoortMeting",
+        value: function deleteSoortMeting(item) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "SoortMeting/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }));
         } //eventsoorten
 
       }, {
         key: "getAllEventsoorten",
         value: function getAllEventsoorten() {
           return this.http.get(baselink + "SoortEvent/read.php");
+        }
+      }, {
+        key: "deleteEventSoort",
+        value: function deleteEventSoort(item) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "SoortEvent/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }));
+        }
+      }, {
+        key: "addEventSoort",
+        value: function addEventSoort(event) {
+          //return this.http.post<Event>(baselink + "", event);
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "SoortEvent/create.php", {
+            body: JSON.stringify(event),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
         } //alarmdata
 
       }, {
@@ -4051,18 +7486,68 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             },
             method: 'PUT'
           }));
-        } //gebruikers
-
+        }
+      }, {
+        key: "setUser",
+        value: function setUser(user) {
+          this.userSubject.next(user);
+        }
+      }, {
+        key: "setIsAdmin",
+        value: function setIsAdmin(update) {
+          this.isAdminSubject.next(update);
+        }
       }, {
         key: "getAllGebruikers",
         value: function getAllGebruikers() {
           return this.http.get(baselink + "Gebruiker/read.php");
+        }
+      }, {
+        key: "addGebruiker",
+        value: function addGebruiker(gebruiker) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "Gebruiker/create.php", {
+            body: JSON.stringify(gebruiker),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'no-cors'
+          }));
+        }
+      }, {
+        key: "deleteGebruiker",
+        value: function deleteGebruiker(item) {
+          console.log(item);
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "Gebruiker/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }));
+        }
+      }, {
+        key: "Authenticate",
+        value: function Authenticate(userLogin) {
+          return this.http.get(baselink + "Gebruiker/GetLogin.php?email=" + userLogin.email + "&wachtwoord=" + userLogin.wachtwoord);
         } //alarmdatagebruikers
 
       }, {
         key: "getAllAlarmDataGebruikersByGebruiker",
         value: function getAllAlarmDataGebruikersByGebruiker(id) {
           return this.http.get(baselink + "AlarmDataGebruiker/getByGebruikerId.php?gebruikerId=" + id);
+        }
+      }, {
+        key: "getAllAlarmDataGebruikerByGebruiker",
+        value: function getAllAlarmDataGebruikerByGebruiker(id) {
+          return this.http.get(baselink + "AlarmDataGebruiker/getByAlarmData.php?gebruikerId=" + id);
+        }
+      }, {
+        key: "getAllAlarmDataGebruikers",
+        value: function getAllAlarmDataGebruikers() {
+          return this.http.get(baselink + "AlarmDataGebruiker/read.php");
         }
       }, {
         key: "addAlarmDataGebruiker",
@@ -4076,6 +7561,36 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             method: 'POST',
             mode: 'no-cors'
           }));
+        }
+      }, {
+        key: "deleteAlarmDataGebruiker",
+        value: function deleteAlarmDataGebruiker(item) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])( // wrap the fetch in a from if you need an rxjs Observable
+          fetch(baselink + "AlarmDataGebruiker/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }));
+        } //rollen
+
+      }, {
+        key: "getAllRollen",
+        value: function getAllRollen() {
+          return this.http.get(baselink + "Rol/read.php");
+        } //WijnTypes
+
+      }, {
+        key: "getAllWijnTypes",
+        value: function getAllWijnTypes() {
+          return this.http.get(baselink + "WijnType/read.php");
+        } //Materiaal
+
+      }, {
+        key: "getAllMaterialen",
+        value: function getAllMaterialen() {
+          return this.http.get(baselink + "Materiaal/read.php");
         }
       }]);
 
@@ -4167,6 +7682,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ng-pick-datetime */
     "./node_modules/ng-pick-datetime/picker.js");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
 
     var SharedModule = function SharedModule() {
       _classCallCheck(this, SharedModule);
@@ -4174,8 +7695,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [],
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__["FlexLayoutModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBadgeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"]],
-      exports: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__["FlexLayoutModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBadgeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"]]
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__["FlexLayoutModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBadgeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSortModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginatorModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBarModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbModule"]],
+      exports: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__["FlexLayoutModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBadgeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"], ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSortModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginatorModule"]]
     })], SharedModule);
     /***/
   },
@@ -4196,7 +7717,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLWRhc2hib2FyZC90b29uLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi90b29uLWRhc2hib2FyZC90b29uLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -4231,21 +7752,56 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/platform-browser */
+    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 
     var ToonDashboardComponent =
     /*#__PURE__*/
     function () {
-      function ToonDashboardComponent() {
+      function ToonDashboardComponent(route, router, sanitizer) {
         _classCallCheck(this, ToonDashboardComponent);
+
+        this.route = route;
+        this.router = router;
+        this.sanitizer = sanitizer;
+        this.id = 0;
       }
 
       _createClass(ToonDashboardComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this47 = this;
+
+          this.routeSub = this.route.params.subscribe(function (params) {
+            _this47.id = params['id'];
+            _this47.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=' + _this47.id;
+            console.log(_this47.id, _this47.iframe);
+          });
+        }
       }]);
 
       return ToonDashboardComponent;
     }();
+
+    ToonDashboardComponent.ctorParameters = function () {
+      return [{
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }, {
+        type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]
+      }];
+    };
 
     ToonDashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-toon-dashboard',
@@ -4336,7 +7892,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLWFjdGlldmUtdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = ".example-card {\r\n    max-width: 400px;\r\n  }\r\n  \r\n.flex-me {\r\n  display: -webkit-inline-box;\r\n  display: inline-flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n          flex-flow: row wrap;\r\n  background: grey;\r\n}\r\n  \r\n/* .example-header-image {\r\n    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\r\n    background-size: cover;\r\n  } */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMvdG9vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0VBQ2xCOztBQUVGO0VBQ0UsMkJBQW9CO0VBQXBCLG9CQUFvQjtFQUNwQiw4QkFBbUI7RUFBbkIsNkJBQW1CO1VBQW5CLG1CQUFtQjtFQUNuQixnQkFBZ0I7QUFDbEI7O0FBRUU7OztLQUdHIiwiZmlsZSI6Ii4uLy4uL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMvdG9vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtY2FyZCB7XHJcbiAgICBtYXgtd2lkdGg6IDQwMHB4O1xyXG4gIH1cclxuICBcclxuLmZsZXgtbWUge1xyXG4gIGRpc3BsYXk6IGlubGluZS1mbGV4O1xyXG4gIGZsZXgtZmxvdzogcm93IHdyYXA7XHJcbiAgYmFja2dyb3VuZDogZ3JleTtcclxufVxyXG5cclxuICAvKiAuZXhhbXBsZS1oZWFkZXItaW1hZ2Uge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdodHRwczovL21hdGVyaWFsLmFuZ3VsYXIuaW8vYXNzZXRzL2ltZy9leGFtcGxlcy9zaGliYTEuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gIH0gKi8iXX0= */";
     /***/
   },
 
@@ -4371,21 +7927,113 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/platform-browser */
+    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var ToonActieveVinificatiesComponent =
     /*#__PURE__*/
     function () {
-      function ToonActieveVinificatiesComponent() {
+      function ToonActieveVinificatiesComponent(fb, _service, sanitizer, router) {
         _classCallCheck(this, ToonActieveVinificatiesComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.sanitizer = sanitizer;
+        this.router = router;
+        this.processenl = new Array();
+        this.instantiateLists();
       }
 
       _createClass(ToonActieveVinificatiesComponent, [{
+        key: "instantiateLists",
+        value: function instantiateLists() {
+          var _this48 = this;
+
+          var druiflijst = new Array();
+
+          this._service.getAllProcessen().subscribe(function (result) {
+            result.records.forEach(function (proces) {
+              proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"]();
+
+              if (proces.actief == 1) {
+                _this48._service.getVatById(proces.vatId).subscribe(function (vat) {
+                  proces.vat = vat;
+                });
+
+                _this48._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
+                  proces.persmethode = persmethode;
+                });
+
+                _this48._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
+                  result.records.forEach(function (druifsoort) {
+                    console.log(druifsoort);
+                    druiflijst.push(druifsoort);
+                  });
+                  proces.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(druiflijst);
+                });
+
+                {
+                  proces.iframe = "http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&panelId=8&fullscreen&var-vat=" + proces.vatId;
+                }
+
+                _this48.processenl.push(proces);
+              }
+            });
+            _this48.processen = _this48.makeObservable();
+          });
+        }
+      }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "makeObservable",
+        value: function makeObservable() {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this.processenl);
+        }
       }]);
 
       return ToonActieveVinificatiesComponent;
     }();
+
+    ToonActieveVinificatiesComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+      }, {
+        type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]
+      }];
+    };
 
     ToonActieveVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-toon-actieve-vinificaties',
@@ -4415,7 +8063,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLWRldGFpbHMtdmluaWZpY2F0aWVzL3Rvb24tZGV0YWlscy12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi90b29uLXZpbmlmaWNhdGllcy90b29uLWRldGFpbHMtdmluaWZpY2F0aWVzL3Rvb24tZGV0YWlscy12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -4450,22 +8098,84 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var ToonDetailsVinificatiesComponent =
     /*#__PURE__*/
     function () {
-      function ToonDetailsVinificatiesComponent() {
+      function ToonDetailsVinificatiesComponent(fb, _service, route, router) {
         _classCallCheck(this, ToonDetailsVinificatiesComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.route = route;
+        this.router = router;
+        this.id = 0;
+        this.processenl = new Array();
+        this.displayedColumns = ['id', 'vatId', 'oogst', 'persHoeveelheid'];
+        this.process = _service.getVatById(this.id);
+        console.log(this.process);
       }
 
       _createClass(ToonDetailsVinificatiesComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this49 = this;
+
+          this.routeSub = this.route.params.subscribe(function (params) {
+            _this49.id = params['id'];
+            console.log(_this49.id);
+          });
+        }
+      }, {
+        key: "makeObservable",
+        value: function makeObservable() {}
       }]);
 
       return ToonDetailsVinificatiesComponent;
     }();
 
+    ToonDetailsVinificatiesComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
+      }];
+    };
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"], {
+      static: true
+    })], ToonDetailsVinificatiesComponent.prototype, "paginator", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"], {
+      static: true
+    })], ToonDetailsVinificatiesComponent.prototype, "sort", void 0);
     ToonDetailsVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-toon-details-vinificaties',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -4494,7 +8204,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLW5vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy90b29uLW5vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = "table {\r\n  width: 100%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tbm9uLWFjdGlldmUtdmluaWZpY2F0aWVzL3Rvb24tbm9uLWFjdGlldmUtdmluaWZpY2F0aWVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoiLi4vLi4vdG9vbi12aW5pZmljYXRpZXMvdG9vbi1ub24tYWN0aWV2ZS12aW5pZmljYXRpZXMvdG9vbi1ub24tYWN0aWV2ZS12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufSJdfQ== */";
     /***/
   },
 
@@ -4529,22 +8239,118 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/services.service */
+    "./src/app/services/services.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var ToonNonActieveVinificatiesComponent =
     /*#__PURE__*/
     function () {
-      function ToonNonActieveVinificatiesComponent() {
+      function ToonNonActieveVinificatiesComponent(fb, _service, router) {
         _classCallCheck(this, ToonNonActieveVinificatiesComponent);
+
+        this.fb = fb;
+        this._service = _service;
+        this.router = router;
+        this.processenl = new Array();
+        this.displayedColumns = ['id', 'vatId', 'oogst', 'persHoeveelheid'];
+        this.instantiateLists();
       }
 
       _createClass(ToonNonActieveVinificatiesComponent, [{
+        key: "instantiateLists",
+        value: function instantiateLists() {
+          var _this50 = this;
+
+          var druiflijst = new Array();
+
+          this._service.getAllProcessen().subscribe(function (result) {
+            result.records.forEach(function (proces) {
+              proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
+
+              if (proces.actief == 0) {
+                _this50._service.getVatById(proces.vatId).subscribe(function (vat) {
+                  proces.vat = vat;
+                });
+
+                _this50._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
+                  proces.persmethode = persmethode;
+                });
+
+                _this50._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
+                  result.records.forEach(function (druifsoort) {
+                    console.log(druifsoort);
+                    druiflijst.push(druifsoort);
+                  });
+                  proces.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(druiflijst);
+                });
+
+                _this50.processenl.push(proces);
+              }
+            });
+            _this50.processen = _this50.makeObservable();
+            _this50.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this50.processenl);
+            _this50.dataSource.paginator = _this50.paginator;
+            _this50.dataSource.sort = _this50.sort;
+            console.log(_this50.dataSource);
+          });
+        }
+      }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "makeObservable",
+        value: function makeObservable() {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(this.processenl);
+        }
       }]);
 
       return ToonNonActieveVinificatiesComponent;
     }();
 
+    ToonNonActieveVinificatiesComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }];
+    };
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_6__["MatPaginator"], {
+      static: true
+    })], ToonNonActieveVinificatiesComponent.prototype, "paginator", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSort"], {
+      static: true
+    })], ToonNonActieveVinificatiesComponent.prototype, "sort", void 0);
     ToonNonActieveVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-toon-non-actieve-vinificaties',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -4666,7 +8472,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Project 4.0\Frontend\CircuitFrontend\src\main.ts */
+    /*! C:\Angular\Frontend\CircuitFrontend\src\main.ts */
     "./src/main.ts");
     /***/
   }

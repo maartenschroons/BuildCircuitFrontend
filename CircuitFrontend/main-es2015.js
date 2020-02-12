@@ -23,6 +23,188 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/admin-overzicht.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/admin-overzicht.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alarmeringswaarden aanpassen</h1>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <app-druif-beheren></app-druif-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <app-event-beheren></app-event-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <app-methode-beheren></app-methode-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <app-meting-beheren></app-meting-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <app-vat-beheren></app-vat-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <app-gebruiker-beheren></app-gebruiker-beheren>\r\n    </mat-tab>\r\n</mat-tab-group>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.html":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.html ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alle druiven</h1>\r\n<ul>\r\n    <li *ngFor=\"let druif of (druiven | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{druif.druifsoort}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, druif)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(druif)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Druifsoort:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.html":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.html ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alle Events</h1>\r\n<ul>\r\n    <li *ngFor=\"let event of (events | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{event.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, event)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(event)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Event:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam event\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Event\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.html":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.html ***!
+  \********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alle Gebruikers</h1>\r\n<ul>\r\n    <li *ngFor=\"let gebruiker of (gebruikers | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, gebruiker)\">Edit</button>\r\n                </div>\r\n               \r\n                <div fxFlex=\"80%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Gebruiker:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"Model.voornaam\"\r\n                                formControlName=\"voornaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"Model.naam\"\r\n                                formControlName=\"achternaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n\r\n                    <div>\r\n                        <mat-form-field style=\"width:400px\">\r\n                            <input matInput placeholder=\"Email\" [(ngModel)]=\"Model.email\" formControlName=\"email\"\r\n                                type=\"text\" name=\"Email\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                    <div>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Telefoonnummer\" [(ngModel)]=\"Model.telefoonnummer\"\r\n                                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.html":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.html ***!
+  \****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alle methodes</h1>\r\n<ul>\r\n    <li *ngFor=\"let methode of (methodes | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{methode.methode}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, methode)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(methode)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Persmethode:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam persmethode\" [(ngModel)]=\"Model.methode\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"Methode\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.html":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.html ***!
+  \**************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alle Metingsoorten</h1>\r\n<ul>\r\n    <li *ngFor=\"let meting of (metingen | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{meting.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, meting)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(meting)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Soort meting:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam meting\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.html":
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.html ***!
+  \********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alle vaten</h1>\r\n<ul>\r\n    <li *ngFor=\"let vat of (vaten | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{vat.nummer}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, vat)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\" *ngIf=\"vat.inGebruik==0\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(vat)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"80%\" *ngIf=\"vat.inGebruik==1\">\r\n\r\n                </div>\r\n                <div fxFlex=\"75%\" *ngIf=\"vat.inGebruik==0\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Vat:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam event\" [(ngModel)]=\"Model.nummer\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Vat\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Save</button>\r\n        <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"modal.close('Save click')\">Close</button>\r\n    </div>\r\n</ng-template>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/admin-toevoegen.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/admin-toevoegen.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Alarmeringswaarden aanpassen</h1>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <app-druif-soort-toevoegen></app-druif-soort-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <app-event-toevoegen></app-event-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <app-methode-toevoegen></app-methode-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <app-meting-toevoegen></app-meting-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <app-vat-toevoegen></app-vat-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <app-gebruiker-toevoegen></app-gebruiker-toevoegen>\r\n    </mat-tab>\r\n</mat-tab-group>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.html":
+/*!****************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.html ***!
+  \****************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe druifsoort aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\" formControlName=\"naam\"\r\n                type=\"text\" name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!createDruifSoortForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.html":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.html ***!
+  \****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe event aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Eventbeschrijving\" [(ngModel)]=\"model.naam\" formControlName=\"naam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.html":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.html ***!
+  \************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe gebruiker aan</h1>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een rol</mat-label>\r\n            <mat-select formControlName=\"rol\" [(ngModel)]=\"model.rolId\">\r\n                <mat-option *ngFor=\"let rol of (rollen | async)\" [value]=\"rol.id\">\r\n                    {{rol.rolnaam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"model.voornaam\" formControlName=\"voornaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"model.naam\" formControlName=\"achternaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Email\" [(ngModel)]=\"model.email\" formControlName=\"email\" type=\"text\"\r\n                name=\"Email\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Telefoonnummer\" [(ngModel)]=\"model.telefoonnummer\"\r\n                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Wachtwoord\" [(ngModel)]=\"model.wachtwoord\" formControlName=\"wachtwoord\"\r\n                type=\"text\" name=\"Wachtwoord\" type=\"password\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Confirm Wachtwoord\" formControlName=\"wachtwoordc\" type=\"text\"\r\n                name=\"Wachtwoordc\" type=\"password\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.html":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.html ***!
+  \********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe persmethode aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Methode naam\" [(ngModel)]=\"model.methode\" formControlName=\"naam\" type=\"text\"\r\n                name=\"Methode\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.html":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.html ***!
+  \******************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe metingSoort aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Meting soort\" [(ngModel)]=\"model.naam\" formControlName=\"naam\" type=\"text\"\r\n                name=\"Methode\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.html":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.html ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe druifsoort aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Naam van het vat\" [(ngModel)]=\"model.nummer\" formControlName=\"naam\" type=\"text\"\r\n                name=\"VatNaam\" />\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Locatie van het vat\" [(ngModel)]=\"model.locatie\" formControlName=\"locatie\"\r\n                type=\"text\" name=\"VatNaam\" />\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Volume van het vat\" [(ngModel)]=\"model.volume\" formControlName=\"volume\"\r\n                type=\"text\" name=\"VatNaam\" />\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een rol</mat-label>\r\n            <mat-select formControlName=\"materiaal\" [(ngModel)]=\"model.materiaalId\">\r\n                <mat-option *ngFor=\"let materiaal of (materialen | async)\" [value]=\"materiaal.id\">\r\n                    {{materiaal.naam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"model.deksel\" formControlName=\"deksel\">Gesloten vat?\r\n        </mat-checkbox>\r\n    </section>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"model.koelmantel\" formControlName=\"koelmantel\">Koelmantel?\r\n        </mat-checkbox>\r\n    </section>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"model.mangat\" formControlName=\"mangat\">Mangat?</mat-checkbox>\r\n    </section>\r\n\r\n    <div>\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/alarmering-data.component.html":
 /*!*****************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/alarmering-data.component.html ***!
@@ -110,7 +292,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een gebruiker</mat-label>\r\n            <mat-select (selectionChange)=\"onSelect($event.value)\" formControlName=\"gebruiker\" [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n                <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                    {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" [(ngModel)]=\"proces\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>\r\n    <mat-form-field>\r\n        <mat-label>Kies een gebruiker</mat-label>\r\n        <mat-select (selectionChange)=\"onSelect($event.value)\" [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n            <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n            </mat-option>\r\n        </mat-select>\r\n    </mat-form-field>\r\n</p>\r\n<div>\r\n    <div>\r\n        Alarm\r\n        <div *ngFor=\"let proces of (processenSub | async)\">\r\n            {{proces.vat?.nummer}} <button (click)=\"delete(proces)\">Delete alarm</button>\r\n        </div>\r\n    </div>\r\n    <div>Geen alarm\r\n        <div *ngFor=\"let proces of (processenNot | async)\">\r\n            {{proces.vat?.nummer}}<button (click)=\"add(proces)\">Add alarm</button>\r\n        </div>\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -123,7 +305,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n\r\n                        <a mat-list-item routerLink=\"/\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <a mat-list-item routerLink=\"/createProcess\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                process</a>\r\n                        <a mat-list-item routerLink=\"/afsluiten\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een proces\r\n                                af</a>\r\n                        <a mat-list-item routerLink=\"/dashboard\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard 2</a>\r\n                        <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                Vinfi\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #vini=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/actief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Actieve vinificaties</button>\r\n                                <button mat-menu-item routerLink=\"/nonactief\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide vinificaties</button>\r\n                        </mat-menu>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                Data toevoegen aan een proces\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #menu=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/addMeting\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                        toe aan een proces</button>\r\n                                <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                        toe aan een proces</button>\r\n                        </mat-menu>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                Alarmering aanpassen\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #alarm=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/alarmdata\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                        alarmeringswaarden</button>\r\n                                <button mat-menu-item routerLink=\"/alarmpersonen\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                        alarmeringspersonen</button>\r\n                        </mat-menu>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <div>\r\n                                <a mat-list-item routerLink=\"/createProcess\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        process</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een proces\r\n                                        af</a>\r\n                                <a mat-list-item routerLink=\"/dashboard\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard 1</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinfi\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/actief\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button mat-menu-item routerLink=\"/nonactief\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/addMeting\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n\r\n                                <!-- <div *ngIf=\"admin\">\r\n                                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                                Admin Data\r\n                                                <mat-icon>expand_more</mat-icon>\r\n                                        </a>\r\n                                        <mat-menu #admin=\"matMenu\">\r\n                                                <button mat-menu-item routerLink=\"/adminToevoegen\"\r\n                                                        routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        toevoegen</button>\r\n                                                <button mat-menu-item routerLink=\"/adminEdit\" routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        beheren</button>\r\n                                        </mat-menu>\r\n                                </div> -->\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n\r\n                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                Admin Data\r\n                                <mat-icon>expand_more</mat-icon>\r\n                        </a>\r\n                        <mat-menu #admin=\"matMenu\">\r\n                                <button mat-menu-item routerLink=\"/adminToevoegen\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                        toevoegen</button>\r\n                                <button mat-menu-item routerLink=\"/adminEdit\" routerLinkActive=\"active\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                        beheren</button>\r\n                        </mat-menu>\r\n\r\n\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>");
 
 /***/ }),
 
@@ -137,6 +319,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<h1>Vinificatie Monitoring</h1>\r\n<h2>Home pagina</h2>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"login-card\">\r\n    <mat-card-title class=\"login-card-title\">Login to continue</mat-card-title>\r\n\r\n    <form (ngSubmit)=\"onSubmit()\">\r\n\r\n        <div class=\"login-container\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Email\" type=\"email\" name=\"email\" [(ngModel)]=\"login.email\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Password\" type=\"password\" name=\"password\"\r\n                        [(ngModel)]=\"login.wachtwoord\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n\r\n            <mat-card-actions>\r\n                <div>\r\n                    <button mat-raised-button color=\"primary\" class=\"login-card-button\" type=\"submit\">Login</button>\r\n                </div>\r\n\r\n            </mat-card-actions>\r\n\r\n        </div>\r\n    </form>\r\n</mat-card>");
 
 /***/ }),
 
@@ -188,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Start een nieuw proces</h1>\r\n    <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n        <div fxFlex=\"20%\">\r\n          <p> \r\n             <mat-form-field>\r\n                    <mat-label>Kies een vat</mat-label>\r\n                    <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                        <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                            {{vat.nummer}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field> \r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een druifsoort</mat-label>\r\n                    <mat-select formControlName=\"druif\" >\r\n                        <mat-option *ngFor=\"let druif of (druiven| async)\" [value]=\"druif.id\">\r\n                            {{druif.druifsoort}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een persmethode</mat-label>\r\n                    <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                        <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                            {{pers.methode}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p> \r\n        </div>\r\n        <div fxFlex=\"20%\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\" formControlName=\"persHoeveelheid\" type=\"text\"\r\n                        name=\"persHoeveelheid\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\" [(ngModel)]=\"procesModel.oogst\"/>\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\" [(ngModel)]=\"procesModel.persDruk\"/>\r\n                </mat-form-field>\r\n            </p>\r\n        </div>\r\n        <div fxFlex=\"60%\">\r\n\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n        <p class=\"ml-4\">\r\n            <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\"\r\n                type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n\r\n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Start een nieuw proces</h1>\r\n    <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n        <div fxFlex=\"20%\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een vat</mat-label>\r\n                    <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                        <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                            {{vat.nummer}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <div class=\"form-group\">\r\n                <label for=\"options\">Options :</label>\r\n                <label *ngFor=\"let druif of (druiven| async)\" class=\"form-control\">\r\n                    <input type=\"checkbox\" name=\"options\" value=\"option\" (change)=\"onChange(druif)\" />\r\n                    {{druif.druifsoort}}\r\n                </label>\r\n            </div>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een persmethode</mat-label>\r\n                    <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                        <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                            {{pers.methode}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n        </div>\r\n        <div fxFlex=\"20%\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\"\r\n                        formControlName=\"persHoeveelheid\" type=\"text\" name=\"persHoeveelheid\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\"\r\n                        [(ngModel)]=\"procesModel.oogst\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\"\r\n                        [(ngModel)]=\"procesModel.persDruk\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Jaargang\" formControlName=\"jaargang\" type=\"text\" name=\"jaargang\"\r\n                        [(ngModel)]=\"procesModel.jaargang\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <mat-form-field>\r\n                <mat-label>Kies het wijntype</mat-label>\r\n                <mat-select formControlName=\"wijntype\" [(ngModel)]=\"procesModel.wijnTypeId\">\r\n                    <mat-option *ngFor=\"let wijntype of (wijntypes | async)\" [value]=\"wijntype.id\">\r\n                        {{wijntype.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n        </div>\r\n\r\n        <div fxFlex=\"60%\">\r\n\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n        <p class=\"ml-4\">\r\n            <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\"\r\n                type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n\r\n</form>");
 
 /***/ }),
 
@@ -214,7 +409,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<iframe src=\"http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=2\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(iframe)' width=\"100%\" height=\"98%\"></iframe>\r\n");
 
 /***/ }),
 
@@ -227,7 +422,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>toon-actieve-vinificaties works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-grid-list cols=\"3\">\r\n    <div *ngFor=\"let p of (processen | async)\">\r\n        <mat-grid-tile>          \r\n            <mat-card class=\"example-card\">\r\n                <mat-card-header>\r\n                <!-- <div mat-card-avatar class=\"example-header-image\"></div> -->\r\n                <mat-card-title>{{p.vat?.nummer}}</mat-card-title>\r\n                <mat-card-subtitle>Vinificatie {{p.id}}</mat-card-subtitle>\r\n                </mat-card-header>\r\n                <!-- <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"> -->\r\n                <iframe mat-card-image [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <ul>                    \r\n                    <li>Oogst: {{p.oogst}}Kg</li>\r\n                    <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    <li>Persmethode: {{p.persmethode?.methode}}</li>\r\n                    <!-- <li *ngFor=\"let d of (p.druif | async)\">{{d.druifsoort}}</li> -->\r\n                </ul>\r\n                <mat-card-content>\r\n                <p>\r\n                </p>\r\n                </mat-card-content>\r\n                <mat-card-actions>\r\n                <!-- <button mat-button >DASHBOARD</button> -->\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" >Dashboard</a>\r\n                <!-- <button mat-button>DETAILS</button> -->\r\n                </mat-card-actions>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </div>\r\n</mat-grid-list>");
 
 /***/ }),
 
@@ -253,7 +448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>toon-non-actieve-vinificaties works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n\r\n    <h1 class=\"header\">Voltooide vinificatieprocessen</h1>\r\n\r\n    <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n        <!-- vinificatienummer Column -->\r\n        <ng-container matColumnDef=\"id\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vinificatienummer </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> <a [routerLink]=\"['/detail/' + (proces.id)]\" >Vinificatie {{proces.id}}</a></td>\r\n        </ng-container>\r\n    \r\n        <!-- vat Column -->\r\n        <ng-container matColumnDef=\"vatId\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vat </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.vat?.nummer}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- oogst Column -->\r\n        <ng-container matColumnDef=\"oogst\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Oogst </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.oogst}} Kg </td>\r\n        </ng-container>\r\n    \r\n        <!-- pershoeveelheid Column -->\r\n        <ng-container matColumnDef=\"persHoeveelheid\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Pershoeveelheid </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.persHoeveelheid}} L </td>\r\n        </ng-container>\r\n\r\n\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    </table>\r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n</div>");
 
 /***/ }),
 
@@ -486,6 +681,1136 @@ function __importDefault(mod) {
 
 /***/ }),
 
+/***/ "./src/app/admin/admin-overzicht/admin-overzicht.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/admin-overzicht.component.css ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvYWRtaW4tb3ZlcnppY2h0LmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/admin-overzicht.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/admin-overzicht.component.ts ***!
+  \********************************************************************/
+/*! exports provided: AdminOverzichtComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminOverzichtComponent", function() { return AdminOverzichtComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AdminOverzichtComponent = class AdminOverzichtComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+AdminOverzichtComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-admin-overzicht',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./admin-overzicht.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/admin-overzicht.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./admin-overzicht.component.css */ "./src/app/admin/admin-overzicht/admin-overzicht.component.css")).default]
+    })
+], AdminOverzichtComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.css":
+/*!*********************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.css ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("button{\r\n    padding: 3;\r\n    margin: 1;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2FkbWluLW92ZXJ6aWNodC9kcnVpZi1iZWhlcmVuL2RydWlmLWJlaGVyZW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7SUFDVixTQUFTO0FBQ2IiLCJmaWxlIjoiLi4vYWRtaW4tb3ZlcnppY2h0L2RydWlmLWJlaGVyZW4vZHJ1aWYtYmVoZXJlbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYnV0dG9ue1xyXG4gICAgcGFkZGluZzogMztcclxuICAgIG1hcmdpbjogMTtcclxufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: DruifBeherenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DruifBeherenComponent", function() { return DruifBeherenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+
+
+
+
+
+
+let DruifBeherenComponent = class DruifBeherenComponent {
+    constructor(fb, _service, modalService) {
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createDruifSoortForm = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+    }
+    InstantiateLists() {
+        this._service.getAllDruifsoorten().subscribe(result => {
+            this.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
+            console.log(result);
+        });
+    }
+    ngOnInit() {
+    }
+    Delete(druif) {
+        this._service.deleteDruifSoort(druif).subscribe(result => { this.InstantiateLists(); });
+    }
+    open(content, druif) {
+        this.druifModel = druif;
+        console.log(this.druifModel);
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+DruifBeherenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"] }
+];
+DruifBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-druif-beheren',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./druif-beheren.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./druif-beheren.component.css */ "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.css")).default]
+    })
+], DruifBeherenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.css":
+/*!*********************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.css ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvZXZlbnQtYmVoZXJlbi9ldmVudC1iZWhlcmVuLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: EventBeherenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventBeherenComponent", function() { return EventBeherenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+
+
+
+let EventBeherenComponent = class EventBeherenComponent {
+    constructor(fb, _service, modalService) {
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+    }
+    InstantiateLists() {
+        this._service.getAllEventsoorten().subscribe(result => {
+            this.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+        });
+    }
+    ngOnInit() {
+    }
+    Delete(event) {
+        this._service.deleteEventSoort(event).subscribe(result => { this.InstantiateLists(); });
+    }
+    open(content, event) {
+        this.Model = event;
+        console.log(this.Model);
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+EventBeherenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"] }
+];
+EventBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-event-beheren',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./event-beheren.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./event-beheren.component.css */ "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.css")).default]
+    })
+], EventBeherenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.css":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.css ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvZ2VicnVpa2VyLWJlaGVyZW4vZ2VicnVpa2VyLWJlaGVyZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.ts ***!
+  \****************************************************************************************/
+/*! exports provided: GebruikerBeherenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GebruikerBeherenComponent", function() { return GebruikerBeherenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+
+
+
+let GebruikerBeherenComponent = class GebruikerBeherenComponent {
+    constructor(fb, _service, modalService) {
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+            voornaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            achternaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            telefoonnummer: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+    }
+    InstantiateLists() {
+        this._service.getAllGebruikers().subscribe(result => {
+            this.gebruikers = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+        });
+    }
+    ngOnInit() {
+    }
+    open(content, gebruiker) {
+        this.Model = gebruiker;
+        console.log(this.Model);
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+GebruikerBeherenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"] }
+];
+GebruikerBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-gebruiker-beheren',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./gebruiker-beheren.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./gebruiker-beheren.component.css */ "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.css")).default]
+    })
+], GebruikerBeherenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.css":
+/*!*************************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.css ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvbWV0aG9kZS1iZWhlcmVuL21ldGhvZGUtYmVoZXJlbi5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: MethodeBeherenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MethodeBeherenComponent", function() { return MethodeBeherenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+
+
+
+let MethodeBeherenComponent = class MethodeBeherenComponent {
+    constructor(fb, _service, modalService) {
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+    }
+    InstantiateLists() {
+        this._service.getAllPersMethodes().subscribe(result => {
+            this.methodes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+        });
+    }
+    ngOnInit() {
+    }
+    Delete(methode) {
+        this._service.deletePersMethode(methode).subscribe(result => { this.InstantiateLists(); });
+    }
+    open(content, methode) {
+        this.Model = methode;
+        console.log(this.Model);
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+MethodeBeherenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"] }
+];
+MethodeBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-methode-beheren',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./methode-beheren.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./methode-beheren.component.css */ "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.css")).default]
+    })
+], MethodeBeherenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.css":
+/*!***********************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.css ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvbWV0aW5nLWJlaGVyZW4vbWV0aW5nLWJlaGVyZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: MetingBeherenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MetingBeherenComponent", function() { return MetingBeherenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+
+
+
+let MetingBeherenComponent = class MetingBeherenComponent {
+    constructor(fb, _service, modalService) {
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+    }
+    InstantiateLists() {
+        this._service.getAllMetingsoorten().subscribe(result => {
+            this.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+        });
+    }
+    ngOnInit() {
+    }
+    Delete(meting) {
+        this._service.deleteSoortMeting(meting).subscribe(result => { this.InstantiateLists(); });
+    }
+    open(content, meting) {
+        this.Model = meting;
+        console.log(this.Model);
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+MetingBeherenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"] }
+];
+MetingBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-meting-beheren',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./meting-beheren.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./meting-beheren.component.css */ "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.css")).default]
+    })
+], MetingBeherenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.css":
+/*!*****************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.css ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hZG1pbi1vdmVyemljaHQvdmF0LWJlaGVyZW4vdmF0LWJlaGVyZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.ts ***!
+  \****************************************************************************/
+/*! exports provided: VatBeherenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VatBeherenComponent", function() { return VatBeherenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+
+
+
+let VatBeherenComponent = class VatBeherenComponent {
+    constructor(fb, _service, modalService) {
+        this.fb = fb;
+        this._service = _service;
+        this.modalService = modalService;
+        this.createForm = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            locatie: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            volume: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            deksel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            koelmantel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            mangat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            materiaal: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.InstantiateLists();
+    }
+    InstantiateLists() {
+        this._service.getAllVaten().subscribe(result => {
+            this.vaten = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+        });
+    }
+    ngOnInit() {
+    }
+    Delete(vat) {
+        this._service.deleteVat(vat).subscribe(result => { this.InstantiateLists(); });
+    }
+    open(content, vat) {
+        this.Model = vat;
+        console.log(this.Model);
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+VatBeherenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"] }
+];
+VatBeherenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-vat-beheren',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./vat-beheren.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./vat-beheren.component.css */ "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.css")).default]
+    })
+], VatBeherenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/admin-toevoegen.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/admin-toevoegen.component.css ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/admin-toevoegen.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/admin-toevoegen.component.ts ***!
+  \********************************************************************/
+/*! exports provided: AdminToevoegenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminToevoegenComponent", function() { return AdminToevoegenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AdminToevoegenComponent = class AdminToevoegenComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+AdminToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-admin-toevoegen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./admin-toevoegen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/admin-toevoegen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./admin-toevoegen.component.css */ "./src/app/admin/admin-toevoegen/admin-toevoegen.component.css")).default]
+    })
+], AdminToevoegenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.css":
+/*!*************************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.css ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkcnVpZi1zb29ydC10b2V2b2VnZW4vZHJ1aWYtc29vcnQtdG9ldm9lZ2VuLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.ts":
+/*!************************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.ts ***!
+  \************************************************************************************************/
+/*! exports provided: DruifSoortToevoegenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DruifSoortToevoegenComponent", function() { return DruifSoortToevoegenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_models_druif_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/druif.model */ "./src/app/models/druif.model.ts");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+let DruifSoortToevoegenComponent = class DruifSoortToevoegenComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.druifModel = new src_app_models_druif_model__WEBPACK_IMPORTED_MODULE_3__["Druif"](0, "");
+        this.createDruifSoortForm = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    }
+    openSnackBar() {
+        this._snackBar.open("De druifsoort is aangemaakt!", "Close", {
+            duration: 5000,
+        });
+    }
+    ngOnInit() {
+    }
+    onSubmit() {
+        this.openSnackBar();
+        this._service.addDruifSoort(this.druifModel).subscribe();
+    }
+};
+DruifSoortToevoegenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
+];
+DruifSoortToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-druif-soort-toevoegen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./druif-soort-toevoegen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./druif-soort-toevoegen.component.css */ "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.css")).default]
+    })
+], DruifSoortToevoegenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.css":
+/*!*************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.css ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJldmVudC10b2V2b2VnZW4vZXZlbnQtdG9ldm9lZ2VuLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: EventToevoegenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventToevoegenComponent", function() { return EventToevoegenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var src_app_models_soort_event_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/soort-event.model */ "./src/app/models/soort-event.model.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+let EventToevoegenComponent = class EventToevoegenComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_soort_event_model__WEBPACK_IMPORTED_MODULE_4__["SoortEvent"](0, "");
+        this.Form = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    }
+    openSnackBar() {
+        this._snackBar.open("Het soort event is aangemaakt!", "Close", {
+            duration: 5000,
+        });
+    }
+    ngOnInit() {
+    }
+    onSubmit() {
+        this.openSnackBar();
+        this._service.addEventSoort(this.model).subscribe();
+    }
+};
+EventToevoegenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
+];
+EventToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-event-toevoegen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./event-toevoegen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./event-toevoegen.component.css */ "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.css")).default]
+    })
+], EventToevoegenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.css":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.css ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJnZWJydWlrZXItdG9ldm9lZ2VuL2dlYnJ1aWtlci10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.ts":
+/*!********************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.ts ***!
+  \********************************************************************************************/
+/*! exports provided: GebruikerToevoegenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GebruikerToevoegenComponent", function() { return GebruikerToevoegenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_models_gebruiker_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/models/gebruiker.model */ "./src/app/models/gebruiker.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+
+let GebruikerToevoegenComponent = class GebruikerToevoegenComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_gebruiker_model__WEBPACK_IMPORTED_MODULE_2__["Gebruiker"](0, 0, "", "", "j", "", "", "", "");
+        this.rollen = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
+        this.Form = this.fb.group({
+            voornaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            achternaam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            telefoonnummer: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            wachtwoord: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            wachtwoordc: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            rol: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        }, { validator: this.matchingPasswords('wachtwoord', 'wachtwoordc') });
+        this.InstantiateLists();
+    }
+    matchingPasswords(passwordKey, passwordConfirmationKey) {
+        return (group) => {
+            let passwordInput = group.controls[passwordKey];
+            let passwordConfirmationInput = group.controls[passwordConfirmationKey];
+            if (passwordInput.value !== passwordConfirmationInput.value) {
+                return passwordConfirmationInput.setErrors({ notEquivalent: true });
+            }
+            else {
+                passwordConfirmationInput.setErrors(passwordConfirmationInput.validator(passwordConfirmationInput));
+            }
+        };
+    }
+    openSnackBar() {
+        this._snackBar.open("De gebruiker is aangemaakt!", "Close", {
+            duration: 5000,
+        });
+    }
+    InstantiateLists() {
+        this._service.getAllRollen().subscribe(result => {
+            this.rollen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+        });
+    }
+    ngOnInit() {
+    }
+    onSubmit() {
+        this.openSnackBar();
+        this._service.addGebruiker(this.model).subscribe();
+    }
+};
+GebruikerToevoegenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+];
+GebruikerToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-gebruiker-toevoegen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./gebruiker-toevoegen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./gebruiker-toevoegen.component.css */ "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.css")).default]
+    })
+], GebruikerToevoegenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.css":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.css ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtZXRob2RlLXRvZXZvZWdlbi9tZXRob2RlLXRvZXZvZWdlbi5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.ts ***!
+  \****************************************************************************************/
+/*! exports provided: MethodeToevoegenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MethodeToevoegenComponent", function() { return MethodeToevoegenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_models_persmethode_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/models/persmethode.model */ "./src/app/models/persmethode.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+let MethodeToevoegenComponent = class MethodeToevoegenComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_persmethode_model__WEBPACK_IMPORTED_MODULE_2__["Persmethode"](0, "");
+        this.Form = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    }
+    openSnackBar() {
+        this._snackBar.open("De persmethode is aangemaakt!", "Close", {
+            duration: 5000,
+        });
+    }
+    ngOnInit() {
+    }
+    onSubmit() {
+        this.openSnackBar();
+        this._service.addMethode(this.model).subscribe();
+    }
+};
+MethodeToevoegenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
+];
+MethodeToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-methode-toevoegen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./methode-toevoegen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./methode-toevoegen.component.css */ "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.css")).default]
+    })
+], MethodeToevoegenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.css":
+/*!***************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.css ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtZXRpbmctdG9ldm9lZ2VuL21ldGluZy10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.ts":
+/*!**************************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.ts ***!
+  \**************************************************************************************/
+/*! exports provided: MetingToevoegenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MetingToevoegenComponent", function() { return MetingToevoegenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_models_soort_meting_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/models/soort-meting.model */ "./src/app/models/soort-meting.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+let MetingToevoegenComponent = class MetingToevoegenComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_soort_meting_model__WEBPACK_IMPORTED_MODULE_2__["SoortMeting"](0, "");
+        this.Form = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    }
+    openSnackBar() {
+        this._snackBar.open("De soort meting is aangemaakt!", "Close", {
+            duration: 5000,
+        });
+    }
+    ngOnInit() {
+    }
+    onSubmit() {
+        this.openSnackBar();
+        this._service.addMetingSoort(this.model).subscribe();
+    }
+};
+MetingToevoegenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
+];
+MetingToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-meting-toevoegen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./meting-toevoegen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./meting-toevoegen.component.css */ "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.css")).default]
+    })
+], MetingToevoegenComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.css":
+/*!*********************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.css ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2YXQtdG9ldm9lZ2VuL3ZhdC10b2V2b2VnZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: VatToevoegenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VatToevoegenComponent", function() { return VatToevoegenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_models_vat_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/models/vat.model */ "./src/app/models/vat.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+let VatToevoegenComponent = class VatToevoegenComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.model = new src_app_models_vat_model__WEBPACK_IMPORTED_MODULE_2__["Vat"](0, "", 0, 1, "", 0, false, false, false, 0);
+        this.Form = this.fb.group({
+            naam: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            locatie: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            volume: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            deksel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            koelmantel: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            mangat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            materiaal: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    }
+    openSnackBar() {
+        this._snackBar.open("Het vat is aangemaakt!", "Close", {
+            duration: 5000,
+        });
+    }
+    ngOnInit() {
+    }
+    onSubmit() {
+        this.openSnackBar();
+        this._service.addVat(this.model).subscribe();
+    }
+};
+VatToevoegenComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
+];
+VatToevoegenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-vat-toevoegen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./vat-toevoegen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./vat-toevoegen.component.css */ "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.css")).default]
+    })
+], VatToevoegenComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/alarmering/alarmering-data/alarmering-data.component.css":
 /*!**************************************************************************!*\
   !*** ./src/app/alarmering/alarmering-data/alarmering-data.component.css ***!
@@ -495,7 +1820,7 @@ function __importDefault(mod) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9hbGFybWVyaW5nLWRhdGEuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9hbGFybWVyaW5nLWRhdGEuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -539,7 +1864,7 @@ AlarmeringDataComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9jby9jby5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9jby9jby5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -559,6 +1884,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
@@ -566,9 +1893,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let CoComponent = class CoComponent {
-    constructor(fb, _service) {
+    constructor(fb, _service, _snackBar) {
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_5__["AlarmData"](null, null, null, null, null, 0);
         this.checked = false;
         this.alarmForm = this.fb.group({
@@ -589,279 +1917,17 @@ let CoComponent = class CoComponent {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required
             ]
         });
-        // ,{ validator: this.greaterThan('minimum', 'maximum') });
         this.processenl = new Array();
         this.instantiateLists();
     }
-    instantiateLists() {
-        this._service.getAllProcessen().subscribe(result => {
-            result.records.forEach(proces => {
-                if (proces.actief == 1) {
-                    this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
-                    this.processenl.push(proces);
-                }
-            });
-            this.processen = this.makeObservable();
+    // ,{ validator: this.greaterThan('minimum', 'maximum') });
+    openSnackBar() {
+        this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000,
         });
-    }
-    // greaterThan(minimumKey: string, maximumKey: string) {
-    //   return (group: FormGroup) => {
-    //     let minimum = group.controls[minimumKey];
-    //     let maximum = group.controls[maximumKey];
-    //     if (minimum.value > maximum.value) {
-    //       return minimum.setErrors({ notEquivalent: true })
-    //     }
-    //     else {
-    //       minimum.setErrors(minimum.validator(minimum))
-    //     }
-    //   }
-    // }
-    makeObservable() {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this.processenl);
-    }
-    ngOnInit() {
-        this.alarmForm.get('disable').valueChanges.subscribe(v => {
-            if (v) {
-                this.alarmForm.get('minimum').disable();
-                this.alarmForm.get('maximum').disable();
-                this.checked = true;
-            }
-            else {
-                this.alarmForm.get('minimum').enable();
-                this.alarmForm.get('maximum').enable();
-                this.checked = false;
-            }
-        });
-    }
-    onSelect(procesId) {
-        this._service.getAlarmDataByVinAndSoort(procesId, 2).subscribe(result => {
-            this.alarmdataModel = result;
-        });
-    }
-    onSubmit() {
-        if (this.checked) {
-            this.alarmdataModel.actief = 0;
-        }
-        else {
-            this.alarmdataModel.actief = 1;
-        }
-        this._service.updateAlarmData(this.alarmdataModel);
-    }
-};
-CoComponent.ctorParameters = () => [
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] }
-];
-CoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-co',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./co.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/co/co.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./co.component.css */ "./src/app/alarmering/alarmering-data/co/co.component.css")).default]
-    })
-], CoComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/alarmering/alarmering-data/druk/druk.component.css":
-/*!********************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/druk/druk.component.css ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9kcnVrL2RydWsuY29tcG9uZW50LmNzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/alarmering/alarmering-data/druk/druk.component.ts":
-/*!*******************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/druk/druk.component.ts ***!
-  \*******************************************************************/
-/*! exports provided: DrukComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DrukComponent", function() { return DrukComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-
-
-
-
-
-
-let DrukComponent = class DrukComponent {
-    constructor(fb, _service) {
-        this.fb = fb;
-        this._service = _service;
-        this.checked = false;
-        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
-        this.alarmForm = this.fb.group({
-            disable: [],
-            proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-            minimum: [
-                {
-                    value: '',
-                    disabled: false
-                },
-                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
-            ],
-            maximum: [
-                {
-                    value: '',
-                    disabled: false
-                },
-                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
-            ]
-        });
-        // ,{ validator: this.greaterThan('minimum', 'maximum') });
-        this.processenl = new Array();
-        this.instantiateLists();
     }
     instantiateLists() {
-        this._service.getAllProcessen().subscribe(result => {
-            result.records.forEach(proces => {
-                if (proces.actief == 1) {
-                    this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
-                    this.processenl.push(proces);
-                }
-            });
-            this.processen = this.makeObservable();
-        });
-    }
-    // greaterThan(minimumKey: string, maximumKey: string) {
-    //   return (group: FormGroup) => {
-    //     let minimum = group.controls[minimumKey];
-    //     let maximum = group.controls[maximumKey];
-    //     if (minimum.value > maximum.value) {
-    //       return minimum.setErrors({ notEquivalent: true })
-    //     }
-    //     else {
-    //       minimum.setErrors(minimum.validator(minimum))
-    //     }
-    //   }
-    // }
-    makeObservable() {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this.processenl);
-    }
-    ngOnInit() {
-        this.alarmForm.get('disable').valueChanges.subscribe(v => {
-            if (v) {
-                this.alarmForm.get('minimum').disable();
-                this.alarmForm.get('maximum').disable();
-                this.checked = true;
-            }
-            else {
-                this.alarmForm.get('minimum').enable();
-                this.alarmForm.get('maximum').enable();
-                this.checked = false;
-            }
-        });
-    }
-    onSelect(procesId) {
-        this._service.getAlarmDataByVinAndSoort(procesId, 4).subscribe(result => {
-            this.alarmdataModel = result;
-        });
-    }
-    onSubmit() {
-        if (this.checked) {
-            this.alarmdataModel.actief = 0;
-        }
-        else {
-            this.alarmdataModel.actief = 1;
-        }
-        this._service.updateAlarmData(this.alarmdataModel);
-    }
-};
-DrukComponent.ctorParameters = () => [
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] }
-];
-DrukComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-druk',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./druk.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/druk/druk.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./druk.component.css */ "./src/app/alarmering/alarmering-data/druk/druk.component.css")).default]
-    })
-], DrukComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/alarmering/alarmering-data/ethanol/ethanol.component.css":
-/*!**************************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/ethanol/ethanol.component.css ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9ldGhhbm9sL2V0aGFub2wuY29tcG9uZW50LmNzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/alarmering/alarmering-data/ethanol/ethanol.component.ts":
-/*!*************************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/ethanol/ethanol.component.ts ***!
-  \*************************************************************************/
-/*! exports provided: EthanolComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EthanolComponent", function() { return EthanolComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-
-
-
-
-
-
-let EthanolComponent = class EthanolComponent {
-    constructor(fb, _service) {
-        this.fb = fb;
-        this._service = _service;
-        this.checked = false;
-        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
-        this.alarmForm = this.fb.group({
-            disable: [],
-            proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
-            minimum: [
-                {
-                    value: '',
-                    disabled: false
-                },
-                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
-            ],
-            maximum: [
-                {
-                    value: '',
-                    disabled: false
-                },
-                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
-            ]
-        });
-        // ,{ validator: this.greaterThan('minimum', 'maximum') });
-        this.processenl = new Array();
-        this.instantiateLists();
-    }
-    instantiateLists() {
+        this.openSnackBar();
         this._service.getAllProcessen().subscribe(result => {
             result.records.forEach(proces => {
                 if (proces.actief == 1) {
@@ -913,64 +1979,71 @@ let EthanolComponent = class EthanolComponent {
         else {
             this.alarmdataModel.actief = 1;
         }
+        if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
+        }
         this._service.updateAlarmData(this.alarmdataModel);
     }
 };
-EthanolComponent.ctorParameters = () => [
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] }
+CoComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
 ];
-EthanolComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+CoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-ethanol',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./ethanol.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/ethanol/ethanol.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./ethanol.component.css */ "./src/app/alarmering/alarmering-data/ethanol/ethanol.component.css")).default]
+        selector: 'app-co',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./co.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/co/co.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./co.component.css */ "./src/app/alarmering/alarmering-data/co/co.component.css")).default]
     })
-], EthanolComponent);
+], CoComponent);
 
 
 
 /***/ }),
 
-/***/ "./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.css":
-/*!**********************************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.css ***!
-  \**********************************************************************************/
+/***/ "./src/app/alarmering/alarmering-data/druk/druk.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/druk/druk.component.css ***!
+  \********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90ZW1wZXJhdHV1ci90ZW1wZXJhdHV1ci5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9kcnVrL2RydWsuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
-/***/ "./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.ts":
-/*!*********************************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.ts ***!
-  \*********************************************************************************/
-/*! exports provided: TemperatuurComponent */
+/***/ "./src/app/alarmering/alarmering-data/druk/druk.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/druk/druk.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: DrukComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemperatuurComponent", function() { return TemperatuurComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DrukComponent", function() { return DrukComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 
 
 
 
 
 
-let TemperatuurComponent = class TemperatuurComponent {
-    constructor(fb, _service) {
+
+let DrukComponent = class DrukComponent {
+    constructor(fb, _service, _snackBar) {
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.checked = false;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
@@ -991,11 +2064,17 @@ let TemperatuurComponent = class TemperatuurComponent {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
             ]
         });
-        // ,{ validator: this.greaterThan('minimum', 'maximum') });
         this.processenl = new Array();
         this.instantiateLists();
     }
+    // ,{ validator: this.greaterThan('minimum', 'maximum') });
+    openSnackBar() {
+        this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000,
+        });
+    }
     instantiateLists() {
+        this.openSnackBar();
         this._service.getAllProcessen().subscribe(result => {
             result.records.forEach(proces => {
                 if (proces.actief == 1) {
@@ -1047,64 +2126,71 @@ let TemperatuurComponent = class TemperatuurComponent {
         else {
             this.alarmdataModel.actief = 1;
         }
+        if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
+        }
         this._service.updateAlarmData(this.alarmdataModel);
     }
 };
-TemperatuurComponent.ctorParameters = () => [
+DrukComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] }
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
 ];
-TemperatuurComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+DrukComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-temperatuur',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./temperatuur.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./temperatuur.component.css */ "./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.css")).default]
+        selector: 'app-druk',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./druk.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/druk/druk.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./druk.component.css */ "./src/app/alarmering/alarmering-data/druk/druk.component.css")).default]
     })
-], TemperatuurComponent);
+], DrukComponent);
 
 
 
 /***/ }),
 
-/***/ "./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.css":
-/*!**********************************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.css ***!
-  \**********************************************************************************/
+/***/ "./src/app/alarmering/alarmering-data/ethanol/ethanol.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/ethanol/ethanol.component.css ***!
+  \**************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90cm9lYmVsaGVpZC90cm9lYmVsaGVpZC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS9ldGhhbm9sL2V0aGFub2wuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
-/***/ "./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.ts":
-/*!*********************************************************************************!*\
-  !*** ./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.ts ***!
-  \*********************************************************************************/
-/*! exports provided: TroebelheidComponent */
+/***/ "./src/app/alarmering/alarmering-data/ethanol/ethanol.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/ethanol/ethanol.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: EthanolComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TroebelheidComponent", function() { return TroebelheidComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EthanolComponent", function() { return EthanolComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 
 
 
 
 
 
-let TroebelheidComponent = class TroebelheidComponent {
-    constructor(fb, _service) {
+
+let EthanolComponent = class EthanolComponent {
+    constructor(fb, _service, _snackBar) {
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.checked = false;
         this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
         this.alarmForm = this.fb.group({
@@ -1128,6 +2214,158 @@ let TroebelheidComponent = class TroebelheidComponent {
         // ,{ validator: this.greaterThan('minimum', 'maximum') });
         this.processenl = new Array();
         this.instantiateLists();
+    }
+    openSnackBar() {
+        this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000,
+        });
+    }
+    instantiateLists() {
+        this._service.getAllProcessen().subscribe(result => {
+            result.records.forEach(proces => {
+                if (proces.actief == 1) {
+                    this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
+                    this.processenl.push(proces);
+                }
+            });
+            this.processen = this.makeObservable();
+        });
+    }
+    // greaterThan(minimumKey: string, maximumKey: string) {
+    //   return (group: FormGroup) => {
+    //     let minimum = group.controls[minimumKey];
+    //     let maximum = group.controls[maximumKey];
+    //     if (minimum.value > maximum.value) {
+    //       return minimum.setErrors({ notEquivalent: true })
+    //     }
+    //     else {
+    //       minimum.setErrors(minimum.validator(minimum))
+    //     }
+    //   }
+    // }
+    makeObservable() {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this.processenl);
+    }
+    ngOnInit() {
+        this.alarmForm.get('disable').valueChanges.subscribe(v => {
+            if (v) {
+                this.alarmForm.get('minimum').disable();
+                this.alarmForm.get('maximum').disable();
+                this.checked = true;
+            }
+            else {
+                this.alarmForm.get('minimum').enable();
+                this.alarmForm.get('maximum').enable();
+                this.checked = false;
+            }
+        });
+    }
+    onSelect(procesId) {
+        this._service.getAlarmDataByVinAndSoort(procesId, 2).subscribe(result => {
+            this.alarmdataModel = result;
+        });
+    }
+    onSubmit() {
+        this.openSnackBar();
+        if (this.checked) {
+            this.alarmdataModel.actief = 0;
+        }
+        else {
+            this.alarmdataModel.actief = 1;
+        }
+        if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
+        }
+        this._service.updateAlarmData(this.alarmdataModel);
+    }
+};
+EthanolComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+];
+EthanolComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-ethanol',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./ethanol.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/ethanol/ethanol.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./ethanol.component.css */ "./src/app/alarmering/alarmering-data/ethanol/ethanol.component.css")).default]
+    })
+], EthanolComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.css ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90ZW1wZXJhdHV1ci90ZW1wZXJhdHV1ci5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: TemperatuurComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemperatuurComponent", function() { return TemperatuurComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+
+let TemperatuurComponent = class TemperatuurComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.checked = false;
+        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
+        this.alarmForm = this.fb.group({
+            disable: [],
+            proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
+            minimum: [
+                {
+                    value: '',
+                    disabled: false
+                },
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
+            ],
+            maximum: [
+                {
+                    value: '',
+                    disabled: false
+                },
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
+            ]
+        });
+        // ,{ validator: this.greaterThan('minimum', 'maximum') });
+        this.processenl = new Array();
+        this.instantiateLists();
+    }
+    openSnackBar() {
+        this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000,
+        });
     }
     instantiateLists() {
         this._service.getAllProcessen().subscribe(result => {
@@ -1175,18 +2413,170 @@ let TroebelheidComponent = class TroebelheidComponent {
         });
     }
     onSubmit() {
+        this.openSnackBar();
         if (this.checked) {
             this.alarmdataModel.actief = 0;
         }
         else {
             this.alarmdataModel.actief = 1;
         }
+        if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
+        }
+        this._service.updateAlarmData(this.alarmdataModel);
+    }
+};
+TemperatuurComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+];
+TemperatuurComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-temperatuur',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./temperatuur.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./temperatuur.component.css */ "./src/app/alarmering/alarmering-data/temperatuur/temperatuur.component.css")).default]
+    })
+], TemperatuurComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.css ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctZGF0YS90cm9lYmVsaGVpZC90cm9lYmVsaGVpZC5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/alarmering/alarmering-data/troebelheid/troebelheid.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: TroebelheidComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TroebelheidComponent", function() { return TroebelheidComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
+
+
+let TroebelheidComponent = class TroebelheidComponent {
+    constructor(fb, _service, _snackBar) {
+        this.fb = fb;
+        this._service = _service;
+        this._snackBar = _snackBar;
+        this.checked = false;
+        this.alarmdataModel = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_4__["AlarmData"](null, null, null, null, null, 0);
+        this.alarmForm = this.fb.group({
+            disable: [],
+            proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
+            minimum: [
+                {
+                    value: '',
+                    disabled: false
+                },
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
+            ],
+            maximum: [
+                {
+                    value: '',
+                    disabled: false
+                },
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required
+            ]
+        });
+        this.processenl = new Array();
+        this.instantiateLists();
+    }
+    // ,{ validator: this.greaterThan('minimum', 'maximum') });
+    openSnackBar() {
+        this._snackBar.open("De alarmwaarden zijn aangepast!", "Close", {
+            duration: 5000,
+        });
+    }
+    instantiateLists() {
+        this._service.getAllProcessen().subscribe(result => {
+            result.records.forEach(proces => {
+                if (proces.actief == 1) {
+                    this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
+                    this.processenl.push(proces);
+                }
+            });
+            this.processen = this.makeObservable();
+        });
+    }
+    // greaterThan(minimumKey: string, maximumKey: string) {
+    //   return (group: FormGroup) => {
+    //     let minimum = group.controls[minimumKey];
+    //     let maximum = group.controls[maximumKey];
+    //     if (minimum.value > maximum.value) {
+    //       return minimum.setErrors({ notEquivalent: true })
+    //     }
+    //     else {
+    //       minimum.setErrors(minimum.validator(minimum))
+    //     }
+    //   }
+    // }
+    makeObservable() {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this.processenl);
+    }
+    ngOnInit() {
+        this.alarmForm.get('disable').valueChanges.subscribe(v => {
+            if (v) {
+                this.alarmForm.get('minimum').disable();
+                this.alarmForm.get('maximum').disable();
+                this.checked = true;
+            }
+            else {
+                this.alarmForm.get('minimum').enable();
+                this.alarmForm.get('maximum').enable();
+                this.checked = false;
+            }
+        });
+    }
+    onSelect(procesId) {
+        this._service.getAlarmDataByVinAndSoort(procesId, 4).subscribe(result => {
+            this.alarmdataModel = result;
+        });
+    }
+    onSubmit() {
+        this.openSnackBar();
+        if (this.checked) {
+            this.alarmdataModel.actief = 0;
+        }
+        else {
+            this.alarmdataModel.actief = 1;
+        }
+        if (this.alarmdataModel.minimumwaarde == 0) {
+            this.alarmdataModel.minimumwaarde = 1;
+        }
         this._service.updateAlarmData(this.alarmdataModel);
     }
 };
 TroebelheidComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] }
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
 ];
 TroebelheidComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1209,7 +2599,7 @@ TroebelheidComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctcGVyc29uZW4vYWxhcm1lcmluZy1wZXJzb25lbi5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9hbGFybWVyaW5nL2FsYXJtZXJpbmctcGVyc29uZW4vYWxhcm1lcmluZy1wZXJzb25lbi5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -1229,6 +2619,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var src_app_models_alarm_data_gebruiker_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/models/alarm-data-gebruiker.model */ "./src/app/models/alarm-data-gebruiker.model.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
@@ -1236,20 +2628,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AlarmeringPersonenComponent = class AlarmeringPersonenComponent {
-    constructor(fb, _service) {
+    constructor(fb, _service, _snackBar) {
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.gebruikersl = new Array();
+        this.bestaat = false;
         this.alarmForm = this.fb.group({
             gebruiker: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             proces: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
-        this.adgl = new Array();
         this.AlarmDataGebruikerModel = new src_app_models_alarm_data_gebruiker_model__WEBPACK_IMPORTED_MODULE_5__["AlarmDataGebruiker"](null, null);
         this.processenl = new Array();
         this.instantiateLists();
     }
+    openSnackBar(message) {
+        this._snackBar.open(message, "Close", {
+            duration: 5000,
+        });
+    }
     instantiateLists() {
+        this.processenl = [];
+        this.gebruikersl = [];
         this._service.getAllGebruikers().subscribe(result => {
             result.records.forEach(gebruiker => {
                 this.gebruikersl.push(gebruiker);
@@ -1265,9 +2665,16 @@ let AlarmeringPersonenComponent = class AlarmeringPersonenComponent {
             });
             this.processen = this.makeObservable();
         });
+        this.processenNotl = [];
+        this.processenSubl = [];
+        this.processenNotl = this.processenl;
+        this.bestaat = false;
     }
-    makeObservableAdg() {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.adgl);
+    makeObservableSub() {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenSubl);
+    }
+    makeObservableNot() {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenNotl);
     }
     makeObservableGebruiker() {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.gebruikersl);
@@ -1278,27 +2685,81 @@ let AlarmeringPersonenComponent = class AlarmeringPersonenComponent {
     ngOnInit() {
     }
     onSelect(id) {
-        // this.adgl= new Array<AlarmDataGebruiker[]>();
-        // this.gebruiker = id;
-        // this._service.getAllAlarmDataGebruikersByGebruiker(id).subscribe(result => {
-        //   result.records.forEach(proces => {
-        //     this.adgl.push(proces);
-        //   });
-        //   this.adg = this.makeObservableAdg();
-        // })
+        this.instantiateLists();
+        this._service.getAllAlarmDataGebruikers().subscribe(result => {
+            result.records.forEach(el => {
+                this.checkIfExists(el, id);
+            });
+            if (this.bestaat) {
+                this.gebruiker = id;
+                this._service.getAllAlarmDataGebruikerByGebruiker(id).subscribe(result => {
+                    result.records.forEach(element => {
+                        this.CheckIfContains(element.alarmData_vinificatieId);
+                        this.processenNotl.forEach(el => {
+                            if (el.id == element.alarmData_vinificatieId) {
+                                this.processenNotl.splice(this.processenNotl.indexOf(el), 1);
+                            }
+                        });
+                    });
+                });
+                this.processenNot = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenl);
+            }
+            else {
+                this.processenl = [];
+                this.processenNot = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Observable"]();
+                this._service.getAllProcessen().subscribe(result => {
+                    result.records.forEach(proces => {
+                        if (proces.actief == 1) {
+                            this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
+                            this.processenl.push(proces);
+                        }
+                    });
+                    this.processen = this.makeObservable();
+                    this.processenNot = this.processen;
+                });
+            }
+        });
+        this.processenSub = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenSubl);
     }
-    onSubmit() {
-        this._service.getAlarmDataByProces(this.proces).subscribe(result => {
+    checkIfExists(el, id) {
+        if (el.gebruikerId == id) {
+            this.bestaat = true;
+        }
+    }
+    add(proces) {
+        var message = "Deze persoon krijgt vanaf nu meldingen van het proces";
+        this.openSnackBar(message);
+        this._service.getAlarmDataByProces(proces.id).subscribe(result => {
             result.records.forEach(element => {
                 this.AlarmDataGebruikerModel.alarmdataId = element.id;
                 this._service.addAlarmDataGebruiker(this.AlarmDataGebruikerModel).subscribe();
             });
         });
     }
+    delete(proces) {
+        var message = "Deze persoon zal geen meldingen mee krijgen van het proces";
+        this.openSnackBar(message);
+        this._service.getAlarmDataByProces(proces.id).subscribe(result => {
+            result.records.forEach(element => {
+                this.AlarmDataGebruikerModel.alarmdataId = element.id;
+                this._service.deleteAlarmDataGebruiker(this.AlarmDataGebruikerModel).subscribe();
+            });
+        });
+    }
+    CheckIfContains(id) {
+        this.processen.subscribe(result => {
+            result.forEach(el => {
+                if (el.id == id) {
+                    this.processenSubl.push(el);
+                }
+            });
+        });
+    }
 };
 AlarmeringPersonenComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] }
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
 ];
 AlarmeringPersonenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1399,7 +2860,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("mat-sidenav-container {\r\n  position: fixed;\r\n  height: 100%;\r\n  min-height: 100%;\r\n  width: 100%;\r\n  min-width: 100%;\r\n}\r\n\r\n\r\n      body { \r\n        font-family: Roboto, Arial, sans-serif;\r\n        margin: 0;\r\n      }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2FwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGVBQWU7QUFDakI7OztNQUdNO1FBQ0Usc0NBQXNDO1FBQ3RDLFNBQVM7TUFDWCIsImZpbGUiOiIuLi9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1zaWRlbmF2LWNvbnRhaW5lciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1pbi13aWR0aDogMTAwJTtcclxufVxyXG5cclxuXHJcbiAgICAgIGJvZHkgeyBcclxuICAgICAgICBmb250LWZhbWlseTogUm9ib3RvLCBBcmlhbCwgc2Fucy1zZXJpZjtcclxuICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgIH0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-sidenav-container {\r\n  position: fixed;\r\n  height: 100%;\r\n  min-height: 100%;\r\n  width: 100%;\r\n  min-width: 100%;\r\n}\r\n\r\n\r\n      body { \r\n        font-family: Roboto, Arial, sans-serif;\r\n        margin: 0;\r\n      }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGVBQWU7QUFDakI7OztNQUdNO1FBQ0Usc0NBQXNDO1FBQ3RDLFNBQVM7TUFDWCIsImZpbGUiOiIuLi8uLi9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1zaWRlbmF2LWNvbnRhaW5lciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1pbi13aWR0aDogMTAwJTtcclxufVxyXG5cclxuXHJcbiAgICAgIGJvZHkgeyBcclxuICAgICAgICBmb250LWZhbWlseTogUm9ib3RvLCBBcmlhbCwgc2Fucy1zZXJpZjtcclxuICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgIH0iXX0= */");
 
 /***/ }),
 
@@ -1416,15 +2877,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm2015/layout.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
 
 
 
 let AppComponent = class AppComponent {
-    constructor() {
+    constructor(_service, router, breakpointObserver) {
+        this._service = _service;
+        this.router = router;
+        this.breakpointObserver = breakpointObserver;
         this.opened = false;
         this.title = 'CircuitFrontend';
+        this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__["Breakpoints"].Handset)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(result => result.matches), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["shareReplay"])());
+        this._service.isLoggedin.subscribe(e => {
+            this.login = e.valueOf();
+        });
+        this._service.isAdmin.subscribe(e => {
+            this.admin = e.valueOf();
+        });
+    }
+    logOut() {
+        localStorage.removeItem("token");
+        this._service.isLoggedin.next(!this.login ? true : false);
+        this.router.navigate(["/"]);
+        console.log(this._service.isLoggedin.value);
     }
 };
+AppComponent.ctorParameters = () => [
+    { type: _services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__["BreakpointObserver"] }
+];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSidenav"], { static: false })
 ], AppComponent.prototype, "sidenav", void 0);
@@ -1473,6 +2964,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _toon_vinificaties_toon_actieve_vinificaties_toon_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./toon-vinificaties/toon-actieve-vinificaties/toon-actieve-vinificaties.component */ "./src/app/toon-vinificaties/toon-actieve-vinificaties/toon-actieve-vinificaties.component.ts");
 /* harmony import */ var _toon_vinificaties_toon_non_actieve_vinificaties_toon_non_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./toon-vinificaties/toon-non-actieve-vinificaties/toon-non-actieve-vinificaties.component */ "./src/app/toon-vinificaties/toon-non-actieve-vinificaties/toon-non-actieve-vinificaties.component.ts");
 /* harmony import */ var _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./toon-vinificaties/toon-details-vinificaties/toon-details-vinificaties.component */ "./src/app/toon-vinificaties/toon-details-vinificaties/toon-details-vinificaties.component.ts");
+/* harmony import */ var _admin_admin_toevoegen_druif_soort_toevoegen_druif_soort_toevoegen_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component */ "./src/app/admin/admin-toevoegen/druif-soort-toevoegen/druif-soort-toevoegen.component.ts");
+/* harmony import */ var _admin_admin_toevoegen_vat_toevoegen_vat_toevoegen_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component */ "./src/app/admin/admin-toevoegen/vat-toevoegen/vat-toevoegen.component.ts");
+/* harmony import */ var _admin_admin_toevoegen_event_toevoegen_event_toevoegen_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./admin/admin-toevoegen/event-toevoegen/event-toevoegen.component */ "./src/app/admin/admin-toevoegen/event-toevoegen/event-toevoegen.component.ts");
+/* harmony import */ var _admin_admin_toevoegen_methode_toevoegen_methode_toevoegen_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component */ "./src/app/admin/admin-toevoegen/methode-toevoegen/methode-toevoegen.component.ts");
+/* harmony import */ var _admin_admin_toevoegen_meting_toevoegen_meting_toevoegen_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component */ "./src/app/admin/admin-toevoegen/meting-toevoegen/meting-toevoegen.component.ts");
+/* harmony import */ var _admin_admin_toevoegen_gebruiker_toevoegen_gebruiker_toevoegen_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component */ "./src/app/admin/admin-toevoegen/gebruiker-toevoegen/gebruiker-toevoegen.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _admin_admin_toevoegen_admin_toevoegen_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./admin/admin-toevoegen/admin-toevoegen.component */ "./src/app/admin/admin-toevoegen/admin-toevoegen.component.ts");
+/* harmony import */ var _admin_admin_overzicht_admin_overzicht_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./admin/admin-overzicht/admin-overzicht.component */ "./src/app/admin/admin-overzicht/admin-overzicht.component.ts");
+/* harmony import */ var _admin_admin_overzicht_druif_beheren_druif_beheren_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./admin/admin-overzicht/druif-beheren/druif-beheren.component */ "./src/app/admin/admin-overzicht/druif-beheren/druif-beheren.component.ts");
+/* harmony import */ var _admin_admin_overzicht_event_beheren_event_beheren_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./admin/admin-overzicht/event-beheren/event-beheren.component */ "./src/app/admin/admin-overzicht/event-beheren/event-beheren.component.ts");
+/* harmony import */ var _admin_admin_overzicht_gebruiker_beheren_gebruiker_beheren_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component */ "./src/app/admin/admin-overzicht/gebruiker-beheren/gebruiker-beheren.component.ts");
+/* harmony import */ var _admin_admin_overzicht_methode_beheren_methode_beheren_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./admin/admin-overzicht/methode-beheren/methode-beheren.component */ "./src/app/admin/admin-overzicht/methode-beheren/methode-beheren.component.ts");
+/* harmony import */ var _admin_admin_overzicht_meting_beheren_meting_beheren_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./admin/admin-overzicht/meting-beheren/meting-beheren.component */ "./src/app/admin/admin-overzicht/meting-beheren/meting-beheren.component.ts");
+/* harmony import */ var _admin_admin_overzicht_vat_beheren_vat_beheren_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./admin/admin-overzicht/vat-beheren/vat-beheren.component */ "./src/app/admin/admin-overzicht/vat-beheren/vat-beheren.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1505,10 +3026,13 @@ const appRoutes = [
     { path: 'process', component: _process_process_component__WEBPACK_IMPORTED_MODULE_12__["ProcessComponent"] },
     { path: 'alarmdata', component: _alarmering_alarmering_data_alarmering_data_component__WEBPACK_IMPORTED_MODULE_16__["AlarmeringDataComponent"] },
     { path: 'alarmpersonen', component: _alarmering_alarmering_personen_alarmering_personen_component__WEBPACK_IMPORTED_MODULE_17__["AlarmeringPersonenComponent"] },
-    { path: 'dashboard', component: _toon_dashboard_toon_dashboard_component__WEBPACK_IMPORTED_MODULE_13__["ToonDashboardComponent"] },
+    { path: 'dashboard/:id', component: _toon_dashboard_toon_dashboard_component__WEBPACK_IMPORTED_MODULE_13__["ToonDashboardComponent"] },
     { path: 'actief', component: _toon_vinificaties_toon_actieve_vinificaties_toon_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_20__["ToonActieveVinificatiesComponent"] },
     { path: 'nonactief', component: _toon_vinificaties_toon_non_actieve_vinificaties_toon_non_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_21__["ToonNonActieveVinificatiesComponent"] },
-    { path: 'detail', component: _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__["ToonDetailsVinificatiesComponent"] }
+    { path: 'detail/:id', component: _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__["ToonDetailsVinificatiesComponent"] },
+    { path: 'adminToevoegen', component: _admin_admin_toevoegen_admin_toevoegen_component__WEBPACK_IMPORTED_MODULE_30__["AdminToevoegenComponent"] },
+    { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"] },
+    { path: 'adminEdit', component: _admin_admin_overzicht_admin_overzicht_component__WEBPACK_IMPORTED_MODULE_31__["AdminOverzichtComponent"] }
 ];
 let AppModule = class AppModule {
 };
@@ -1518,7 +3042,22 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
             _toon_vinificaties_toon_actieve_vinificaties_toon_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_20__["ToonActieveVinificatiesComponent"],
             _toon_vinificaties_toon_non_actieve_vinificaties_toon_non_actieve_vinificaties_component__WEBPACK_IMPORTED_MODULE_21__["ToonNonActieveVinificatiesComponent"],
-            _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__["ToonDetailsVinificatiesComponent"]
+            _toon_vinificaties_toon_details_vinificaties_toon_details_vinificaties_component__WEBPACK_IMPORTED_MODULE_22__["ToonDetailsVinificatiesComponent"],
+            _admin_admin_toevoegen_druif_soort_toevoegen_druif_soort_toevoegen_component__WEBPACK_IMPORTED_MODULE_23__["DruifSoortToevoegenComponent"],
+            _admin_admin_toevoegen_vat_toevoegen_vat_toevoegen_component__WEBPACK_IMPORTED_MODULE_24__["VatToevoegenComponent"],
+            _admin_admin_toevoegen_event_toevoegen_event_toevoegen_component__WEBPACK_IMPORTED_MODULE_25__["EventToevoegenComponent"],
+            _admin_admin_toevoegen_methode_toevoegen_methode_toevoegen_component__WEBPACK_IMPORTED_MODULE_26__["MethodeToevoegenComponent"],
+            _admin_admin_toevoegen_meting_toevoegen_meting_toevoegen_component__WEBPACK_IMPORTED_MODULE_27__["MetingToevoegenComponent"],
+            _admin_admin_toevoegen_gebruiker_toevoegen_gebruiker_toevoegen_component__WEBPACK_IMPORTED_MODULE_28__["GebruikerToevoegenComponent"],
+            _login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"],
+            _admin_admin_toevoegen_admin_toevoegen_component__WEBPACK_IMPORTED_MODULE_30__["AdminToevoegenComponent"],
+            _admin_admin_overzicht_admin_overzicht_component__WEBPACK_IMPORTED_MODULE_31__["AdminOverzichtComponent"],
+            _admin_admin_overzicht_druif_beheren_druif_beheren_component__WEBPACK_IMPORTED_MODULE_32__["DruifBeherenComponent"],
+            _admin_admin_overzicht_event_beheren_event_beheren_component__WEBPACK_IMPORTED_MODULE_33__["EventBeherenComponent"],
+            _admin_admin_overzicht_gebruiker_beheren_gebruiker_beheren_component__WEBPACK_IMPORTED_MODULE_34__["GebruikerBeherenComponent"],
+            _admin_admin_overzicht_methode_beheren_methode_beheren_component__WEBPACK_IMPORTED_MODULE_35__["MethodeBeherenComponent"],
+            _admin_admin_overzicht_meting_beheren_meting_beheren_component__WEBPACK_IMPORTED_MODULE_36__["MetingBeherenComponent"],
+            _admin_admin_overzicht_vat_beheren_vat_beheren_component__WEBPACK_IMPORTED_MODULE_37__["VatBeherenComponent"]
         ],
         imports: [
             _home_home_module__WEBPACK_IMPORTED_MODULE_14__["HomeModule"],
@@ -1548,7 +3087,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1619,6 +3158,86 @@ HomeModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/login/login.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/login/login.component.css ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9sb2dpbi9sb2dpbi5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/login/login.component.ts ***!
+  \******************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _models_user_login_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/user-login.model */ "./src/app/models/user-login.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_services_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/services.service */ "./src/app/services/services.service.ts");
+
+
+
+
+
+
+let LoginComponent = class LoginComponent {
+    constructor(fb, _service, router) {
+        this.fb = fb;
+        this._service = _service;
+        this.router = router;
+        this.login = new _models_user_login_model__WEBPACK_IMPORTED_MODULE_2__["UserLogin"]("", "");
+        this.loginForm = this.fb.group({
+            email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email]],
+            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    }
+    ngOnInit() {
+    }
+    onSubmit() {
+        this._service.Authenticate(this.login).subscribe(result => {
+            this._service.isLoggedin.next(result.id ? true : false);
+            localStorage.setItem("token", result.id.toString());
+            this.router.navigateByUrl('/dashboard');
+            this._service.setUser(result);
+            if (result.rolId == 1) {
+                this._service.setIsAdmin(true);
+            }
+            else {
+                this._service.setIsAdmin(false);
+            }
+        });
+    }
+};
+LoginComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: _services_services_service__WEBPACK_IMPORTED_MODULE_5__["ServicesService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-login',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")).default]
+    })
+], LoginComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/models/alarm-data-gebruiker.model.ts":
 /*!******************************************************!*\
   !*** ./src/app/models/alarm-data-gebruiker.model.ts ***!
@@ -1667,6 +3286,28 @@ class AlarmData {
 
 /***/ }),
 
+/***/ "./src/app/models/druif.model.ts":
+/*!***************************************!*\
+  !*** ./src/app/models/druif.model.ts ***!
+  \***************************************/
+/*! exports provided: Druif */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Druif", function() { return Druif; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Druif {
+    constructor(id, druifsoort) {
+        this.id = id;
+        this.druifsoort = druifsoort;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/models/event.model.ts":
 /*!***************************************!*\
   !*** ./src/app/models/event.model.ts ***!
@@ -1686,6 +3327,35 @@ class Event {
         this.vinificatieId = vinificatieId;
         this.gebruikerId = gebruikerId;
         this.datum = datum;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/models/gebruiker.model.ts":
+/*!*******************************************!*\
+  !*** ./src/app/models/gebruiker.model.ts ***!
+  \*******************************************/
+/*! exports provided: Gebruiker */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Gebruiker", function() { return Gebruiker; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Gebruiker {
+    constructor(id, rolId, voornaam, naam, gebruikersnaam, wachtwoord, email, telefoonnummer, jwt) {
+        this.id = id;
+        this.rolId = rolId;
+        this.voornaam = voornaam;
+        this.naam = naam;
+        this.gebruikersnaam = gebruikersnaam;
+        this.wachtwoord = wachtwoord;
+        this.email = email;
+        this.telefoonnummer = telefoonnummer;
+        this.jwt = jwt;
     }
 }
 
@@ -1718,6 +3388,28 @@ class Meting {
 
 /***/ }),
 
+/***/ "./src/app/models/persmethode.model.ts":
+/*!*********************************************!*\
+  !*** ./src/app/models/persmethode.model.ts ***!
+  \*********************************************/
+/*! exports provided: Persmethode */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Persmethode", function() { return Persmethode; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Persmethode {
+    constructor(id, methode) {
+        this.id = id;
+        this.methode = methode;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/models/process.model.ts":
 /*!*****************************************!*\
   !*** ./src/app/models/process.model.ts ***!
@@ -1731,7 +3423,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 
 class Process {
-    constructor(id, vatId, persmethodeId, actief, persHoeveelheid, oogst, persDruk, vat) {
+    constructor(id, vatId, persmethodeId, actief, persHoeveelheid, oogst, persDruk, vat, druif, jaargang, wijnTypeId) {
         this.id = id;
         this.vatId = vatId;
         this.persmethodeId = persmethodeId;
@@ -1740,6 +3432,149 @@ class Process {
         this.oogst = oogst;
         this.persDruk = persDruk;
         this.vat = vat;
+        this.druif = druif;
+        this.jaargang = jaargang;
+        this.wijnTypeId = wijnTypeId;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/models/soort-event.model.ts":
+/*!*********************************************!*\
+  !*** ./src/app/models/soort-event.model.ts ***!
+  \*********************************************/
+/*! exports provided: SoortEvent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SoortEvent", function() { return SoortEvent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class SoortEvent {
+    constructor(soortEventId, naam) {
+        this.soortEventId = soortEventId;
+        this.naam = naam;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/models/soort-meting.model.ts":
+/*!**********************************************!*\
+  !*** ./src/app/models/soort-meting.model.ts ***!
+  \**********************************************/
+/*! exports provided: SoortMeting */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SoortMeting", function() { return SoortMeting; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class SoortMeting {
+    constructor(id, naam) {
+        this.id = id;
+        this.naam = naam;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/models/user-login.model.ts":
+/*!********************************************!*\
+  !*** ./src/app/models/user-login.model.ts ***!
+  \********************************************/
+/*! exports provided: UserLogin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserLogin", function() { return UserLogin; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class UserLogin {
+    constructor(email, wachtwoord) {
+        this.email = email;
+        this.wachtwoord = wachtwoord;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/models/vat.model.ts":
+/*!*************************************!*\
+  !*** ./src/app/models/vat.model.ts ***!
+  \*************************************/
+/*! exports provided: Vat */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Vat", function() { return Vat; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Vat {
+    constructor(id, nummer, inGebruik, gelinkt, locatie, volume, deksel, koelmantel, mangat, materiaalId) {
+        this.id = id;
+        this.nummer = nummer;
+        this.inGebruik = inGebruik;
+        this.gelinkt = gelinkt;
+        this.locatie = locatie;
+        this.volume = volume;
+        this.deksel = deksel;
+        this.koelmantel = koelmantel;
+        this.mangat = mangat;
+        this.materiaalId = materiaalId;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/models/vinificatie-druif.model.ts":
+/*!***************************************************!*\
+  !*** ./src/app/models/vinificatie-druif.model.ts ***!
+  \***************************************************/
+/*! exports provided: VinificatieDruif */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VinificatieDruif", function() { return VinificatieDruif; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class VinificatieDruif {
+    constructor(vinificatieId, druifsoortId) {
+        this.vinificatieId = vinificatieId;
+        this.druifsoortId = druifsoortId;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/models/wijn-type.model.ts":
+/*!*******************************************!*\
+  !*** ./src/app/models/wijn-type.model.ts ***!
+  \*******************************************/
+/*! exports provided: WijnType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WijnType", function() { return WijnType; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class WijnType {
+    constructor(id, naam) {
+        this.id = id;
+        this.naam = naam;
     }
 }
 
@@ -1755,7 +3590,7 @@ class Process {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2FkZC1hY3RpZS9hZGQtYWN0aWUuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2FkZC1hY3RpZS9hZGQtYWN0aWUuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1775,6 +3610,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_models_event_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/event.model */ "./src/app/models/event.model.ts");
 /* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
@@ -1782,9 +3619,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AddActieComponent = class AddActieComponent {
-    constructor(fb, _service) {
+    constructor(fb, _service, _snackBar) {
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.processenl = new Array();
         this.eventModel = new src_app_models_event_model__WEBPACK_IMPORTED_MODULE_3__["Event"](0, null, 0, "1", new Date());
         this.addEventForm = this.fb.group({
@@ -1805,18 +3643,25 @@ let AddActieComponent = class AddActieComponent {
             this.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
         });
     }
+    openSnackBar() {
+        this._snackBar.open("De actie is toegevoegd aan het proces!", "Close", {
+            duration: 5000,
+        });
+    }
     ngOnInit() {
     }
     makeObservable() {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(this.processenl);
     }
     onSubmit() {
+        this.openSnackBar();
         this._service.addEvent(this.eventModel).subscribe;
     }
 };
 AddActieComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] }
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
 ];
 AddActieComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1839,7 +3684,7 @@ AddActieComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2FkZC1tZXRpbmcvYWRkLW1ldGluZy5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2FkZC1tZXRpbmcvYWRkLW1ldGluZy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -1859,6 +3704,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var src_app_models_meting_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/models/meting.model */ "./src/app/models/meting.model.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
@@ -1866,9 +3713,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AddMetingComponent = class AddMetingComponent {
-    constructor(fb, _service) {
+    constructor(fb, _service, _snackBar) {
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.processenl = new Array();
         this.metingModel = new src_app_models_meting_model__WEBPACK_IMPORTED_MODULE_5__["Meting"](0, null, null, null, null, new Date());
         this.addMetingForm = this.fb.group({
@@ -1879,6 +3727,11 @@ let AddMetingComponent = class AddMetingComponent {
         });
         this.instantiateLists();
         console.log(this.metingModel.tijd);
+    }
+    openSnackBar() {
+        this._snackBar.open("De meting is toegevoegd aan het proces!", "Close", {
+            duration: 5000,
+        });
     }
     instantiateLists() {
         this._service.getAllProcessen().subscribe(result => {
@@ -1900,13 +3753,15 @@ let AddMetingComponent = class AddMetingComponent {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(this.processenl);
     }
     onSubmit() {
+        this.openSnackBar();
         this.metingModel.gebruikerId = "1";
         this._service.addMeting(this.metingModel).subscribe;
     }
 };
 AddMetingComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] }
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
 ];
 AddMetingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1929,7 +3784,7 @@ AddMetingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2Fmc2x1aXRlbi9hZnNsdWl0ZW4uY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2Fmc2x1aXRlbi9hZnNsdWl0ZW4uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1947,15 +3802,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
 
 let AfsluitenComponent = class AfsluitenComponent {
-    constructor(_service) {
+    constructor(_service, _snackBar) {
         this._service = _service;
+        this._snackBar = _snackBar;
         this.processenl = new Array();
         this.instantiateLists();
+    }
+    openSnackBar() {
+        this._snackBar.open("Het proces is afgesloten!", "Close", {
+            duration: 5000,
+        });
     }
     instantiateLists() {
         this.processenl = new Array();
@@ -1976,12 +3839,14 @@ let AfsluitenComponent = class AfsluitenComponent {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this.processenl);
     }
     Sluit(proces) {
+        this.openSnackBar();
         proces.actief = 0;
         this._service.updateProcess(proces).subscribe(result => {
             proces.vat = this._service.getVatById(proces.vatId);
             proces.vat.subscribe(result => {
                 result.inGebruik = 0;
                 this._service.updateVat(result).subscribe(result => {
+                    console.log(result);
                     this.instantiateLists();
                 });
             });
@@ -1989,7 +3854,8 @@ let AfsluitenComponent = class AfsluitenComponent {
     }
 };
 AfsluitenComponent.ctorParameters = () => [
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] }
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"] }
 ];
 AfsluitenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2012,7 +3878,7 @@ AfsluitenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzL2NyZWF0ZS1wcm9jZXNzLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2033,6 +3899,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/models/alarm-data.model */ "./src/app/models/alarm-data.model.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/models/vinificatie-druif.model */ "./src/app/models/vinificatie-druif.model.ts");
+/* harmony import */ var src_app_models_wijn_type_model__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/models/wijn-type.model */ "./src/app/models/wijn-type.model.ts");
+
+
+
 
 
 
@@ -2041,22 +3913,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let CreateProcessComponent = class CreateProcessComponent {
-    constructor(fb, _service) {
+    constructor(fb, _service, _snackBar) {
         this.fb = fb;
         this._service = _service;
+        this._snackBar = _snackBar;
         this.vatenl = new Array();
-        this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null);
+        this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null, null, null, 0);
+        this.druivenLijst = new Array();
+        this.wijntypes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])([new src_app_models_wijn_type_model__WEBPACK_IMPORTED_MODULE_9__["WijnType"](1, "rood"), new src_app_models_wijn_type_model__WEBPACK_IMPORTED_MODULE_9__["WijnType"](2, "rosé")]);
         this.createProcessForm = this.fb.group({
             vat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            druif: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             pers: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             persHoeveelheid: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             oogst: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            bar: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+            bar: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            jaargang: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            wijntype: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
         this.instantiateLists();
     }
+    openSnackBar() {
+        this._snackBar.open("Het proces is aangemaakt!", "Close", {
+            duration: 5000,
+        });
+    }
+    onChange(value) {
+        var index = this.druivenLijst.indexOf(value);
+        if (index == -1) {
+            this.druivenLijst.push(value);
+        }
+        else {
+            this.druivenLijst.splice(index, 1);
+        }
+        console.log(this.druivenLijst);
+    }
     instantiateLists() {
+        this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null, null, null, 0);
         this.vatenl = new Array;
         this._service.getAllVaten().subscribe(result => {
             result.records.forEach(vat => {
@@ -2079,24 +3971,20 @@ let CreateProcessComponent = class CreateProcessComponent {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(this.vatenl);
     }
     onSubmit() {
+        this.openSnackBar();
         this._service.addProces(this.procesModel).subscribe(result => {
             this.procesModel.vat = this._service.getVatById(this.procesModel.vatId);
             this.procesModel.vat.subscribe(result => {
                 result.inGebruik = 1;
                 this._service.updateVat(result).subscribe(result => {
+                    this.instantiateLists();
                     this._service.getLastProcess().subscribe(result => {
-                        console.log(result);
-                        var co = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 2, result.id, 15, 1, 1);
-                        this._service.addAlarmData(co);
-                        var druk = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 4, result.id, 15, 1, 1);
-                        this._service.addAlarmData(druk);
-                        var temp = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 1, result.id, 15, 1, 1);
-                        this._service.addAlarmData(temp);
-                        var alc = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 3, result.id, 15, 1, 1);
-                        this._service.addAlarmData(alc);
-                        var troeb = new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, 5, result.id, 15, 1, 1);
-                        this._service.addAlarmData(troeb);
-                        this.instantiateLists();
+                        for (let i = 1; i < 6; i++) {
+                            this._service.addAlarmData(new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, i, result.id, 51, 1, 1)).subscribe();
+                        }
+                        this.druivenLijst.forEach(el => {
+                            this._service.addVinificatieDruif(new src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__["VinificatieDruif"](result.id, el.id));
+                        });
                     });
                 });
             });
@@ -2105,7 +3993,8 @@ let CreateProcessComponent = class CreateProcessComponent {
 };
 CreateProcessComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] }
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"] }
 ];
 CreateProcessComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2128,7 +4017,7 @@ CreateProcessComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9wcm9jZXNzL3Byb2Nlc3MuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9wcm9jZXNzL3Byb2Nlc3MuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -2224,6 +4113,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _models_gebruiker_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/gebruiker.model */ "./src/app/models/gebruiker.model.ts");
+
 
 
 
@@ -2232,10 +4123,19 @@ const baselink = "http://192.168.0.105/api/";
 let ServicesService = class ServicesService {
     constructor(http) {
         this.http = http;
+        //gebruikers
+        this.isLoggedin = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
+        this.userSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](new _models_gebruiker_model__WEBPACK_IMPORTED_MODULE_4__["Gebruiker"](null, null, '', '', '', '', '', '', ''));
+        this.user = this.userSubject.asObservable();
+        this.isAdminSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
+        this.isAdmin = this.isAdminSubject.asObservable();
     }
     //Vinificatieprocessen
     getAllProcessen() {
         return this.http.get(baselink + "Vinificatie/read.php");
+    }
+    getAllInactieveProcessen() {
+        return this.http.get(baselink + "Vinificatie/nietActief.php");
     }
     addProces(process) {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
@@ -2262,6 +4162,20 @@ let ServicesService = class ServicesService {
     }
     getLastProcess() {
         return this.http.get(baselink + "Vinificatie/getLast.php");
+    }
+    addVinificatieDruif(druif) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "VinificatieDruif/create.php", {
+            body: JSON.stringify(druif),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'no-cors'
+        }));
+    }
+    getProcesById(id) {
+        return this.http.get(baselink + "Vinificatie/read_one.php?id=" + id);
     }
     //Metingen
     addMeting(meting) {
@@ -2309,21 +4223,135 @@ let ServicesService = class ServicesService {
             method: 'PUT'
         }));
     }
+    addVat(vat) {
+        //return this.http.post<Event>(baselink + "", event);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "Vat/create.php", {
+            body: JSON.stringify(vat),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'no-cors'
+        }));
+    }
+    deleteVat(item) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "Vat/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        }));
+    }
     //persmethodes
     getAllPersMethodes() {
         return this.http.get(baselink + "PersMethode/read.php");
+    }
+    getPersmethodeById(id) {
+        return this.http.get(baselink + "Persmethode/read_one.php?id=" + id);
+    }
+    addMethode(methode) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "PersMethode/create.php", {
+            body: JSON.stringify(methode),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'no-cors'
+        }));
+    }
+    deletePersMethode(item) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "PersMethode/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        }));
     }
     //druifsoorten
     getAllDruifsoorten() {
         return this.http.get(baselink + "DruifSoort/read.php");
     }
+    getAllDruifsoortenByVinificatieId(id) {
+        return this.http.get(baselink + "VinificatieDruif/getDruif.php?id=" + id);
+    }
+    addDruifSoort(druif) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "DruifSoort/create.php", {
+            body: JSON.stringify(druif),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'no-cors'
+        }));
+    }
+    deleteDruifSoort(item) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "DruifSoort/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        }));
+    }
     //metingsoorten
     getAllMetingsoorten() {
         return this.http.get(baselink + "SoortMeting/read.php");
     }
+    addMetingSoort(meting) {
+        //return this.http.post<Event>(baselink + "", event);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "SoortMeting/create.php", {
+            body: JSON.stringify(meting),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'no-cors'
+        }));
+    }
+    deleteSoortMeting(item) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "SoortMeting/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        }));
+    }
     //eventsoorten
     getAllEventsoorten() {
         return this.http.get(baselink + "SoortEvent/read.php");
+    }
+    deleteEventSoort(item) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "SoortEvent/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        }));
+    }
+    addEventSoort(event) {
+        //return this.http.post<Event>(baselink + "", event);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "SoortEvent/create.php", {
+            body: JSON.stringify(event),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'no-cors'
+        }));
     }
     //alarmdata
     getAlarmDataById(id) {
@@ -2356,13 +4384,49 @@ let ServicesService = class ServicesService {
             method: 'PUT'
         }));
     }
-    //gebruikers
+    setUser(user) {
+        this.userSubject.next(user);
+    }
+    setIsAdmin(update) {
+        this.isAdminSubject.next(update);
+    }
     getAllGebruikers() {
         return this.http.get(baselink + "Gebruiker/read.php");
+    }
+    addGebruiker(gebruiker) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "Gebruiker/create.php", {
+            body: JSON.stringify(gebruiker),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'no-cors'
+        }));
+    }
+    deleteGebruiker(item) {
+        console.log(item);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "Gebruiker/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        }));
+    }
+    Authenticate(userLogin) {
+        return this.http.get(baselink + "Gebruiker/GetLogin.php?email=" + userLogin.email + "&wachtwoord=" + userLogin.wachtwoord);
     }
     //alarmdatagebruikers
     getAllAlarmDataGebruikersByGebruiker(id) {
         return this.http.get(baselink + "AlarmDataGebruiker/getByGebruikerId.php?gebruikerId=" + id);
+    }
+    getAllAlarmDataGebruikerByGebruiker(id) {
+        return this.http.get(baselink + "AlarmDataGebruiker/getByAlarmData.php?gebruikerId=" + id);
+    }
+    getAllAlarmDataGebruikers() {
+        return this.http.get(baselink + "AlarmDataGebruiker/read.php");
     }
     addAlarmDataGebruiker(item) {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
@@ -2374,6 +4438,28 @@ let ServicesService = class ServicesService {
             method: 'POST',
             mode: 'no-cors'
         }));
+    }
+    deleteAlarmDataGebruiker(item) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
+        fetch(baselink + "AlarmDataGebruiker/delete.php", {
+            body: JSON.stringify(item),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        }));
+    }
+    //rollen
+    getAllRollen() {
+        return this.http.get(baselink + "Rol/read.php");
+    }
+    //WijnTypes
+    getAllWijnTypes() {
+        return this.http.get(baselink + "WijnType/read.php");
+    }
+    //Materiaal
+    getAllMaterialen() {
+        return this.http.get(baselink + "Materiaal/read.php");
     }
 };
 ServicesService.ctorParameters = () => [
@@ -2408,6 +4494,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-pick-datetime */ "./node_modules/ng-pick-datetime/picker.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+
 
 
 
@@ -2442,7 +4530,15 @@ SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
             ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"],
             ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"]
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSortModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginatorModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBarModule"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbModule"]
         ],
         exports: [
             _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"],
@@ -2464,7 +4560,12 @@ SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlDateTimeModule"],
             ng_pick_datetime__WEBPACK_IMPORTED_MODULE_8__["OwlNativeDateTimeModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"]
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSortModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginatorModule"]
         ]
     })
 ], SharedModule);
@@ -2482,7 +4583,7 @@ SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLWRhc2hib2FyZC90b29uLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi90b29uLWRhc2hib2FyZC90b29uLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -2498,13 +4599,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToonDashboardComponent", function() { return ToonDashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+
+
 
 
 let ToonDashboardComponent = class ToonDashboardComponent {
-    constructor() { }
+    constructor(route, router, sanitizer) {
+        this.route = route;
+        this.router = router;
+        this.sanitizer = sanitizer;
+        this.id = 0;
+    }
     ngOnInit() {
+        this.routeSub = this.route.params.subscribe(params => {
+            this.id = params['id'];
+            this.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=' + this.id;
+            console.log(this.id, this.iframe);
+        });
     }
 };
+ToonDashboardComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"] }
+];
 ToonDashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-toon-dashboard',
@@ -2562,7 +4682,7 @@ ToonDashboardModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLWFjdGlldmUtdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = (".example-card {\r\n    max-width: 400px;\r\n  }\r\n  \r\n.flex-me {\r\n  display: -webkit-inline-box;\r\n  display: inline-flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n          flex-flow: row wrap;\r\n  background: grey;\r\n}\r\n  \r\n/* .example-header-image {\r\n    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\r\n    background-size: cover;\r\n  } */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMvdG9vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0VBQ2xCOztBQUVGO0VBQ0UsMkJBQW9CO0VBQXBCLG9CQUFvQjtFQUNwQiw4QkFBbUI7RUFBbkIsNkJBQW1CO1VBQW5CLG1CQUFtQjtFQUNuQixnQkFBZ0I7QUFDbEI7O0FBRUU7OztLQUdHIiwiZmlsZSI6Ii4uLy4uL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tYWN0aWV2ZS12aW5pZmljYXRpZXMvdG9vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtY2FyZCB7XHJcbiAgICBtYXgtd2lkdGg6IDQwMHB4O1xyXG4gIH1cclxuICBcclxuLmZsZXgtbWUge1xyXG4gIGRpc3BsYXk6IGlubGluZS1mbGV4O1xyXG4gIGZsZXgtZmxvdzogcm93IHdyYXA7XHJcbiAgYmFja2dyb3VuZDogZ3JleTtcclxufVxyXG5cclxuICAvKiAuZXhhbXBsZS1oZWFkZXItaW1hZ2Uge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdodHRwczovL21hdGVyaWFsLmFuZ3VsYXIuaW8vYXNzZXRzL2ltZy9leGFtcGxlcy9zaGliYTEuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gIH0gKi8iXX0= */");
 
 /***/ }),
 
@@ -2578,13 +4698,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToonActieveVinificatiesComponent", function() { return ToonActieveVinificatiesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
 
 
 let ToonActieveVinificatiesComponent = class ToonActieveVinificatiesComponent {
-    constructor() { }
+    constructor(fb, _service, sanitizer, router) {
+        this.fb = fb;
+        this._service = _service;
+        this.sanitizer = sanitizer;
+        this.router = router;
+        this.processenl = new Array();
+        this.instantiateLists();
+    }
+    instantiateLists() {
+        var druiflijst = new Array();
+        this._service.getAllProcessen().subscribe(result => {
+            result.records.forEach(proces => {
+                proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"]();
+                if (proces.actief == 1) {
+                    this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
+                    this._service.getPersmethodeById(proces.persmethodeId).subscribe(persmethode => { proces.persmethode = persmethode; });
+                    this._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(result => {
+                        result.records.forEach(druifsoort => {
+                            console.log(druifsoort);
+                            druiflijst.push(druifsoort);
+                        });
+                        proces.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(druiflijst);
+                    });
+                    {
+                        proces.iframe = "http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&panelId=8&fullscreen&var-vat=" + proces.vatId;
+                    }
+                    this.processenl.push(proces);
+                }
+            });
+            this.processen = this.makeObservable();
+        });
+    }
     ngOnInit() {
     }
+    makeObservable() {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this.processenl);
+    }
 };
+ToonActieveVinificatiesComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"] },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] }
+];
 ToonActieveVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-toon-actieve-vinificaties',
@@ -2606,7 +4776,7 @@ ToonActieveVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorat
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLWRldGFpbHMtdmluaWZpY2F0aWVzL3Rvb24tZGV0YWlscy12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi90b29uLXZpbmlmaWNhdGllcy90b29uLWRldGFpbHMtdmluaWZpY2F0aWVzL3Rvb24tZGV0YWlscy12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -2622,13 +4792,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToonDetailsVinificatiesComponent", function() { return ToonDetailsVinificatiesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
 
 
 let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
-    constructor() { }
+    constructor(fb, _service, route, router) {
+        this.fb = fb;
+        this._service = _service;
+        this.route = route;
+        this.router = router;
+        this.id = 0;
+        this.processenl = new Array();
+        this.displayedColumns = ['id', 'vatId', 'oogst', 'persHoeveelheid'];
+        this.process = _service.getVatById(this.id);
+        console.log(this.process);
+    }
     ngOnInit() {
+        this.routeSub = this.route.params.subscribe(params => {
+            this.id = params['id'];
+            console.log(this.id);
+        });
+    }
+    makeObservable() {
     }
 };
+ToonDetailsVinificatiesComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_4__["ServicesService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"], { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "paginator", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"], { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "sort", void 0);
 ToonDetailsVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-toon-details-vinificaties',
@@ -2650,7 +4856,7 @@ ToonDetailsVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorat
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi90b29uLXZpbmlmaWNhdGllcy90b29uLW5vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy90b29uLW5vbi1hY3RpZXZlLXZpbmlmaWNhdGllcy5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("table {\r\n  width: 100%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Rvb24tdmluaWZpY2F0aWVzL3Rvb24tbm9uLWFjdGlldmUtdmluaWZpY2F0aWVzL3Rvb24tbm9uLWFjdGlldmUtdmluaWZpY2F0aWVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoiLi4vLi4vdG9vbi12aW5pZmljYXRpZXMvdG9vbi1ub24tYWN0aWV2ZS12aW5pZmljYXRpZXMvdG9vbi1ub24tYWN0aWV2ZS12aW5pZmljYXRpZXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -2666,13 +4872,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToonNonActieveVinificatiesComponent", function() { return ToonNonActieveVinificatiesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/services.service */ "./src/app/services/services.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+
 
 
 let ToonNonActieveVinificatiesComponent = class ToonNonActieveVinificatiesComponent {
-    constructor() { }
+    constructor(fb, _service, router) {
+        this.fb = fb;
+        this._service = _service;
+        this.router = router;
+        this.processenl = new Array();
+        this.displayedColumns = ['id', 'vatId', 'oogst', 'persHoeveelheid'];
+        this.instantiateLists();
+    }
+    instantiateLists() {
+        var druiflijst = new Array();
+        this._service.getAllProcessen().subscribe(result => {
+            result.records.forEach(proces => {
+                proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
+                if (proces.actief == 0) {
+                    this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
+                    this._service.getPersmethodeById(proces.persmethodeId).subscribe(persmethode => { proces.persmethode = persmethode; });
+                    this._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(result => {
+                        result.records.forEach(druifsoort => {
+                            console.log(druifsoort);
+                            druiflijst.push(druifsoort);
+                        });
+                        proces.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(druiflijst);
+                    });
+                    this.processenl.push(proces);
+                }
+            });
+            this.processen = this.makeObservable();
+            this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](this.processenl);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+            console.log(this.dataSource);
+        });
+    }
     ngOnInit() {
     }
+    makeObservable() {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(this.processenl);
+    }
 };
+ToonNonActieveVinificatiesComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_6__["MatPaginator"], { static: true })
+], ToonNonActieveVinificatiesComponent.prototype, "paginator", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSort"], { static: true })
+], ToonNonActieveVinificatiesComponent.prototype, "sort", void 0);
 ToonNonActieveVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-toon-non-actieve-vinificaties',
@@ -2750,7 +5012,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Project 4.0\Frontend\CircuitFrontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Angular\Frontend\CircuitFrontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
