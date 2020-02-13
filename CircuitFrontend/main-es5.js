@@ -551,7 +551,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/createProcess\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        process</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een\r\n                                        proces\r\n                                        af</a>\r\n                                <a mat-list-item routerLink=\"/dashboard\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard\r\n                                        1</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinfi\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/actief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/nonactief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/addMeting\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                        Admin Data\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #admin=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/adminToevoegen\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                toevoegen</button>\r\n                                        <button mat-menu-item routerLink=\"/adminEdit\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                beheren</button>\r\n                                </mat-menu>\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"sidenav.toggle()\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
+    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <div *ngIf=\"login\">\r\n                                <a mat-list-item routerLink=\"/createProcess\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        process</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een\r\n                                        proces\r\n                                        af</a>\r\n                                <a mat-list-item routerLink=\"/dashboard\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard\r\n                                        1</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinfi\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/actief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/nonactief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/addMeting\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n                                <div *ngIf=\"admin\">\r\n                                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                                Admin Data\r\n                                                <mat-icon>expand_more</mat-icon>\r\n                                        </a>\r\n                                        <mat-menu #admin=\"matMenu\">\r\n                                                <button mat-menu-item routerLink=\"/adminToevoegen\"\r\n                                                        (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        toevoegen</button>\r\n                                                <button mat-menu-item routerLink=\"/adminEdit\" (click)=\"sidenav.toggle()\"\r\n                                                        routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        beheren</button>\r\n                                        </mat-menu>\r\n                                </div>\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"sidenav.toggle()\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
     /***/
   },
 
@@ -591,7 +591,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-card class=\"login-card\">\r\n    <mat-card-title class=\"login-card-title\">Login to continue</mat-card-title>\r\n\r\n    <form (ngSubmit)=\"onSubmit()\">\r\n\r\n        <div class=\"login-container\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Email\" type=\"email\" name=\"email\" [(ngModel)]=\"login.email\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Password\" type=\"password\" name=\"password\"\r\n                        [(ngModel)]=\"login.wachtwoord\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n\r\n            <mat-card-actions>\r\n                <div>\r\n                    <button mat-raised-button color=\"primary\" class=\"login-card-button\" type=\"submit\">Login</button>\r\n                </div>\r\n\r\n            </mat-card-actions>\r\n\r\n        </div>\r\n    </form>\r\n</mat-card>";
+    __webpack_exports__["default"] = "<mat-card class=\"login-card\">\r\n    <mat-card-title class=\"login-card-title\">Login to continue</mat-card-title>\r\n\r\n    <form (ngSubmit)=\"onSubmit()\">\r\n\r\n        <div class=\"login-container\">\r\n            <p>\r\n                <mat-form-field style=\"width:300px\">\r\n                    <input matInput placeholder=\"Email\" type=\"email\" name=\"email\" [(ngModel)]=\"login.email\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Password\" type=\"password\" name=\"password\"\r\n                        [(ngModel)]=\"login.wachtwoord\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n\r\n            <mat-card-actions>\r\n                <div>\r\n                    <button mat-raised-button color=\"primary\" class=\"login-card-button\" type=\"submit\">Login</button>\r\n                </div>\r\n\r\n            </mat-card-actions>\r\n\r\n        </div>\r\n    </form>\r\n</mat-card>";
     /***/
   },
 
@@ -3140,9 +3140,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this32 = this;
+
           this.openSnackBar();
 
-          this._service.addDruifSoort(this.druifModel).subscribe();
+          this._service.addDruifSoort(this.druifModel).subscribe(function (result) {
+            _this32.druifModel = new src_app_models_druif_model__WEBPACK_IMPORTED_MODULE_3__["Druif"](0, "");
+          });
         }
       }]);
 
@@ -3275,9 +3279,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this33 = this;
+
           this.openSnackBar();
 
-          this._service.addEventSoort(this.model).subscribe();
+          this._service.addEventSoort(this.model).subscribe(function (result) {
+            _this33.model = new src_app_models_soort_event_model__WEBPACK_IMPORTED_MODULE_4__["SoortEvent"](0, "");
+          });
         }
       }]);
 
@@ -3439,10 +3447,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "InstantiateLists",
         value: function InstantiateLists() {
-          var _this32 = this;
+          var _this34 = this;
 
           this._service.getAllRollen().subscribe(function (result) {
-            _this32.rollen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this34.rollen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
         }
       }, {
@@ -3451,9 +3459,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this35 = this;
+
           this.openSnackBar();
 
-          this._service.addGebruiker(this.model).subscribe();
+          this._service.addGebruiker(this.model).subscribe(function (result) {
+            _this35.model = new src_app_models_gebruiker_model__WEBPACK_IMPORTED_MODULE_2__["Gebruiker"](0, 0, "", "", "j", "", "", "", "");
+          });
         }
       }]);
 
@@ -3586,9 +3598,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this36 = this;
+
           this.openSnackBar();
 
-          this._service.addMateriaal(this.model).subscribe();
+          this._service.addMateriaal(this.model).subscribe(function (result) {
+            _this36.model = new src_app_models_materiaal_model__WEBPACK_IMPORTED_MODULE_2__["Materiaal"](0, "");
+          });
         }
       }]);
 
@@ -3721,9 +3737,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this37 = this;
+
           this.openSnackBar();
 
-          this._service.addMethode(this.model).subscribe();
+          this._service.addMethode(this.model).subscribe(function (result) {
+            _this37.model = new src_app_models_persmethode_model__WEBPACK_IMPORTED_MODULE_2__["Persmethode"](0, "");
+          });
         }
       }]);
 
@@ -3856,9 +3876,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this38 = this;
+
           this.openSnackBar();
 
-          this._service.addMetingSoort(this.model).subscribe();
+          this._service.addMetingSoort(this.model).subscribe(function (result) {
+            _this38.model = new src_app_models_soort_meting_model__WEBPACK_IMPORTED_MODULE_2__["SoortMeting"](0, "");
+          });
         }
       }]);
 
@@ -4001,10 +4025,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this33 = this;
+          var _this39 = this;
 
           this._service.getAllMaterialen().subscribe(function (result) {
-            _this33.materialen = Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(result.records);
+            _this39.materialen = Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(result.records);
           });
         }
       }, {
@@ -4013,9 +4037,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this40 = this;
+
           this.openSnackBar();
 
-          this._service.addVat(this.model).subscribe();
+          this._service.addVat(this.model).subscribe(function (result) {
+            _this40.model = new src_app_models_vat_model__WEBPACK_IMPORTED_MODULE_2__["Vat"](0, "", 0, 1, "", 0, 0, 0, 0, 1);
+          });
         }
       }]);
 
@@ -4148,9 +4176,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
+          var _this41 = this;
+
           this.openSnackBar();
 
-          this._service.addWijntype(this.model).subscribe();
+          this._service.addWijntype(this.model).subscribe(function (result) {
+            _this41.model = new src_app_models_wijn_type_model__WEBPACK_IMPORTED_MODULE_2__["WijnType"](0, "");
+          });
         }
       }]);
 
@@ -4378,21 +4410,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this34 = this;
+          var _this42 = this;
 
           this.openSnackBar();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this34._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this42._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this34.processenl.push(proces);
+                _this42.processenl.push(proces);
               }
             });
-            _this34.processen = _this34.makeObservable();
+            _this42.processen = _this42.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -4415,31 +4447,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this35 = this;
+          var _this43 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this35.alarmForm.get('minimum').disable();
+              _this43.alarmForm.get('minimum').disable();
 
-              _this35.alarmForm.get('maximum').disable();
+              _this43.alarmForm.get('maximum').disable();
 
-              _this35.checked = true;
+              _this43.checked = true;
             } else {
-              _this35.alarmForm.get('minimum').enable();
+              _this43.alarmForm.get('minimum').enable();
 
-              _this35.alarmForm.get('maximum').enable();
+              _this43.alarmForm.get('maximum').enable();
 
-              _this35.checked = false;
+              _this43.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this36 = this;
+          var _this44 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 3).subscribe(function (result) {
-            _this36.alarmdataModel = result;
+            _this44.alarmdataModel = result;
           });
         }
       }, {
@@ -4604,21 +4636,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this37 = this;
+          var _this45 = this;
 
           this.openSnackBar();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this37._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this45._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this37.processenl.push(proces);
+                _this45.processenl.push(proces);
               }
             });
-            _this37.processen = _this37.makeObservable();
+            _this45.processen = _this45.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -4641,31 +4673,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this38 = this;
+          var _this46 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this38.alarmForm.get('minimum').disable();
+              _this46.alarmForm.get('minimum').disable();
 
-              _this38.alarmForm.get('maximum').disable();
+              _this46.alarmForm.get('maximum').disable();
 
-              _this38.checked = true;
+              _this46.checked = true;
             } else {
-              _this38.alarmForm.get('minimum').enable();
+              _this46.alarmForm.get('minimum').enable();
 
-              _this38.alarmForm.get('maximum').enable();
+              _this46.alarmForm.get('maximum').enable();
 
-              _this38.checked = false;
+              _this46.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this39 = this;
+          var _this47 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 1).subscribe(function (result) {
-            _this39.alarmdataModel = result;
+            _this47.alarmdataModel = result;
           });
         }
       }, {
@@ -4830,19 +4862,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this40 = this;
+          var _this48 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this40._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this48._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this40.processenl.push(proces);
+                _this48.processenl.push(proces);
               }
             });
-            _this40.processen = _this40.makeObservable();
+            _this48.processen = _this48.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -4865,31 +4897,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this41 = this;
+          var _this49 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this41.alarmForm.get('minimum').disable();
+              _this49.alarmForm.get('minimum').disable();
 
-              _this41.alarmForm.get('maximum').disable();
+              _this49.alarmForm.get('maximum').disable();
 
-              _this41.checked = true;
+              _this49.checked = true;
             } else {
-              _this41.alarmForm.get('minimum').enable();
+              _this49.alarmForm.get('minimum').enable();
 
-              _this41.alarmForm.get('maximum').enable();
+              _this49.alarmForm.get('maximum').enable();
 
-              _this41.checked = false;
+              _this49.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this42 = this;
+          var _this50 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 2).subscribe(function (result) {
-            _this42.alarmdataModel = result;
+            _this50.alarmdataModel = result;
           });
         }
       }, {
@@ -5056,19 +5088,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this43 = this;
+          var _this51 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this43._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this51._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this43.processenl.push(proces);
+                _this51.processenl.push(proces);
               }
             });
-            _this43.processen = _this43.makeObservable();
+            _this51.processen = _this51.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -5091,31 +5123,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this44 = this;
+          var _this52 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this44.alarmForm.get('minimum').disable();
+              _this52.alarmForm.get('minimum').disable();
 
-              _this44.alarmForm.get('maximum').disable();
+              _this52.alarmForm.get('maximum').disable();
 
-              _this44.checked = true;
+              _this52.checked = true;
             } else {
-              _this44.alarmForm.get('minimum').enable();
+              _this52.alarmForm.get('minimum').enable();
 
-              _this44.alarmForm.get('maximum').enable();
+              _this52.alarmForm.get('maximum').enable();
 
-              _this44.checked = false;
+              _this52.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this45 = this;
+          var _this53 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 5).subscribe(function (result) {
-            _this45.alarmdataModel = result;
+            _this53.alarmdataModel = result;
           });
         }
       }, {
@@ -5282,19 +5314,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this46 = this;
+          var _this54 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this46._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this54._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this46.processenl.push(proces);
+                _this54.processenl.push(proces);
               }
             });
-            _this46.processen = _this46.makeObservable();
+            _this54.processen = _this54.makeObservable();
           });
         } // greaterThan(minimumKey: string, maximumKey: string) {
         //   return (group: FormGroup) => {
@@ -5317,31 +5349,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this47 = this;
+          var _this55 = this;
 
           this.alarmForm.get('disable').valueChanges.subscribe(function (v) {
             if (v) {
-              _this47.alarmForm.get('minimum').disable();
+              _this55.alarmForm.get('minimum').disable();
 
-              _this47.alarmForm.get('maximum').disable();
+              _this55.alarmForm.get('maximum').disable();
 
-              _this47.checked = true;
+              _this55.checked = true;
             } else {
-              _this47.alarmForm.get('minimum').enable();
+              _this55.alarmForm.get('minimum').enable();
 
-              _this47.alarmForm.get('maximum').enable();
+              _this55.alarmForm.get('maximum').enable();
 
-              _this47.checked = false;
+              _this55.checked = false;
             }
           });
         }
       }, {
         key: "onSelect",
         value: function onSelect(procesId) {
-          var _this48 = this;
+          var _this56 = this;
 
           this._service.getAlarmDataByVinAndSoort(procesId, 4).subscribe(function (result) {
-            _this48.alarmdataModel = result;
+            _this56.alarmdataModel = result;
           });
         }
       }, {
@@ -5500,29 +5532,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this49 = this;
+          var _this57 = this;
 
           this.processenl = [];
           this.gebruikersl = [];
 
           this._service.getAllGebruikers().subscribe(function (result) {
             result.records.forEach(function (gebruiker) {
-              _this49.gebruikersl.push(gebruiker);
+              _this57.gebruikersl.push(gebruiker);
             });
-            _this49.gebruikers = _this49.makeObservableGebruiker();
+            _this57.gebruikers = _this57.makeObservableGebruiker();
           });
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this49._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this57._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this49.processenl.push(proces);
+                _this57.processenl.push(proces);
               }
             });
-            _this49.processen = _this49.makeObservable();
+            _this57.processen = _this57.makeObservable();
           });
 
           this.processenNotl = [];
@@ -5556,47 +5588,47 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSelect",
         value: function onSelect(id) {
-          var _this50 = this;
+          var _this58 = this;
 
           this.instantiateLists();
 
           this._service.getAllAlarmDataGebruikers().subscribe(function (result) {
             result.records.forEach(function (el) {
-              _this50.checkIfExists(el, id);
+              _this58.checkIfExists(el, id);
             });
 
-            if (_this50.bestaat) {
-              _this50.gebruiker = id;
+            if (_this58.bestaat) {
+              _this58.gebruiker = id;
 
-              _this50._service.getAllAlarmDataGebruikerByGebruiker(id).subscribe(function (result) {
+              _this58._service.getAllAlarmDataGebruikerByGebruiker(id).subscribe(function (result) {
                 result.records.forEach(function (element) {
-                  _this50.CheckIfContains(element.alarmData_vinificatieId);
+                  _this58.CheckIfContains(element.alarmData_vinificatieId);
 
-                  _this50.processenNotl.forEach(function (el) {
+                  _this58.processenNotl.forEach(function (el) {
                     if (el.id == element.alarmData_vinificatieId) {
-                      _this50.processenNotl.splice(_this50.processenNotl.indexOf(el), 1);
+                      _this58.processenNotl.splice(_this58.processenNotl.indexOf(el), 1);
                     }
                   });
                 });
               });
 
-              _this50.processenNot = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(_this50.processenl);
+              _this58.processenNot = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(_this58.processenl);
             } else {
-              _this50.processenl = [];
-              _this50.processenNot = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Observable"]();
+              _this58.processenl = [];
+              _this58.processenNot = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Observable"]();
 
-              _this50._service.getAllProcessen().subscribe(function (result) {
+              _this58._service.getAllProcessen().subscribe(function (result) {
                 result.records.forEach(function (proces) {
                   if (proces.actief == 1) {
-                    _this50._service.getVatById(proces.vatId).subscribe(function (vat) {
+                    _this58._service.getVatById(proces.vatId).subscribe(function (vat) {
                       proces.vat = vat;
                     });
 
-                    _this50.processenl.push(proces);
+                    _this58.processenl.push(proces);
                   }
                 });
-                _this50.processen = _this50.makeObservable();
-                _this50.processenNot = _this50.processen;
+                _this58.processen = _this58.makeObservable();
+                _this58.processenNot = _this58.processen;
               });
             }
           });
@@ -5613,44 +5645,44 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "add",
         value: function add(proces) {
-          var _this51 = this;
+          var _this59 = this;
 
           var message = "Deze persoon krijgt vanaf nu meldingen van het proces";
           this.openSnackBar(message);
 
           this._service.getAlarmDataByProces(proces.id).subscribe(function (result) {
             result.records.forEach(function (element) {
-              _this51.AlarmDataGebruikerModel.alarmdataId = element.id;
+              _this59.AlarmDataGebruikerModel.alarmdataId = element.id;
 
-              _this51._service.addAlarmDataGebruiker(_this51.AlarmDataGebruikerModel).subscribe();
+              _this59._service.addAlarmDataGebruiker(_this59.AlarmDataGebruikerModel).subscribe();
             });
           });
         }
       }, {
         key: "delete",
         value: function _delete(proces) {
-          var _this52 = this;
+          var _this60 = this;
 
           var message = "Deze persoon zal geen meldingen mee krijgen van het proces";
           this.openSnackBar(message);
 
           this._service.getAlarmDataByProces(proces.id).subscribe(function (result) {
             result.records.forEach(function (element) {
-              _this52.AlarmDataGebruikerModel.alarmdataId = element.id;
+              _this60.AlarmDataGebruikerModel.alarmdataId = element.id;
 
-              _this52._service.deleteAlarmDataGebruiker(_this52.AlarmDataGebruikerModel).subscribe();
+              _this60._service.deleteAlarmDataGebruiker(_this60.AlarmDataGebruikerModel).subscribe();
             });
           });
         }
       }, {
         key: "CheckIfContains",
         value: function CheckIfContains(id) {
-          var _this53 = this;
+          var _this61 = this;
 
           this.processen.subscribe(function (result) {
             result.forEach(function (el) {
               if (el.id == id) {
-                _this53.processenSubl.push(el);
+                _this61.processenSubl.push(el);
               }
             });
           });
@@ -5916,7 +5948,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function AppComponent(_service, router, breakpointObserver) {
-        var _this54 = this;
+        var _this62 = this;
 
         _classCallCheck(this, AppComponent);
 
@@ -5930,11 +5962,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["shareReplay"])());
 
         this._service.isLoggedin.subscribe(function (e) {
-          _this54.login = e.valueOf();
+          _this62.login = e.valueOf();
         });
 
         this._service.isAdmin.subscribe(function (e) {
-          _this54.admin = e.valueOf();
+          _this62.admin = e.valueOf();
         });
       }
 
@@ -6550,21 +6582,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this55 = this;
+          var _this63 = this;
 
           this._service.Authenticate(this.login).subscribe(function (result) {
-            _this55._service.isLoggedin.next(result.id ? true : false);
+            _this63._service.isLoggedin.next(result.id ? true : false);
 
             localStorage.setItem("token", result.id.toString());
 
-            _this55.router.navigateByUrl('');
+            _this63.router.navigateByUrl('');
 
-            _this55._service.setUser(result);
+            _this63._service.setUser(result);
 
             if (result.rolId == 1) {
-              _this55._service.setIsAdmin(true);
+              _this63._service.setIsAdmin(true);
             } else {
-              _this55._service.setIsAdmin(false);
+              _this63._service.setIsAdmin(false);
             }
           });
         }
@@ -7256,7 +7288,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function AddActieComponent(fb, _service, _snackBar) {
-        var _this56 = this;
+        var _this64 = this;
 
         _classCallCheck(this, AddActieComponent);
 
@@ -7278,14 +7310,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 proces.vat = vat;
               });
 
-              _this56.processenl.push(proces);
+              _this64.processenl.push(proces);
             }
           });
-          _this56.processen = _this56.makeObservable();
+          _this64.processen = _this64.makeObservable();
         });
 
         _service.getAllEventsoorten().subscribe(function (result) {
-          _this56.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          _this64.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
         });
       }
 
@@ -7450,23 +7482,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this57 = this;
+          var _this65 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this57._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this65._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this57.processenl.push(proces);
+                _this65.processenl.push(proces);
               }
             });
-            _this57.processen = _this57.makeObservable();
+            _this65.processen = _this65.makeObservable();
           });
 
           this._service.getAllMetingsoorten().subscribe(function (result) {
-            _this57.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
+            _this65.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
           });
         }
       }, {
@@ -7603,24 +7635,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this58 = this;
+          var _this66 = this;
 
           this.processenl = new Array();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this58._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this66._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this58.processenl.push(proces);
+                _this66.processenl.push(proces);
 
                 console.log(proces);
               }
             });
-            _this58.processen = _this58.makeObservable();
-            console.log(_this58.processen);
+            _this66.processen = _this66.makeObservable();
+            console.log(_this66.processen);
           });
         }
       }, {
@@ -7634,18 +7666,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "Sluit",
         value: function Sluit(proces) {
-          var _this59 = this;
+          var _this67 = this;
 
           this.openSnackBar();
           proces.actief = 0;
 
           this._service.updateProcess(proces).subscribe(function (result) {
-            proces.vat = _this59._service.getVatById(proces.vatId);
+            proces.vat = _this67._service.getVatById(proces.vatId);
             proces.vat.subscribe(function (result) {
               result.inGebruik = 0;
 
-              _this59._service.updateVat(result).subscribe(function (result) {
-                _this59.instantiateLists();
+              _this67._service.updateVat(result).subscribe(function (result) {
+                _this67.instantiateLists();
               });
             });
           });
@@ -7816,7 +7848,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this60 = this;
+          var _this68 = this;
 
           this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null, null, null, 0);
           this.vatenl = new Array();
@@ -7824,22 +7856,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this._service.getAllVaten().subscribe(function (result) {
             result.records.forEach(function (vat) {
               if (vat.inGebruik == 0) {
-                _this60.vatenl.push(vat);
+                _this68.vatenl.push(vat);
               }
             });
-            _this60.vaten = _this60.makeObservable();
+            _this68.vaten = _this68.makeObservable();
           });
 
           this._service.getAllDruifsoorten().subscribe(function (result) {
-            _this60.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this68.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
 
           this._service.getAllPersMethodes().subscribe(function (result) {
-            _this60.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this68.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
 
           this._service.getAllWijnTypes().subscribe(function (result) {
-            _this60.wijntypes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this68.wijntypes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
         }
       }, {
@@ -7853,27 +7885,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this61 = this;
+          var _this69 = this;
 
           this.openSnackBar();
 
           this._service.addProces(this.procesModel).subscribe(function (result) {
-            _this61.procesModel.vat = _this61._service.getVatById(_this61.procesModel.vatId);
+            _this69.procesModel.vat = _this69._service.getVatById(_this69.procesModel.vatId);
 
-            _this61.procesModel.vat.subscribe(function (result) {
+            _this69.procesModel.vat.subscribe(function (result) {
               console.log(result);
               result.inGebruik = 1;
 
-              _this61._service.updateVat(result).subscribe(function (result) {
-                _this61.instantiateLists();
+              _this69._service.updateVat(result).subscribe(function (result) {
+                _this69.instantiateLists();
 
-                _this61._service.getLastProcess().subscribe(function (result) {
+                _this69._service.getLastProcess().subscribe(function (result) {
                   for (var i = 1; i < 6; i++) {
-                    _this61._service.addAlarmData(new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, i, result.id, 51, 1, 1)).subscribe();
+                    _this69._service.addAlarmData(new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, i, result.id, 51, 1, 1)).subscribe();
                   }
 
-                  _this61.druivenLijst.forEach(function (el) {
-                    _this61._service.addVinificatieDruif(new src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__["VinificatieDruif"](result.id, el.id));
+                  _this69.druivenLijst.forEach(function (el) {
+                    _this69._service.addVinificatieDruif(new src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__["VinificatieDruif"](result.id, el.id));
                   });
                 });
               });
@@ -8896,12 +8928,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonDashboardComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this62 = this;
+          var _this70 = this;
 
           this.routeSub = this.route.params.subscribe(function (params) {
-            _this62.id = params['id'];
-            _this62.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=' + _this62.id;
-            console.log(_this62.id, _this62.iframe);
+            _this70.id = params['id'];
+            _this70.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=' + _this70.id;
+            console.log(_this70.id, _this70.iframe);
           });
         }
       }]);
@@ -9091,18 +9123,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonActieveVinificatiesComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this63 = this;
+          var _this71 = this;
 
           // var druiflijst = new Array<Druif[]>();
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               // proces.druif = new Observable<Druif>();
               if (proces.actief == 1) {
-                _this63._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this71._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this63._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
+                _this71._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
                   proces.persmethode = persmethode;
                 }); // this._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(result => { 
                 //   result.records.forEach(druifsoort => {
@@ -9118,10 +9150,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   proces.iframe = "http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&panelId=8&fullscreen&var-vat=" + proces.vatId;
                 }
 
-                _this63.processenl.push(proces);
+                _this71.processenl.push(proces);
               }
             });
-            _this63.processen = _this63.makeObservable();
+            _this71.processen = _this71.makeObservable();
           });
         }
       }, {
@@ -9241,7 +9273,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function ToonDetailsVinificatiesComponent(fb, _service, route, router) {
-        var _this64 = this;
+        var _this72 = this;
 
         _classCallCheck(this, ToonDetailsVinificatiesComponent);
 
@@ -9251,7 +9283,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.router = router;
         this.eventl = new Array();
         this.routeSub = this.route.params.subscribe(function (params) {
-          _this64.id = params['id'];
+          _this72.id = params['id'];
         });
         this.getProcess();
         this.getEvents();
@@ -9260,49 +9292,49 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonDetailsVinificatiesComponent, [{
         key: "getProcess",
         value: function getProcess() {
-          var _this65 = this;
+          var _this73 = this;
 
           this._service.getProcesById(this.id).subscribe(function (proces) {
             var druiflijst = new Array();
-            _this65.process = proces;
+            _this73.process = proces;
 
-            _this65._service.getVatById(proces.vatId).subscribe(function (vat) {
-              _this65.process.vat = vat;
+            _this73._service.getVatById(proces.vatId).subscribe(function (vat) {
+              _this73.process.vat = vat;
             });
 
-            _this65._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
-              _this65.process.persmethode = persmethode;
+            _this73._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
+              _this73.process.persmethode = persmethode;
             });
 
-            _this65._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
-              _this65.process.wijnType = wijnType;
+            _this73._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
+              _this73.process.wijnType = wijnType;
             });
 
-            _this65._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
+            _this73._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
               result.records.forEach(function (druifsoort) {
                 druiflijst.push(druifsoort);
               });
-              _this65.process.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(druiflijst);
+              _this73.process.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(druiflijst);
             });
 
-            console.log(_this65.process);
+            console.log(_this73.process);
           });
         }
       }, {
         key: "getEvents",
         value: function getEvents() {
-          var _this66 = this;
+          var _this74 = this;
 
           this._service.getAllEventsByVinificatieId(this.id).subscribe(function (result) {
             result.records.forEach(function (event) {
-              _this66._service.getEventSoortById(event.soortEventId).subscribe(function (soortEvent) {
+              _this74._service.getEventSoortById(event.soortEventId).subscribe(function (soortEvent) {
                 event.soortEvent = soortEvent;
               });
 
-              _this66.eventl.push(event);
+              _this74.eventl.push(event);
             });
-            _this66.events = _this66.makeObservable(_this66.eventl);
-            console.log(_this66.events);
+            _this74.events = _this74.makeObservable(_this74.eventl);
+            console.log(_this74.events);
           });
         }
       }, {
@@ -9441,7 +9473,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonNonActieveVinificatiesComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this67 = this;
+          var _this75 = this;
 
           var druiflijst = new Array();
 
@@ -9450,15 +9482,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
 
               if (proces.actief == 0) {
-                _this67._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this75._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this67._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
+                _this75._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
                   proces.persmethode = persmethode;
                 });
 
-                _this67._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
+                _this75._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
                   result.records.forEach(function (druifsoort) {
                     console.log(druifsoort);
                     druiflijst.push(druifsoort);
@@ -9466,14 +9498,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   proces.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(druiflijst);
                 });
 
-                _this67.processenl.push(proces);
+                _this75.processenl.push(proces);
               }
             });
-            _this67.processen = _this67.makeObservable();
-            _this67.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this67.processenl);
-            _this67.dataSource.paginator = _this67.paginator;
-            _this67.dataSource.sort = _this67.sort;
-            console.log(_this67.dataSource);
+            _this75.processen = _this75.makeObservable();
+            _this75.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this75.processenl);
+            _this75.dataSource.paginator = _this75.paginator;
+            _this75.dataSource.sort = _this75.sort;
+            console.log(_this75.dataSource);
           });
         }
       }, {
