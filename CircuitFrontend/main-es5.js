@@ -531,7 +531,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>\r\n    <mat-form-field>\r\n        <mat-label>Kies een gebruiker</mat-label>\r\n        <mat-select (selectionChange)=\"onSelect($event.value)\" [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n            <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n            </mat-option>\r\n        </mat-select>\r\n    </mat-form-field>\r\n</p>\r\n<div>\r\n    <div>\r\n        Alarm\r\n        <div *ngFor=\"let proces of (processenSub | async)\">\r\n            {{proces.vat?.nummer}} <button (click)=\"delete(proces)\">Delete alarm</button>\r\n        </div>\r\n    </div>\r\n    <div>Geen alarm\r\n        <div *ngFor=\"let proces of (processenNot | async)\">\r\n            {{proces.vat?.nummer}}<button (click)=\"add(proces)\">Add alarm</button>\r\n        </div>\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n    <div>\r\n        <p>\r\n            <mat-form-field>\r\n                <mat-label>Kies een gebruiker</mat-label>\r\n                <mat-select (selectionChange)=\"onSelect($event.value)\"\r\n                    [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n                    <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                        {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n        </p>\r\n\r\n        <div>\r\n            Alarm\r\n            <div *ngFor=\"let proces of (processenSub | async)\">\r\n                {{proces.vat?.nummer}} <button mat-raised-button color=\"warn\" (click)=\"delete(proces)\">Delete alarm</button>\r\n            </div>\r\n        </div>\r\n        <div>\r\n            Geen alarm\r\n            <div *ngFor=\"let proces of (processenNot | async)\">\r\n                {{proces.vat?.nummer}}<button mat-raised-button color=\"primary\" (click)=\"add(proces)\">Add alarm</button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n</div>";
     /***/
   },
 
@@ -8168,8 +8168,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function ServicesService(http) {
         _classCallCheck(this, ServicesService);
 
-        this.http = http; //gebruikers
-
+        this.http = http;
         this.isLoggedin = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
         this.userSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](new _models_gebruiker_model__WEBPACK_IMPORTED_MODULE_4__["Gebruiker"](null, null, '', '', '', '', '', '', ''));
         this.user = this.userSubject.asObservable();
@@ -8249,6 +8248,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             },
             method: 'PUT'
           }));
+        }
+      }, {
+        key: "getAllHandmatigeMetingenByVinificatieId",
+        value: function getAllHandmatigeMetingenByVinificatieId(vinificatieId) {
+          return this.http.get(baselink + "HandmatigeMeting/getByVinificatieId.php?vinificatieId=" + vinificatieId);
         }
       }, {
         key: "addMeting",
@@ -8429,6 +8433,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return this.http.get(baselink + "SoortMeting/read.php");
         }
       }, {
+        key: "getSoortMetingById",
+        value: function getSoortMetingById(id) {
+          return this.http.get(baselink + "SoortMeting/read_one.php?id=" + id);
+        }
+      }, {
         key: "addMetingSoort",
         value: function addMetingSoort(meting) {
           //return this.http.post<Event>(baselink + "", event);
@@ -8485,8 +8494,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }));
         }
       }, {
-        key: "getEventSoortById",
-        value: function getEventSoortById(id) {
+        key: "getSoortEventById",
+        value: function getSoortEventById(id) {
           return this.http.get(baselink + "SoortEvent/read_one.php?id=" + id);
         }
       }, {
@@ -8543,6 +8552,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             },
             method: 'PUT'
           }));
+        } //gebruikers  
+
+      }, {
+        key: "getGebruikerById",
+        value: function getGebruikerById(id) {
+          return this.http.get(baselink + "Gebruiker/read_one.php?id=" + id);
         }
       }, {
         key: "setUser",
@@ -8740,6 +8755,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             },
             method: 'PUT'
           }));
+        } //alarmLog
+
+      }, {
+        key: "getAlarmLogByVinificatieId",
+        value: function getAlarmLogByVinificatieId(vinificatieId) {
+          return this.http.get(baselink + "AlarmLog/getByVinificatieId.php?vinificatieId=" + vinificatieId);
+        } //vinificatieGebruiker
+
+      }, {
+        key: "getAllVinificatieGebruiker",
+        value: function getAllVinificatieGebruiker() {
+          return this.http.get(baselink + "VinificatieGebruiker/read.php");
         }
       }]);
 
@@ -9283,11 +9310,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.route = route;
         this.router = router;
         this.eventl = new Array();
+        this.metingl = new Array();
+        this.alarml = new Array();
+        this.gebruikerl = new Array();
         this.routeSub = this.route.params.subscribe(function (params) {
           _this72.id = params['id'];
         });
         this.getProcess();
         this.getEvents();
+        this.getHandmatigeMetingen();
+        this.getAlarmLog();
+        this.getGebruikers();
       }
 
       _createClass(ToonDetailsVinificatiesComponent, [{
@@ -9328,7 +9361,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           this._service.getAllEventsByVinificatieId(this.id).subscribe(function (result) {
             result.records.forEach(function (event) {
-              _this74._service.getEventSoortById(event.soortEventId).subscribe(function (soortEvent) {
+              _this74._service.getSoortEventById(event.soortEventId).subscribe(function (soortEvent) {
                 event.soortEvent = soortEvent;
               });
 
@@ -9336,6 +9369,55 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             });
             _this74.events = _this74.makeObservable(_this74.eventl);
             console.log(_this74.events);
+          });
+        }
+      }, {
+        key: "getHandmatigeMetingen",
+        value: function getHandmatigeMetingen() {
+          var _this75 = this;
+
+          this._service.getAllHandmatigeMetingenByVinificatieId(this.id).subscribe(function (result) {
+            result.records.forEach(function (meting) {
+              _this75._service.getSoortMetingById(meting.soortMetingId).subscribe(function (soortMeting) {
+                meting.soortMeting = soortMeting;
+              });
+
+              _this75.metingl.push(meting);
+            });
+            _this75.metingen = _this75.makeObservable(_this75.metingl);
+            console.log(_this75.metingen);
+          });
+        }
+      }, {
+        key: "getAlarmLog",
+        value: function getAlarmLog() {
+          var _this76 = this;
+
+          this._service.getAlarmLogByVinificatieId(this.id).subscribe(function (result) {
+            result.records.forEach(function (alarm) {
+              _this76.eventl.push(alarm);
+            });
+            _this76.alarmLog = _this76.makeObservable(_this76.alarml);
+            console.log(_this76.events);
+          });
+        }
+      }, {
+        key: "getGebruikers",
+        value: function getGebruikers() {
+          var _this77 = this;
+
+          this._service.getAllVinificatieGebruiker().subscribe(function (result) {
+            result.records.forEach(function (vingebr) {
+              if (vingebr.vinificatieId == _this77.id) {
+                _this77._service.getGebruikerById(vingebr.gebruikerId).subscribe(function (gebruiker) {
+                  vingebr.gebruiker = gebruiker;
+                });
+
+                _this77.gebruikerl.push(vingebr);
+              }
+            });
+            _this77.gebruikers = _this77.makeObservable(_this77.gebruikerl);
+            console.log(_this77.gebruikers);
           });
         }
       }, {
@@ -9474,7 +9556,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonNonActieveVinificatiesComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this75 = this;
+          var _this78 = this;
 
           var druiflijst = new Array();
 
@@ -9483,15 +9565,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
 
               if (proces.actief == 0) {
-                _this75._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this78._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this75._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
+                _this78._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
                   proces.persmethode = persmethode;
                 });
 
-                _this75._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
+                _this78._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
                   result.records.forEach(function (druifsoort) {
                     console.log(druifsoort);
                     druiflijst.push(druifsoort);
@@ -9499,14 +9581,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   proces.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(druiflijst);
                 });
 
-                _this75.processenl.push(proces);
+                _this78.processenl.push(proces);
               }
             });
-            _this75.processen = _this75.makeObservable();
-            _this75.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this75.processenl);
-            _this75.dataSource.paginator = _this75.paginator;
-            _this75.dataSource.sort = _this75.sort;
-            console.log(_this75.dataSource);
+            _this78.processen = _this78.makeObservable();
+            _this78.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this78.processenl);
+            _this78.dataSource.paginator = _this78.paginator;
+            _this78.dataSource.sort = _this78.sort;
+            console.log(_this78.dataSource);
           });
         }
       }, {

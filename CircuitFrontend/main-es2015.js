@@ -344,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>\r\n    <mat-form-field>\r\n        <mat-label>Kies een gebruiker</mat-label>\r\n        <mat-select (selectionChange)=\"onSelect($event.value)\" [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n            <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n            </mat-option>\r\n        </mat-select>\r\n    </mat-form-field>\r\n</p>\r\n<div>\r\n    <div>\r\n        Alarm\r\n        <div *ngFor=\"let proces of (processenSub | async)\">\r\n            {{proces.vat?.nummer}} <button (click)=\"delete(proces)\">Delete alarm</button>\r\n        </div>\r\n    </div>\r\n    <div>Geen alarm\r\n        <div *ngFor=\"let proces of (processenNot | async)\">\r\n            {{proces.vat?.nummer}}<button (click)=\"add(proces)\">Add alarm</button>\r\n        </div>\r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n    <div>\r\n        <p>\r\n            <mat-form-field>\r\n                <mat-label>Kies een gebruiker</mat-label>\r\n                <mat-select (selectionChange)=\"onSelect($event.value)\"\r\n                    [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n                    <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                        {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n        </p>\r\n\r\n        <div>\r\n            Alarm\r\n            <div *ngFor=\"let proces of (processenSub | async)\">\r\n                {{proces.vat?.nummer}} <button mat-raised-button color=\"warn\" (click)=\"delete(proces)\">Delete alarm</button>\r\n            </div>\r\n        </div>\r\n        <div>\r\n            Geen alarm\r\n            <div *ngFor=\"let proces of (processenNot | async)\">\r\n                {{proces.vat?.nummer}}<button mat-raised-button color=\"primary\" (click)=\"add(proces)\">Add alarm</button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -4661,7 +4661,6 @@ const baselink = "http://192.168.0.105/api/";
 let ServicesService = class ServicesService {
     constructor(http) {
         this.http = http;
-        //gebruikers
         this.isLoggedin = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
         this.userSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](new _models_gebruiker_model__WEBPACK_IMPORTED_MODULE_4__["Gebruiker"](null, null, '', '', '', '', '', '', ''));
         this.user = this.userSubject.asObservable();
@@ -4725,6 +4724,9 @@ let ServicesService = class ServicesService {
             },
             method: 'PUT'
         }));
+    }
+    getAllHandmatigeMetingenByVinificatieId(vinificatieId) {
+        return this.http.get(baselink + "HandmatigeMeting/getByVinificatieId.php?vinificatieId=" + vinificatieId);
     }
     addMeting(meting) {
         //return this.http.post<Meting>(baselink + "", meting);
@@ -4866,6 +4868,9 @@ let ServicesService = class ServicesService {
     getAllMetingsoorten() {
         return this.http.get(baselink + "SoortMeting/read.php");
     }
+    getSoortMetingById(id) {
+        return this.http.get(baselink + "SoortMeting/read_one.php?id=" + id);
+    }
     addMetingSoort(meting) {
         //return this.http.post<Event>(baselink + "", event);
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
@@ -4912,7 +4917,7 @@ let ServicesService = class ServicesService {
             method: 'DELETE'
         }));
     }
-    getEventSoortById(id) {
+    getSoortEventById(id) {
         return this.http.get(baselink + "SoortEvent/read_one.php?id=" + id);
     }
     addEventSoort(event) {
@@ -4957,6 +4962,10 @@ let ServicesService = class ServicesService {
             },
             method: 'PUT'
         }));
+    }
+    //gebruikers  
+    getGebruikerById(id) {
+        return this.http.get(baselink + "Gebruiker/read_one.php?id=" + id);
     }
     setUser(user) {
         this.userSubject.next(user);
@@ -5110,6 +5119,14 @@ let ServicesService = class ServicesService {
             },
             method: 'PUT'
         }));
+    }
+    //alarmLog
+    getAlarmLogByVinificatieId(vinificatieId) {
+        return this.http.get(baselink + "AlarmLog/getByVinificatieId.php?vinificatieId=" + vinificatieId);
+    }
+    //vinificatieGebruiker
+    getAllVinificatieGebruiker() {
+        return this.http.get(baselink + "VinificatieGebruiker/read.php");
     }
 };
 ServicesService.ctorParameters = () => [
@@ -5460,11 +5477,17 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
         this.route = route;
         this.router = router;
         this.eventl = new Array();
+        this.metingl = new Array();
+        this.alarml = new Array();
+        this.gebruikerl = new Array();
         this.routeSub = this.route.params.subscribe(params => {
             this.id = params['id'];
         });
         this.getProcess();
         this.getEvents();
+        this.getHandmatigeMetingen();
+        this.getAlarmLog();
+        this.getGebruikers();
     }
     getProcess() {
         this._service.getProcesById(this.id).subscribe(proces => {
@@ -5485,11 +5508,42 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
     getEvents() {
         this._service.getAllEventsByVinificatieId(this.id).subscribe(result => {
             result.records.forEach(event => {
-                this._service.getEventSoortById(event.soortEventId).subscribe(soortEvent => { event.soortEvent = soortEvent; });
+                this._service.getSoortEventById(event.soortEventId).subscribe(soortEvent => { event.soortEvent = soortEvent; });
                 this.eventl.push(event);
             });
             this.events = this.makeObservable(this.eventl);
             console.log(this.events);
+        });
+    }
+    getHandmatigeMetingen() {
+        this._service.getAllHandmatigeMetingenByVinificatieId(this.id).subscribe(result => {
+            result.records.forEach(meting => {
+                this._service.getSoortMetingById(meting.soortMetingId).subscribe(soortMeting => { meting.soortMeting = soortMeting; });
+                this.metingl.push(meting);
+            });
+            this.metingen = this.makeObservable(this.metingl);
+            console.log(this.metingen);
+        });
+    }
+    getAlarmLog() {
+        this._service.getAlarmLogByVinificatieId(this.id).subscribe(result => {
+            result.records.forEach(alarm => {
+                this.eventl.push(alarm);
+            });
+            this.alarmLog = this.makeObservable(this.alarml);
+            console.log(this.events);
+        });
+    }
+    getGebruikers() {
+        this._service.getAllVinificatieGebruiker().subscribe(result => {
+            result.records.forEach(vingebr => {
+                if (vingebr.vinificatieId == this.id) {
+                    this._service.getGebruikerById(vingebr.gebruikerId).subscribe(gebruiker => { vingebr.gebruiker = gebruiker; });
+                    this.gebruikerl.push(vingebr);
+                }
+            });
+            this.gebruikers = this.makeObservable(this.gebruikerl);
+            console.log(this.gebruikers);
         });
     }
     ngOnInit() {
