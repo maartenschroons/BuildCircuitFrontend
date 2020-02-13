@@ -8161,7 +8161,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! ../models/gebruiker.model */
     "./src/app/models/gebruiker.model.ts");
 
-    var baselink = "http://localhost/backend_pcfruit/api/";
+    var baselink = "http://192.168.0.105/api/";
 
     var ServicesService =
     /*#__PURE__*/
