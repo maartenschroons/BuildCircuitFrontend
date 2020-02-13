@@ -4191,6 +4191,7 @@ let AddActieComponent = class AddActieComponent {
     }
     onSubmit() {
         this.openSnackBar();
+        this.eventModel.gebruikerId = localStorage.getItem("token");
         this._service.addEvent(this.eventModel).subscribe;
     }
 };
@@ -4290,7 +4291,7 @@ let AddMetingComponent = class AddMetingComponent {
     }
     onSubmit() {
         this.openSnackBar();
-        this.metingModel.gebruikerId = "1";
+        this.metingModel.gebruikerId = localStorage.getItem("token");
         this._service.addMeting(this.metingModel).subscribe;
     }
 };
