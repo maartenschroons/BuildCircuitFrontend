@@ -474,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-grid-list cols=\"3\">\r\n    <div *ngFor=\"let p of (processen | async)\">\r\n        <mat-grid-tile>          \r\n            <mat-card class=\"example-card\">\r\n                <mat-card-header>\r\n                <!-- <div mat-card-avatar class=\"example-header-image\"></div> -->\r\n                <mat-card-title>{{p.vat?.nummer}}</mat-card-title>\r\n                <mat-card-subtitle>Vinificatie {{p.id}}</mat-card-subtitle>\r\n                </mat-card-header>\r\n                <!-- <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"> -->\r\n                <iframe mat-card-image [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <ul>                    \r\n                    <li>Oogst: {{p.oogst}}Kg</li>\r\n                    <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    <li>Persmethode: {{p.persmethode?.methode}}</li>\r\n                    <!-- <li *ngFor=\"let d of (p.druif | async)\">{{d.druifsoort}}</li> -->\r\n                </ul>\r\n                <mat-card-content>\r\n                <p>\r\n                </p>\r\n                </mat-card-content>\r\n                <mat-card-actions>\r\n                <!-- <button mat-button >DASHBOARD</button> -->\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" >Dashboard</a>\r\n                <!-- <button mat-button>DETAILS</button> -->\r\n                </mat-card-actions>\r\n            </mat-card>\r\n        </mat-grid-tile>\r\n    </div>\r\n</mat-grid-list>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-6 col-lg-4 col-xl-3\" *ngFor=\"let p of (processen | async)\">\r\n            <div class=\"card mt-3 mb-3\">\r\n                <div class=\"card-header\">\r\n                <h5 class=\"card-title\">{{p.vat?.nummer}} - Vinificatie {{p.id}}</h5>\r\n                </div>\r\n                <iframe class=\"card-img-top\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <div class=\"card-body\">\r\n                    <ul>\r\n                        \r\n                        <li>Wijnsoort: {{p.wijnType?.naam}}</li>                    \r\n                        <li>Jaargang: {{p.jaargang}}</li>\r\n                        <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"card-footer\">\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" class=\"btn btn-primary\">Dashboard</a>\r\n                <a [routerLink]=\"['/detail/' + (p.vatId)]\" class=\"btn btn-primary float-right\">Details</a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -487,7 +487,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <mat-tab-group>\r\n        <mat-tab label=\"Overzicht\">\r\n          <h2>Overzicht vinificatie {{process?.id}}</h2>\r\n          <p>...</p>\r\n        </mat-tab>\r\n\r\n        <mat-tab label=\"Metingen\">\r\n            <h2>Handmatig ingemeten data</h2>\r\n            <table mat-table [dataSource]=\"dataSourceMeting\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortMetingId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort meting </th>\r\n                <td mat-cell *matCellDef=\"let m\">{{m?.soortMeting?.naam}}</td>\r\n                </ng-container>\r\n\r\n                <ng-container matColumnDef=\"meting\">\r\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Meting </th>\r\n                    <td mat-cell *matCellDef=\"let m\">{{ m?.meting }}</td>\r\n                    </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"tijd\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let m\"> {{m?.tijd}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsMeting\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsMeting;\"></tr>\r\n            </table>\r\n            <mat-paginator [pageSizeOptions]=\"[10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Events\">\r\n            <h2>Events</h2>\r\n            <table mat-table [dataSource]=\"dataSourceEvent\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortEventId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Event </th>\r\n                <td mat-cell *matCellDef=\"let e\">{{e?.soortEvent?.naam}}</td>\r\n                </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"datum\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let e\"> {{e?.datum}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsEvent\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsEvent;\"></tr>\r\n            </table>\r\n            <mat-paginator [pageSizeOptions]=\"[10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Alarmen en gebruikers\">\r\n            <h2>Alarmen en gebruikers</h2>\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceGebruiker\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"gebruikerId\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Gebruikers </th>\r\n                        <td mat-cell *matCellDef=\"let g\">{{g?.gebruiker?.voornaam}} {{g?.gebruiker?.naam}}</td>\r\n                        </ng-container>  \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsGebruiker\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsGebruiker;\"></tr>\r\n                    </table>\r\n                    <mat-paginator [pageSizeOptions]=\"[5,10, 25, 100]\"></mat-paginator>\r\n                </div>\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceAlarm\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"bericht\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Alarm </th>\r\n                        <td mat-cell *matCellDef=\"let a\">{{a?.bericht}}</td>\r\n                        </ng-container>\r\n                    \r\n                        <ng-container matColumnDef=\"datum\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                        <td mat-cell *matCellDef=\"let a\"> {{a?.datum}} </td>\r\n                        </ng-container>        \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsAlarm\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsAlarm;\"></tr>\r\n                    </table>\r\n                    <mat-paginator [pageSizeOptions]=\"[5,10, 25, 100]\"></mat-paginator>\r\n                </div>                \r\n            </div>\r\n          </mat-tab>\r\n\r\n          \r\n    </mat-tab-group>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <mat-tab-group>\r\n        <mat-tab label=\"Overzicht\">\r\n          <h2>Overzicht vinificatie {{process?.id}}</h2>\r\n          <p>...</p>\r\n        </mat-tab>\r\n\r\n        <mat-tab label=\"Metingen\">\r\n            <h2>Handmatig ingemeten data</h2>\r\n            <table mat-table [dataSource]=\"dataSourceMeting\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortMetingId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort meting </th>\r\n                <td mat-cell *matCellDef=\"let m\">{{m?.soortMeting?.naam}}</td>\r\n                </ng-container>\r\n\r\n                <ng-container matColumnDef=\"meting\">\r\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Meting </th>\r\n                    <td mat-cell *matCellDef=\"let m\">{{ m?.meting }}</td>\r\n                    </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"tijd\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let m\"> {{m?.tijd}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsMeting\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsMeting;\"></tr>\r\n            </table>\r\n            <mat-paginator #metingPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Events\">\r\n            <h2>Events</h2>\r\n            <table mat-table [dataSource]=\"dataSourceEvent\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortEventId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Event </th>\r\n                <td mat-cell *matCellDef=\"let e\">{{e?.soortEvent?.naam}}</td>\r\n                </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"datum\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let e\"> {{e?.datum}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsEvent\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsEvent;\"></tr>\r\n            </table>\r\n            <mat-paginator #eventsPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Alarmen en gebruikers\">\r\n            <h2>Alarmen en gebruikers</h2>\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceGebruiker\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"gebruikerId\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Gebruikers </th>\r\n                        <td mat-cell *matCellDef=\"let g\">{{g?.gebruiker?.voornaam}} {{g?.gebruiker?.naam}}</td>\r\n                        </ng-container>  \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsGebruiker\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsGebruiker;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #gebruikerPaginator [pageSizeOptions]=\"[5,  10, 25, 100]\"></mat-paginator>\r\n                </div>\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceAlarm\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"bericht\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Alarm </th>\r\n                        <td mat-cell *matCellDef=\"let a\">{{a?.bericht}}</td>\r\n                        </ng-container>\r\n                    \r\n                        <ng-container matColumnDef=\"datum\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                        <td mat-cell *matCellDef=\"let a\"> {{a?.datum}} </td>\r\n                        </ng-container>        \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsAlarm\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsAlarm;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #alarmPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n                </div>                \r\n            </div>\r\n          </mat-tab>\r\n\r\n          \r\n    </mat-tab-group>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
@@ -500,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n\r\n    <h1 class=\"header\">Voltooide vinificatieprocessen</h1>\r\n\r\n    <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n        <!-- vinificatienummer Column -->\r\n        <ng-container matColumnDef=\"id\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vinificatienummer </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> <a [routerLink]=\"['/detail/' + (proces.id)]\" >Vinificatie {{proces.id}}</a></td>\r\n        </ng-container>\r\n    \r\n        <!-- vat Column -->\r\n        <ng-container matColumnDef=\"vatId\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vat </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.vat?.nummer}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- oogst Column -->\r\n        <ng-container matColumnDef=\"oogst\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Oogst </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.oogst}} Kg </td>\r\n        </ng-container>\r\n    \r\n        <!-- pershoeveelheid Column -->\r\n        <ng-container matColumnDef=\"persHoeveelheid\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Pershoeveelheid </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.persHoeveelheid}} L </td>\r\n        </ng-container>\r\n\r\n\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    </table>\r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container mb-5\">\r\n\r\n    <h1 class=\"header\">Voltooide vinificatieprocessen</h1>\r\n\r\n    <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n        <!-- vinificatienummer Column -->\r\n        <ng-container matColumnDef=\"id\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vinificatienummer </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> <a [routerLink]=\"['/detail/' + (proces.id)]\" >Vinificatie {{proces.id}}</a></td>\r\n        </ng-container>\r\n    \r\n        <!-- vat Column -->\r\n        <ng-container matColumnDef=\"vatId\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vat </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.vat?.nummer}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- wijnType Column -->\r\n        <ng-container matColumnDef=\"wijnTypeId\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort wijn </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.wijnType?.naam}}</td>\r\n        </ng-container>\r\n\r\n        <!-- jaargang Column -->\r\n        <ng-container matColumnDef=\"jaargang\">\r\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Jaargang </th>\r\n            <td mat-cell *matCellDef=\"let proces\"> {{proces.jaargang}}</td>\r\n            </ng-container>\r\n    \r\n        <!-- pershoeveelheid Column -->\r\n        <ng-container matColumnDef=\"persHoeveelheid\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Pershoeveelheid </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.persHoeveelheid}} L </td>\r\n        </ng-container>\r\n\r\n\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    </table>\r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n</div>");
 
 /***/ }),
 
@@ -4658,7 +4658,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const baselink = "http://192.168.0.105/api/";
+const baselink = "http://localhost/backend_pcfruit/api/";
 let ServicesService = class ServicesService {
     constructor(http) {
         this.http = http;
@@ -5394,7 +5394,7 @@ let ToonActieveVinificatiesComponent = class ToonActieveVinificatiesComponent {
                 // proces.druif = new Observable<Druif>();
                 if (proces.actief == 1) {
                     this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
-                    this._service.getPersmethodeById(proces.persmethodeId).subscribe(persmethode => { proces.persmethode = persmethode; });
+                    this._service.getWijnTypeById(proces.wijnTypeId).subscribe(wijnType => { proces.wijnType = wijnType; });
                     // this._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(result => { 
                     //   result.records.forEach(druifsoort => {
                     //     console.log(druifsoort);
@@ -5520,7 +5520,7 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
             });
             this.events = this.makeObservable(this.eventl);
             this.dataSourceEvent = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.eventl);
-            this.dataSourceEvent.paginator = this.paginator;
+            this.dataSourceEvent.paginator = this.eventsPaginator;
             this.dataSourceEvent.sort = this.sort;
             console.log(this.events);
         });
@@ -5533,34 +5533,34 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
             });
             this.metingen = this.makeObservable(this.metingl);
             this.dataSourceMeting = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.metingl);
-            this.dataSourceMeting.paginator = this.paginator;
+            this.dataSourceMeting.paginator = this.metingPaginator;
             this.dataSourceMeting.sort = this.sort;
             console.log(this.metingen);
         });
     }
     getAlarmLog() {
         this._service.getAlarmLogByVinificatieId(this.id).subscribe(result => {
-            result.records.forEach(alarm => {
-                this.eventl.push(alarm);
+            result.records.forEach(alarmLog => {
+                this.alarml.push(alarmLog);
             });
             this.alarmLog = this.makeObservable(this.alarml);
             this.dataSourceAlarm = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.alarml);
-            this.dataSourceAlarm.paginator = this.paginator;
+            this.dataSourceAlarm.paginator = this.alarmPaginator;
             this.dataSourceAlarm.sort = this.sort;
-            console.log(this.events);
+            console.log(this.alarmLog);
         });
     }
     getGebruikers() {
         this._service.getAllVinificatieGebruiker().subscribe(result => {
-            result.records.forEach(vingebr => {
-                if (vingebr.vinificatieId == this.id) {
-                    this._service.getGebruikerById(vingebr.gebruikerId).subscribe(gebruiker => { vingebr.gebruiker = gebruiker; });
-                    this.gebruikerl.push(vingebr);
+            result.records.forEach(vinificatieGebruiker => {
+                if (vinificatieGebruiker.vinificatieId == this.id) {
+                    this._service.getGebruikerById(vinificatieGebruiker.gebruikerId).subscribe(gebruiker => { vinificatieGebruiker.gebruiker = gebruiker; });
+                    this.gebruikerl.push(vinificatieGebruiker);
                 }
             });
             this.gebruikers = this.makeObservable(this.gebruikerl);
             this.dataSourceGebruiker = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.gebruikerl);
-            this.dataSourceGebruiker.paginator = this.paginator;
+            this.dataSourceGebruiker.paginator = this.gebruikerPaginator;
             this.dataSourceGebruiker.sort = this.sort;
             console.log(this.gebruikers);
         });
@@ -5578,11 +5578,20 @@ ToonDetailsVinificatiesComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"], { static: true })
-], ToonDetailsVinificatiesComponent.prototype, "paginator", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"], { static: true })
 ], ToonDetailsVinificatiesComponent.prototype, "sort", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('gebruikerPaginator', { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "gebruikerPaginator", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('eventsPaginator', { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "eventsPaginator", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('metingPaginator', { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "metingPaginator", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('alarmPaginator', { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "alarmPaginator", void 0);
 ToonDetailsVinificatiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-toon-details-vinificaties',
@@ -5638,24 +5647,16 @@ let ToonNonActieveVinificatiesComponent = class ToonNonActieveVinificatiesCompon
         this._service = _service;
         this.router = router;
         this.processenl = new Array();
-        this.displayedColumns = ['id', 'vatId', 'oogst', 'persHoeveelheid'];
+        this.displayedColumns = ['id', 'vatId', 'wijnTypeId', 'jaargang', 'persHoeveelheid'];
         this.instantiateLists();
     }
     instantiateLists() {
-        var druiflijst = new Array();
         this._service.getAllProcessen().subscribe(result => {
             result.records.forEach(proces => {
                 proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
                 if (proces.actief == 0) {
                     this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
-                    this._service.getPersmethodeById(proces.persmethodeId).subscribe(persmethode => { proces.persmethode = persmethode; });
-                    this._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(result => {
-                        result.records.forEach(druifsoort => {
-                            console.log(druifsoort);
-                            druiflijst.push(druifsoort);
-                        });
-                        proces.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(druiflijst);
-                    });
+                    this._service.getWijnTypeById(proces.wijnTypeId).subscribe(wijnType => { proces.wijnType = wijnType; });
                     this.processenl.push(proces);
                 }
             });
