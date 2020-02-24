@@ -3188,6 +3188,7 @@ let AlarmeringPersonenComponent = class AlarmeringPersonenComponent {
     ngOnInit() {
     }
     onSelect(id) {
+        this.id = id;
         this.processenNotl = [];
         this.instantiateLists();
         this._service.getAllAlarmDataGebruikers().subscribe(result => {
@@ -3239,6 +3240,7 @@ let AlarmeringPersonenComponent = class AlarmeringPersonenComponent {
                 this._service.addAlarmDataGebruiker(this.AlarmDataGebruikerModel).subscribe();
             });
         });
+        this.onSelect(this.id);
     }
     delete(proces) {
         var message = "Deze persoon zal geen meldingen mee krijgen van het proces";
@@ -3249,6 +3251,7 @@ let AlarmeringPersonenComponent = class AlarmeringPersonenComponent {
                 this._service.deleteAlarmDataGebruiker(this.AlarmDataGebruikerModel).subscribe();
             });
         });
+        this.onSelect(this.id);
     }
     CheckIfContains(id) {
         this.processen.subscribe(result => {

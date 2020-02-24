@@ -5591,6 +5591,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function onSelect(id) {
           var _this58 = this;
 
+          this.id = id;
           this.processenNotl = [];
           this.instantiateLists();
 
@@ -5659,6 +5660,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               _this59._service.addAlarmDataGebruiker(_this59.AlarmDataGebruikerModel).subscribe();
             });
           });
+
+          this.onSelect(this.id);
         }
       }, {
         key: "delete",
@@ -5675,6 +5678,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               _this60._service.deleteAlarmDataGebruiker(_this60.AlarmDataGebruikerModel).subscribe();
             });
           });
+
+          this.onSelect(this.id);
         }
       }, {
         key: "CheckIfContains",
