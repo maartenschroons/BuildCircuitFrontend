@@ -51,7 +51,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Data aanpassen</h1>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <app-druif-beheren></app-druif-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <app-event-beheren></app-event-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <app-methode-beheren></app-methode-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <app-meting-beheren></app-meting-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <app-vat-beheren></app-vat-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <app-gebruiker-beheren></app-gebruiker-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Materialen\">\r\n        <app-materiaal-beheren></app-materiaal-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Wijnen\">\r\n        <app-wijn-beheren></app-wijn-beheren>\r\n    </mat-tab>\r\n</mat-tab-group>";
+    __webpack_exports__["default"] = "<div class=\"center-title\">\r\n    <h1>Data aanpassen</h1>\r\n</div>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <app-druif-beheren></app-druif-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <app-event-beheren></app-event-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <app-methode-beheren></app-methode-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <app-meting-beheren></app-meting-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <app-vat-beheren></app-vat-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <app-gebruiker-beheren></app-gebruiker-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Materialen\">\r\n        <app-materiaal-beheren></app-materiaal-beheren>\r\n    </mat-tab>\r\n    <mat-tab label=\"Wijnen\">\r\n        <app-wijn-beheren></app-wijn-beheren>\r\n    </mat-tab>\r\n</mat-tab-group>";
     /***/
   },
 
@@ -71,7 +71,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle druiven</h1>\r\n<ul>\r\n    <li *ngFor=\"let druif of (druiven | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{druif.druifsoort}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, druif)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(druif)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Druifsoort:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div *ngFor=\"let druif of (druiven | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{druif.druifsoort}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, druif)\">Edit</button>\r\n\r\n                <button mat-raised-button color=\"warn\" (click)=\"Delete(druif)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Druifsoort:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
     /***/
   },
 
@@ -91,7 +91,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle Events</h1>\r\n<ul>\r\n    <li *ngFor=\"let event of (events | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{event.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, event)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(event)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Event:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam event\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Event\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n            <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "\r\n<div class=\"container\">\r\n    <div *ngFor=\"let event of (events | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{event.naam}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, event)\">Edit</button>\r\n\r\n                <button mat-raised-button color=\"warn\" (click)=\"Delete(event)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Event:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam event\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Event\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                </form>\r\n            </div>\r\n            <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
     /***/
   },
 
@@ -111,7 +111,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle Gebruikers</h1>\r\n<ul>\r\n    <li *ngFor=\"let gebruiker of (gebruikers | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, gebruiker)\">Edit</button>\r\n                </div>\r\n\r\n                <div fxFlex=\"80%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Gebruiker:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"Model.voornaam\"\r\n                                formControlName=\"voornaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"Model.naam\"\r\n                                formControlName=\"achternaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n\r\n                    <div>\r\n                        <mat-form-field style=\"width:400px\">\r\n                            <input matInput placeholder=\"Email\" [(ngModel)]=\"Model.email\" formControlName=\"email\"\r\n                                type=\"text\" name=\"Email\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                    <div>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Code van PushApp\" [(ngModel)]=\"Model.telefoonnummer\"\r\n                                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                    <div>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Wachtwoord\" [(ngModel)]=\"Model.wachtwoord\"\r\n                                formControlName=\"wachtwoord\" type=\"text\" name=\"Wachtwoord\" type=\"password\" />\r\n                        </mat-form-field>\r\n\r\n                    </div>\r\n\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div *ngFor=\"let gebruiker of (gebruikers | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, gebruiker)\">Edit</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Gebruiker:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"Model.voornaam\"\r\n                                formControlName=\"voornaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"Model.naam\"\r\n                                formControlName=\"achternaam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n\r\n                    <div>\r\n                        <mat-form-field style=\"width:360px\">\r\n                            <input matInput placeholder=\"Email\" [(ngModel)]=\"Model.email\" formControlName=\"email\"\r\n                                type=\"text\" name=\"Email\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                    <div>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Code van PushApp\" [(ngModel)]=\"Model.telefoonnummer\"\r\n                                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n                        </mat-form-field>\r\n                    </div>\r\n                    <div>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Wachtwoord\" [(ngModel)]=\"Model.wachtwoord\"\r\n                                formControlName=\"wachtwoord\" type=\"text\" name=\"Wachtwoord\" type=\"password\" />\r\n                        </mat-form-field>\r\n\r\n                    </div>\r\n\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
     /***/
   },
 
@@ -131,7 +131,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle Materialen</h1>\r\n<ul>\r\n    <li *ngFor=\"let materiaal of (materialen | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{materiaal.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, materiaal)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(materiaal)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Soort materiaal:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam materiaal\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div *ngFor=\"let materiaal of (materialen | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{materiaal.naam}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, materiaal)\">Edit</button>\r\n                <button mat-raised-button color=\"warn\" (click)=\"Delete(materiaal)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Soort materiaal:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam materiaal\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
     /***/
   },
 
@@ -151,7 +151,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle methodes</h1>\r\n<ul>\r\n    <li *ngFor=\"let methode of (methodes | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{methode.methode}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, methode)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(methode)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Persmethode:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam persmethode\" [(ngModel)]=\"Model.methode\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"Methode\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div *ngFor=\"let methode of (methodes | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{methode.methode}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, methode)\">Edit</button>\r\n                <button mat-raised-button color=\"warn\" (click)=\"Delete(methode)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Persmethode:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam persmethode\" [(ngModel)]=\"Model.methode\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"Methode\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
     /***/
   },
 
@@ -171,7 +171,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle Metingsoorten</h1>\r\n<ul>\r\n    <li *ngFor=\"let meting of (metingen | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{meting.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, meting)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(meting)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Soort meting:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam meting\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div *ngFor=\"let meting of (metingen | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{meting.naam}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, meting)\">Edit</button>\r\n                <button mat-raised-button color=\"warn\" (click)=\"Delete(meting)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Soort meting:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam meting\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
     /***/
   },
 
@@ -191,7 +191,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle vaten</h1>\r\n<ul>\r\n    <li *ngFor=\"let vat of (vaten | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{vat.nummer}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, vat)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\" *ngIf=\"vat.inGebruik==0\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(vat)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"80%\" *ngIf=\"vat.inGebruik==1\">\r\n\r\n                </div>\r\n                <div fxFlex=\"75%\" *ngIf=\"vat.inGebruik==0\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Vat:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van het vat\" [(ngModel)]=\"Model.nummer\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"VatNaam\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Locatie van het vat\" [(ngModel)]=\"Model.locatie\"\r\n                                formControlName=\"locatie\" type=\"text\" name=\"VatNaam\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Volume van het vat\" [(ngModel)]=\"Model.volume\"\r\n                                formControlName=\"volume\" type=\"text\" name=\"VatNaam\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n\r\n                    <section class=\"example-section\">\r\n                        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"Model.deksel\" formControlName=\"deksel\">\r\n                            Gesloten vat?\r\n                        </mat-checkbox>\r\n                    </section>\r\n                    <section class=\"example-section\">\r\n                        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"Model.koelmantel\"\r\n                            formControlName=\"koelmantel\">Koelmantel?\r\n                        </mat-checkbox>\r\n                    </section>\r\n                    <section class=\"example-section\">\r\n                        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"Model.mangat\" formControlName=\"mangat\">Mangat?\r\n                        </mat-checkbox>\r\n                    </section>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "<h2 class=\"center-body\">\r\n    Alleen vaten die niet in gebruik zijn kunnen verwijderd worden!\r\n</h2>\r\n<div class=\"container\">\r\n    <div *ngFor=\"let vat of (vaten | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{vat.nummer}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, vat)\">Edit</button>\r\n                <button [disabled]=\"vat.inGebruik == 1\" mat-raised-button color=\"warn\"\r\n                    (click)=\"Delete(vat)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Vat:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\" width=\"500px\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van het vat\" [(ngModel)]=\"Model.nummer\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"VatNaam\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Locatie van het vat\" [(ngModel)]=\"Model.locatie\"\r\n                                formControlName=\"locatie\" type=\"text\" name=\"VatNaam\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Volume van het vat\" [(ngModel)]=\"Model.volume\"\r\n                                formControlName=\"volume\" type=\"text\" name=\"VatNaam\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n\r\n\r\n                    <section class=\"example-section\">\r\n                        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"Model.deksel\" formControlName=\"deksel\">\r\n                            Gesloten vat?\r\n                        </mat-checkbox>\r\n                    </section>\r\n                    <section class=\"example-section\">\r\n                        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"Model.koelmantel\"\r\n                            formControlName=\"koelmantel\">Koelmantel?\r\n                        </mat-checkbox>\r\n                    </section>\r\n                    <section class=\"example-section\">\r\n                        <mat-checkbox class=\"example-margin\" [(ngModel)]=\"Model.mangat\" formControlName=\"mangat\">Mangat?\r\n                        </mat-checkbox>\r\n                    </section>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n</ng-template>";
     /***/
   },
 
@@ -211,7 +211,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alle Wijntypes</h1>\r\n<ul>\r\n    <li *ngFor=\"let wijn of (wijnen | async)\">\r\n        <div>\r\n            <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\">\r\n                <div fxFlex=\"15%\">\r\n                    {{wijn.naam}}\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"primary\" (click)=\"open(content, wijn)\">Edit</button>\r\n                </div>\r\n                <div fxFlex=\"5%\">\r\n                    <button mat-raised-button color=\"warn\" (click)=\"Delete(wijn)\">Delete</button>\r\n                </div>\r\n                <div fxFlex=\"75%\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </li>\r\n</ul>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Type wijn:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam wijn\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div *ngFor=\"let wijn of (wijnen | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{wijn.naam}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, wijn)\">Edit</button>\r\n                <button mat-raised-button color=\"warn\" (click)=\"Delete(wijn)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Type wijn:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam wijn\" [(ngModel)]=\"Model.naam\" formControlName=\"naam\"\r\n                                type=\"text\" name=\"Meting\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>";
     /***/
   },
 
@@ -231,7 +231,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Data toevoegen</h1>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <app-druif-soort-toevoegen></app-druif-soort-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <app-event-toevoegen></app-event-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <app-methode-toevoegen></app-methode-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <app-meting-toevoegen></app-meting-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <app-vat-toevoegen></app-vat-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <app-gebruiker-toevoegen></app-gebruiker-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Wijntypes\">\r\n        <app-wijntype-toevoegen></app-wijntype-toevoegen>\r\n    </mat-tab>\r\n    <mat-tab label=\"Materialen\">\r\n        <app-materiaal-toevoegen></app-materiaal-toevoegen>\r\n    </mat-tab>\r\n</mat-tab-group>";
+    __webpack_exports__["default"] = "<div class=\"center-title\">\r\n    <h1>Data toevoegen</h1>\r\n</div>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"DruifSoorten\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-druif-soort-toevoegen></app-druif-soort-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Events\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-event-toevoegen></app-event-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Methodes\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-methode-toevoegen></app-methode-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Metingen\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-meting-toevoegen></app-meting-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Vaten\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-vat-toevoegen></app-vat-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Gebruikers\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-gebruiker-toevoegen></app-gebruiker-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Wijntypes\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-wijntype-toevoegen></app-wijntype-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Materialen\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\"></div>\r\n                <div class=\"col-md\">\r\n                    <app-materiaal-toevoegen></app-materiaal-toevoegen>\r\n                </div>\r\n                <div class=\"col-md-2\"></div>\r\n            </div>\r\n        </div>\r\n    </mat-tab>\r\n</mat-tab-group>";
     /***/
   },
 
@@ -291,7 +291,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe gebruiker aan</h1>\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een rol</mat-label>\r\n            <mat-select formControlName=\"rol\" [(ngModel)]=\"model.rolId\">\r\n                <mat-option *ngFor=\"let rol of (rollen | async)\" [value]=\"rol.id\">\r\n                    {{rol.rolnaam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"model.voornaam\" formControlName=\"voornaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"model.naam\" formControlName=\"achternaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Email\" [(ngModel)]=\"model.email\" formControlName=\"email\" type=\"text\"\r\n                name=\"Email\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Code van PushApp\" [(ngModel)]=\"model.telefoonnummer\"\r\n                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Wachtwoord\" [(ngModel)]=\"model.wachtwoord\" formControlName=\"wachtwoord\"\r\n                type=\"text\" name=\"Wachtwoord\" type=\"password\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Confirm Wachtwoord\" formControlName=\"wachtwoordc\" type=\"text\"\r\n                name=\"Wachtwoordc\" type=\"password\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"Form\" (ngSubmit)=\"onSubmit()\">\r\n    <h1>Maak een nieuwe gebruiker aan</h1>\r\n\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een rol</mat-label>\r\n            <mat-select formControlName=\"rol\" [(ngModel)]=\"model.rolId\">\r\n                <mat-option *ngFor=\"let rol of (rollen | async)\" [value]=\"rol.id\">\r\n                    {{rol.rolnaam}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <p>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Voornaam\" [(ngModel)]=\"model.voornaam\" formControlName=\"voornaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Achternaam\" [(ngModel)]=\"model.naam\" formControlName=\"achternaam\" type=\"text\"\r\n                name=\"DruifSoort\" />\r\n        </mat-form-field>\r\n    </p>\r\n\r\n    <div>\r\n        <mat-form-field style=\"width:360px\">\r\n            <input matInput placeholder=\"Email\" [(ngModel)]=\"model.email\" formControlName=\"email\" type=\"text\"\r\n                name=\"Email\" />\r\n        </mat-form-field>\r\n    </div>\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Code van PushApp\" [(ngModel)]=\"model.telefoonnummer\"\r\n                formControlName=\"telefoonnummer\" type=\"text\" name=\"Telefoonnummer\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Wachtwoord\" [(ngModel)]=\"model.wachtwoord\" formControlName=\"wachtwoord\"\r\n                type=\"text\" name=\"Wachtwoord\" type=\"password\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput placeholder=\"Confirm Wachtwoord\" formControlName=\"wachtwoordc\" type=\"text\"\r\n                name=\"Wachtwoordc\" type=\"password\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!Form.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -411,7 +411,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Alarmeringswaarden aanpassen</h1>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n    <mat-tab label=\"CO²\"> <app-co></app-co> </mat-tab>\r\n    <mat-tab label=\"Druk\"> <app-druk></app-druk> </mat-tab>\r\n    <mat-tab label=\"Ethanol\"> <app-ethanol></app-ethanol> </mat-tab>\r\n    <mat-tab label=\"Temperatuur\"> <app-temperatuur></app-temperatuur> </mat-tab>\r\n    <mat-tab label=\"Troebelheid\"><app-troebelheid></app-troebelheid> </mat-tab>\r\n  </mat-tab-group>";
+    __webpack_exports__["default"] = "<div class=\"center-title\">\r\n  <h1>Alarmeringswaarden aanpassen</h1>\r\n</div>\r\n<mat-tab-group mat-align-tabs=\"center\">\r\n  <mat-tab label=\"CO²\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-2\"></div>\r\n        <div class=\"col-md\">\r\n          <app-co></app-co>\r\n        </div>\r\n        <div class=\"col-md-2\"></div>\r\n      </div>\r\n    </div>\r\n  </mat-tab>\r\n  <mat-tab label=\"Druk\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-2\"></div>\r\n        <div class=\"col-md\">\r\n          <app-druk></app-druk>\r\n        </div>\r\n        <div class=\"col-md-2\"></div>\r\n      </div>\r\n    </div>\r\n  </mat-tab>\r\n  <mat-tab label=\"Ethanol\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-2\"></div>\r\n        <div class=\"col-md\">\r\n          <app-ethanol></app-ethanol>\r\n        </div>\r\n        <div class=\"col-md-2\"></div>\r\n      </div>\r\n    </div>\r\n  </mat-tab>\r\n  <mat-tab label=\"Temperatuur\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-2\"></div>\r\n        <div class=\"col-md\">\r\n          <app-temperatuur></app-temperatuur>\r\n        </div>\r\n        <div class=\"col-md-2\"></div>\r\n      </div>\r\n    </div>\r\n  </mat-tab>\r\n  <mat-tab label=\"Troebelheid\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-2\"></div>\r\n        <div class=\"col-md\">\r\n          <app-troebelheid></app-troebelheid>\r\n        </div>\r\n        <div class=\"col-md-2\"></div>\r\n      </div>\r\n    </div>\r\n  </mat-tab>\r\n</mat-tab-group>";
     /***/
   },
 
@@ -431,7 +431,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <p>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n    </p>\r\n    <section class=\"example-section\">\r\n        <mat-checkbox class=\"example-margin\" formControlName=\"disable\">Disable</mat-checkbox>\r\n    </section>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" [disabled]=\"true\"\r\n            placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n        <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\" placeholder=\"Maximumwaarde\"\r\n            type=\"text\" name=\"Metingswaarde\" />\r\n    </mat-form-field>\r\n\r\n\r\n    <div>\r\n        <p>\r\n            <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n</form>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"alarmForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div>\r\n        <mat-form-field>\r\n            <mat-label>Kies een vat</mat-label>\r\n            <mat-select formControlName=\"proces\" (selectionChange)=\"onSelect($event.value)\">\r\n                <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                    {{proces.vat?.nummer}}\r\n                </mat-option>\r\n            </mat-select>\r\n        </mat-form-field>\r\n\r\n        <section class=\"example-section\">\r\n            <mat-checkbox class=\"example-margin\" formControlName=\"disable\">Disable</mat-checkbox>\r\n        </section>\r\n    </div>\r\n    <div>\r\n        <mat-form-field>\r\n            <input matInput [(ngModel)]=\"alarmdataModel.minimumwaarde\" formControlName=\"minimum\" [disabled]=\"true\"\r\n                placeholder=\"Minimumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n        </mat-form-field>\r\n        <mat-form-field>\r\n            <input matInput [(ngModel)]=\"alarmdataModel.maximumwaarde\" formControlName=\"maximum\"\r\n                placeholder=\"Maximumwaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n        </mat-form-field>\r\n    </div>\r\n\r\n    <div>\r\n\r\n        <button [disabled]=\"!alarmForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n\r\n\r\n    </div>\r\n</form>";
     /***/
   },
 
@@ -531,7 +531,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n    <div>\r\n        <p>\r\n            <mat-form-field>\r\n                <mat-label>Kies een gebruiker</mat-label>\r\n                <mat-select (selectionChange)=\"onSelect($event.value)\"\r\n                    [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n                    <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                        {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n        </p>\r\n\r\n        <div>\r\n            Alarm\r\n            <div *ngFor=\"let proces of (processenSub | async)\">\r\n                {{proces.vat?.nummer}} <button mat-raised-button color=\"warn\" (click)=\"delete(proces)\">Delete alarm</button>\r\n            </div>\r\n        </div>\r\n        <div>\r\n            Geen alarm\r\n            <div *ngFor=\"let proces of (processenNot | async)\">\r\n                {{proces.vat?.nummer}}<button mat-raised-button color=\"primary\" (click)=\"add(proces)\">Add alarm</button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div class=\"center-title\">\r\n    <h1>\r\n        Alarmeringspersonen beheren\r\n    </h1>\r\n</div>\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md\"></div>\r\n        <div class=\"col-md\">\r\n\r\n            <mat-form-field>\r\n                <mat-label>Kies een gebruiker</mat-label>\r\n                <mat-select (selectionChange)=\"onSelect($event.value)\"\r\n                    [(ngModel)]=\"AlarmDataGebruikerModel.gebruikerId\">\r\n                    <mat-option *ngFor=\"let gebruiker of (gebruikers | async)\" [value]=\"gebruiker.id\">\r\n                        {{gebruiker.voornaam}} {{gebruiker.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n        </div>\r\n\r\n        <div class=\"col-md\">\r\n            Alarm\r\n            <div *ngFor=\"let proces of (processenSub | async)\">\r\n                {{proces.vat?.nummer}} <button mat-raised-button color=\"warn\" (click)=\"delete(proces)\">Delete\r\n                    alarm</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md\">\r\n            Geen alarm\r\n            <div *ngFor=\"let proces of (processenNot | async)\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"add(proces)\">Add\r\n                    alarm</button>\r\n                {{proces.vat?.nummer}}\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"col-md\"></div>\r\n    </div>\r\n</div>";
     /***/
   },
 
@@ -551,7 +551,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n                        <div *ngIf=\"login\">\r\n                                <a mat-list-item routerLink=\"/createProcess\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        proces</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een\r\n                                        proces\r\n                                        af</a>\r\n                                <a mat-list-item routerLink=\"/dashboard\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Dashboard\r\n                                        1</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinfi\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/actief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/nonactief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/addMeting\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\"\r\n                                                (click)=\"sidenav.toggle()\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n                                <div *ngIf=\"admin\">\r\n                                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                                Admin Data\r\n                                                <mat-icon>expand_more</mat-icon>\r\n                                        </a>\r\n                                        <mat-menu #admin=\"matMenu\">\r\n                                                <button mat-menu-item routerLink=\"/adminToevoegen\"\r\n                                                        (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        toevoegen</button>\r\n                                                <button mat-menu-item routerLink=\"/adminEdit\" (click)=\"sidenav.toggle()\"\r\n                                                        routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        beheren</button>\r\n                                        </mat-menu>\r\n                                </div>\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"sidenav.toggle()\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
+    __webpack_exports__["default"] = "<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n\r\n                        <div *ngIf=\"login\">\r\n                        <!-- <div> -->\r\n                                <a mat-list-item routerLink=\"/createProcess\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        proces</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een\r\n                                        proces\r\n                                        af</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinificaties\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/actief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/nonactief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/addMeting\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\"\r\n                                                (click)=\"sidenav.toggle()\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n\r\n                                <div *ngIf=\"admin\">\r\n                                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                                Admin Data\r\n                                                <mat-icon>expand_more</mat-icon>\r\n                                        </a>\r\n                                        <mat-menu #admin=\"matMenu\">\r\n                                                <button mat-menu-item routerLink=\"/adminToevoegen\"\r\n                                                        (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        toevoegen</button>\r\n                                                <button mat-menu-item routerLink=\"/adminEdit\" (click)=\"sidenav.toggle()\"\r\n                                                        routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        beheren</button>\r\n                                        </mat-menu>\r\n                                </div>\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"sidenav.toggle()\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>";
     /***/
   },
 
@@ -571,7 +571,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n    <div fxFlex=\"25%\">\r\n\r\n    </div>\r\n    <div>\r\n        <h1>Vinificatie Monitoring</h1>\r\n        <h2>Welkom op de vinificatiemontoring applicatie. Hier kan u virtueel wijnprocessen starten en opvolgen.</h2>\r\n\r\n    </div>\r\n    <div fxFlex=\"25%\">\r\n\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div class=\"center-image\"><img width=\"100%\" src=\"../../assets/Logo.png\" /></div>\r\n<div class=\"center-title\">\r\n    <h1>Vinificatie Monitoring</h1>\r\n</div>\r\n\r\n<div class=\"center-body\">\r\n    <h2>\r\n        Welkom op de vinificatiemontoring applicatie. Hier kan u virtueel wijnprocessen starten en opvolgen.\r\n    </h2>\r\n    <p>\r\n        Als u nog geen account heeft kan u aan een admin vragen om dit voor u aan te maken.</p>\r\n    <p>\r\n        Anders kan u zich aanmelden door op onderstaande knop te drukken.\r\n    </p>\r\n\r\n    <button *ngIf=\"!login\" mat-raised-button color=\"primary\" (click)=\"Login()\" routerLink=\"/login\">\r\n        Ga naar login\r\n    </button>\r\n</div>";
     /***/
   },
 
@@ -591,7 +591,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-card class=\"login-card\">\r\n    <mat-card-title class=\"login-card-title\">Login to continue</mat-card-title>\r\n\r\n    <form (ngSubmit)=\"onSubmit()\">\r\n\r\n        <div class=\"login-container\">\r\n            <p>\r\n                <mat-form-field style=\"width:300px\">\r\n                    <input matInput placeholder=\"Email\" type=\"email\" name=\"email\" [(ngModel)]=\"login.email\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Password\" type=\"password\" name=\"password\"\r\n                        [(ngModel)]=\"login.wachtwoord\" />\r\n                </mat-form-field>\r\n            </p>\r\n\r\n\r\n            <mat-card-actions>\r\n                <div>\r\n                    <button mat-raised-button color=\"primary\" class=\"login-card-button\" type=\"submit\">Login</button>\r\n                </div>\r\n\r\n            </mat-card-actions>\r\n\r\n        </div>\r\n    </form>\r\n</mat-card>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md\">\r\n            <mat-card class=\"login-card\">\r\n                <mat-card-title class=\"login-card-title\">Login</mat-card-title>\r\n                <mat-card-subtitle>Gelive in te loggen om de applicatie te gebruiken</mat-card-subtitle>\r\n                <form (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <div class=\"login-container center-block\">\r\n                        <p>\r\n                            <mat-form-field style=\"width:300px\">\r\n                                <input matInput placeholder=\"Email\" type=\"email\" name=\"email\"\r\n                                    [(ngModel)]=\"login.email\" />\r\n                            </mat-form-field>\r\n                        </p>\r\n\r\n                        <p>\r\n                            <mat-form-field style=\"width:300px\">\r\n                                <input matInput placeholder=\"Wachtwoord\" type=\"password\" name=\"password\"\r\n                                    [(ngModel)]=\"login.wachtwoord\" />\r\n                            </mat-form-field>\r\n                        </p>\r\n\r\n\r\n                        <mat-card-actions>\r\n                            <div>\r\n                                <button mat-raised-button color=\"primary\" class=\"login-card-button\"\r\n                                    type=\"submit\">Login</button>\r\n                            </div>\r\n\r\n                        </mat-card-actions>\r\n\r\n                    </div>\r\n                </form>\r\n            </mat-card>\r\n        </div>\r\n    </div>\r\n</div>";
     /***/
   },
 
@@ -611,7 +611,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n    <div>\r\n        <h1>Voeg een event toe!</h1>\r\n        <form [formGroup]=\"addEventForm\" (ngSubmit)=\"onSubmit()\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een vat</mat-label>\r\n                    <mat-select formControlName=\"vat\" [(ngModel)]=\"eventModel.vinificatieId\">\r\n                        <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                            {{proces.vat?.nummer}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Soort event</mat-label>\r\n                    <mat-select formControlName=\"soortEvent\" [(ngModel)]=\"eventModel.soortEventId\">\r\n                        <mat-option *ngFor=\"let event of (events |async)\" [value]=\"event.id\">\r\n                            {{event.naam}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n                <div class=\"input-wrapper\">\r\n                    <label>Datum en tijd:</label>\r\n                    <input [owlDateTimeTrigger]=\"dtPicker1\" [owlDateTime]=\"dtPicker1\" [(ngModel)]=\"eventModel.datum\"\r\n                        formControlName=\"datum\">\r\n                    <owl-date-time #dtPicker1></owl-date-time>\r\n                </div>\r\n\r\n\r\n                <div class=\"row\">\r\n                    <p class=\"ml-4\">\r\n                        <button [disabled]=\"!addEventForm.valid\" mat-raised-button color=\"primary\"\r\n                            type=\"submit\">Submit</button>\r\n                    </p>\r\n\r\n                </div>\r\n        </form>\r\n    </div>\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div class=\"center-title\">\r\n    <h1>Voeg een event toe!</h1>\r\n</div>\r\n<form [formGroup]=\"addEventForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een vat</mat-label>\r\n                        <mat-select formControlName=\"vat\" [(ngModel)]=\"eventModel.vinificatieId\">\r\n                            <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                                {{proces.vat?.nummer}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                    <mat-form-field>\r\n                        <mat-label>Soort event</mat-label>\r\n                        <mat-select formControlName=\"soortEvent\" [(ngModel)]=\"eventModel.soortEventId\">\r\n                            <mat-option *ngFor=\"let event of (events |async)\" [value]=\"event.id\">\r\n                                {{event.naam}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                <div class=\"input-wrapper\">\r\n                    <div>\r\n                        <label>Datum en tijd:</label></div>\r\n                    <div>\r\n                        <input [owlDateTimeTrigger]=\"dtPicker1\" [owlDateTime]=\"dtPicker1\" [(ngModel)]=\"eventModel.datum\"\r\n                            formControlName=\"datum\">\r\n                        <owl-date-time #dtPicker1></owl-date-time>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"col-md\"></div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"center-button\">\r\n        <button [disabled]=\"!addEventForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n\r\n</form>";
     /***/
   },
 
@@ -631,7 +631,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n    <div>\r\n        <h1>Voeg een meting toe!</h1>\r\n        <form [formGroup]=\"addMetingForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een vat</mat-label>\r\n                    <mat-select formControlName=\"vat\" [(ngModel)]=\"metingModel.vinificatieId\">\r\n                        <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                            {{proces.vat?.nummer}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Metingswaarde\" [(ngModel)]=\"metingModel.meting\"\r\n                        formControlName=\"Metingswaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n                </mat-form-field>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een metingsType</mat-label>\r\n                    <mat-select formControlName=\"soortMeting\" [(ngModel)]=\"metingModel.soortMetingId\">\r\n                        <mat-option *ngFor=\"let type of (metingen | async)\" [value]=\"type.id\">\r\n                            {{type.naam}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <div class=\"input-wrapper\">\r\n                <label>Datum en tijd:</label>\r\n                <input [owlDateTimeTrigger]=\"dtPicker1\" [owlDateTime]=\"dtPicker1\" [(ngModel)]=\"metingModel.tijd\"\r\n                    formControlName=\"tijd\">\r\n                <owl-date-time #dtPicker1></owl-date-time>\r\n            </div>\r\n\r\n\r\n\r\n            <div class=\"row\">\r\n                <p class=\"ml-4\">\r\n                    <button [disabled]=\"!addMetingForm.valid\" mat-raised-button color=\"primary\"\r\n                        type=\"submit\">Submit</button>\r\n                </p>\r\n\r\n            </div>\r\n        </form>\r\n    </div>\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div class=\"center-title\">\r\n    <h1>Voeg een meting toe!</h1>\r\n</div>\r\n<form [formGroup]=\"addMetingForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een vat</mat-label>\r\n                        <mat-select formControlName=\"vat\" [(ngModel)]=\"metingModel.vinificatieId\">\r\n                            <mat-option *ngFor=\"let proces of (processen | async)\" [value]=\"proces.id\">\r\n                                {{proces.vat?.nummer}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n        <div class=\"col-md\"></div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n\r\n            <mat-form-field>\r\n                <input matInput placeholder=\"Metingswaarde\" [(ngModel)]=\"metingModel.meting\"\r\n                    formControlName=\"Metingswaarde\" type=\"text\" name=\"Metingswaarde\" />\r\n            </mat-form-field>\r\n            <mat-form-field>\r\n                <mat-label>Kies een metingsType</mat-label>\r\n                <mat-select formControlName=\"soortMeting\" [(ngModel)]=\"metingModel.soortMetingId\">\r\n                    <mat-option *ngFor=\"let type of (metingen | async)\" [value]=\"type.id\">\r\n                        {{type.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                <div class=\"input-wrapper\">\r\n                    <div>\r\n                        <label>Datum en tijd:</label>\r\n                    </div>\r\n                    <div>\r\n                        <input [owlDateTimeTrigger]=\"dtPicker1\" [owlDateTime]=\"dtPicker1\" [(ngModel)]=\"metingModel.tijd\"\r\n                            formControlName=\"tijd\">\r\n                        <owl-date-time #dtPicker1></owl-date-time>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"center-button\">\r\n        <button [disabled]=\"!addMetingForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n\r\n</form>";
     /***/
   },
 
@@ -651,7 +651,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n    <div>\r\n        <h1>Kies een proces om af te sluiten</h1>\r\n        <div>\r\n            <ul>\r\n                <li *ngFor=\"let proces of (processen | async)\"> {{proces.vat?.nummer}} <button mat-raised-button\r\n                        addEventForm (click)=\"Sluit(proces)\">Sluit af</button></li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <div fxFlex=\"30%\">\r\n\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div>\r\n    <div class=\"center-title\">\r\n        <h1>Kies een proces om af te sluiten</h1>\r\n    </div>\r\n    <div class=\"container\">\r\n        <div>\r\n            <div *ngFor=\"let proces of (processen | async) \">\r\n                <div class=\"row\">\r\n                    <div class=\"col-md\"></div>\r\n                    <div class=\"col-md\">\r\n                        <button mat-raised-button color=\"warn\" addEventForm (click)=\"Sluit(proces)\">\r\n                            Sluit af\r\n                        </button>\r\n                        {{proces.vat?.nummer}}\r\n                    </div>\r\n                    <div class=\"col-md\"></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
     /***/
   },
 
@@ -671,7 +671,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n<div fxFlex=\"30%\">\r\n\r\n</div>\r\n<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <h1 text-align=\"center\">Start een nieuw proces</h1>\r\n    <div fxLayout=\"row\" fxLayout.sm=\"column\" fxLayoutAlign=\"center\" class=\"main\">\r\n        \r\n        \r\n        <div fxFlex=\"47%\" class=\"main\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een vat</mat-label>\r\n                    <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                        <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                            {{vat.nummer}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n\r\n            <div class=\"form-group\">\r\n                <label for=\"options\">Options :</label>\r\n                <label *ngFor=\"let druif of (druiven| async)\" class=\"form-control\">\r\n                    <input type=\"checkbox\" name=\"options\" value=\"option\" (change)=\"onChange(druif)\" />\r\n                    {{druif.druifsoort}}\r\n                </label>\r\n            </div>\r\n\r\n            <p>\r\n                <mat-form-field>\r\n                    <mat-label>Kies een persmethode</mat-label>\r\n                    <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                        <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                            {{pers.methode}}\r\n                        </mat-option>\r\n                    </mat-select>\r\n                </mat-form-field>\r\n            </p>\r\n        </div>\r\n        <div fxFlex=\"6%\">\r\n\r\n        </div>\r\n        <div fxFlex=\"47%\" class=\"main\">\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\"\r\n                        formControlName=\"persHoeveelheid\" type=\"text\" name=\"persHoeveelheid\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\"\r\n                        [(ngModel)]=\"procesModel.oogst\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\"\r\n                        [(ngModel)]=\"procesModel.persDruk\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <p>\r\n                <mat-form-field>\r\n                    <input matInput placeholder=\"Jaargang\" formControlName=\"jaargang\" type=\"text\" name=\"jaargang\"\r\n                        [(ngModel)]=\"procesModel.jaargang\" />\r\n                </mat-form-field>\r\n            </p>\r\n            <mat-form-field>\r\n                <mat-label>Kies het wijntype</mat-label>\r\n                <mat-select formControlName=\"wijntype\" [(ngModel)]=\"procesModel.wijnTypeId\">\r\n                    <mat-option *ngFor=\"let wijntype of (wijntypes | async)\" [value]=\"wijntype.id\">\r\n                        {{wijntype.naam}}\r\n                    </mat-option>\r\n                </mat-select>\r\n            </mat-form-field>\r\n        </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n        <p class=\"ml-4\">\r\n            <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\"\r\n                type=\"submit\">Submit</button>\r\n        </p>\r\n\r\n    </div>\r\n\r\n</form>\r\n<div fxFlex=\"30%\">\r\n\r\n</div>\r\n</div>";
+    __webpack_exports__["default"] = "<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"center-title\">\r\n        <h1>Start een nieuw proces</h1>\r\n    </div>\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een vat</mat-label>\r\n                        <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                            <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                                {{vat.nummer}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een persmethode</mat-label>\r\n                        <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                            <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                                {{pers.methode}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies het wijntype</mat-label>\r\n                        <mat-select formControlName=\"wijntype\" [(ngModel)]=\"procesModel.wijnTypeId\">\r\n                            <mat-option *ngFor=\"let wijntype of (wijntypes | async)\" [value]=\"wijntype.id\">\r\n                                {{wijntype.naam}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\">\r\n                <div class=\"form-group\">\r\n                    <label for=\"options\">DruifSoorten :</label>\r\n                    <label *ngFor=\"let druif of (druiven| async)\" class=\"form-control\">\r\n                        <input type=\"checkbox\" name=\"options\" value=\"option\" (change)=\"onChange(druif)\" />\r\n                        {{druif.druifsoort}}\r\n                    </label>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\"\r\n                            formControlName=\"persHoeveelheid\" type=\"text\" name=\"persHoeveelheid\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\"\r\n                            [(ngModel)]=\"procesModel.oogst\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\"\r\n                            [(ngModel)]=\"procesModel.persDruk\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Jaargang\" formControlName=\"jaargang\" type=\"text\" name=\"jaargang\"\r\n                            [(ngModel)]=\"procesModel.jaargang\" />\r\n                    </mat-form-field>\r\n                </div>\r\n\r\n            </div>\r\n\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"center-button\">\r\n        <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n\r\n</form>";
     /***/
   },
 
@@ -751,7 +751,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <mat-tab-group>\r\n        <mat-tab label=\"Overzicht\">\r\n          <h2>Overzicht vinificatie {{process?.id}}</h2>\r\n          <p>...</p>\r\n        </mat-tab>\r\n\r\n        <mat-tab label=\"Metingen\">\r\n            <h2>Handmatig ingemeten data</h2>\r\n            <table mat-table [dataSource]=\"dataSourceMeting\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortMetingId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort meting </th>\r\n                <td mat-cell *matCellDef=\"let m\">{{m?.soortMeting?.naam}}</td>\r\n                </ng-container>\r\n\r\n                <ng-container matColumnDef=\"meting\">\r\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Meting </th>\r\n                    <td mat-cell *matCellDef=\"let m\">{{ m?.meting }}</td>\r\n                    </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"tijd\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let m\"> {{m?.tijd}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsMeting\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsMeting;\"></tr>\r\n            </table>\r\n            <mat-paginator #metingPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Events\">\r\n            <h2>Events</h2>\r\n            <table mat-table [dataSource]=\"dataSourceEvent\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortEventId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Event </th>\r\n                <td mat-cell *matCellDef=\"let e\">{{e?.soortEvent?.naam}}</td>\r\n                </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"datum\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let e\"> {{e?.datum}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsEvent\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsEvent;\"></tr>\r\n            </table>\r\n            <mat-paginator #eventsPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Alarmen en gebruikers\">\r\n            <h2>Alarmen en gebruikers</h2>\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceGebruiker\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"gebruikerId\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Gebruikers </th>\r\n                        <td mat-cell *matCellDef=\"let g\">{{g?.gebruiker?.voornaam}} {{g?.gebruiker?.naam}}</td>\r\n                        </ng-container>  \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsGebruiker\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsGebruiker;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #gebruikerPaginator [pageSizeOptions]=\"[5,  10, 25, 100]\"></mat-paginator>\r\n                </div>\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceAlarm\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"bericht\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Alarm </th>\r\n                        <td mat-cell *matCellDef=\"let a\">{{a?.bericht}}</td>\r\n                        </ng-container>\r\n                    \r\n                        <ng-container matColumnDef=\"datum\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                        <td mat-cell *matCellDef=\"let a\"> {{a?.datum}} </td>\r\n                        </ng-container>        \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsAlarm\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsAlarm;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #alarmPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n                </div>                \r\n            </div>\r\n          </mat-tab>\r\n\r\n          \r\n    </mat-tab-group>\r\n</div>\r\n\r\n";
+    __webpack_exports__["default"] = "<div class=\"container mb-5\">\r\n    <mat-tab-group>\r\n        <mat-tab label=\"Overzicht\">\r\n            <h1>Overzicht vinificatie {{process?.id}}</h1>\r\n            <div class=\"jumbotron\" m-3>\r\n                <h3 class=\"display-6\">Vinificatie \r\n                    <span *ngIf=\"process?.actief == 0\"  class=\"badge badge-pill badge-danger\">Voltooid</span>\r\n                    <span *ngIf=\"process?.actief == 1\"  class=\"badge badge-pill badge-success\">Actief</span>\r\n                </h3>\r\n                <ul>                        \r\n                    <li>Wijnsoort: {{process?.wijnType?.naam}}</li>                    \r\n                    <li>Jaargang: {{process?.jaargang}}</li>\r\n                    <li>Druifsoorten:</li>\r\n                    <ul> \r\n                        <li *ngFor=\"let d of (process?.druif | async)\">{{d?.druifsoort}}</li>\r\n                    </ul>\r\n                    <li>Oogst: {{process?.oogst}} Kg</li>\r\n                    <li>Persmethode: {{process?.persmethode?.methode}}</li>\r\n                    <li>Pershoeveelheid: {{process?.persHoeveelheid}}L</li>\r\n                    <li>Persdruk: {{process?.persDruk}} Bar</li>\r\n                </ul>\r\n                <hr class=\"my-4\">\r\n                <h3 class=\"display-6\">Vat</h3>\r\n                <ul>\r\n                    <li>{{process?.vat?.nummer}}</li>\r\n                    <li>Locatie: {{process?.vat?.locatie}}</li>\r\n                    <li *ngIf=\"process?.vat?.koelmantel == 0\">Koelmantel: Neen</li>\r\n                    <li *ngIf=\"process?.vat?.koelmantel == 1\">Koelmantel: Ja</li>\r\n                    <li *ngIf=\"process?.vat?.deksel == 0\">Deksel: Neen</li>\r\n                    <li *ngIf=\"process?.vat?.deksel == 1\">Deksel: Ja</li>\r\n                    <li *ngIf=\"process?.vat?.volume == 0\">Volume: Neen</li>\r\n                    <li *ngIf=\"process?.vat?.volume == 1\">Volume: Ja</li>\r\n                </ul>\r\n            </div>\r\n        </mat-tab>\r\n\r\n        <mat-tab label=\"Metingen\">\r\n            <h2>Handmatig ingemeten data</h2>\r\n            <table mat-table [dataSource]=\"dataSourceMeting\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortMetingId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort meting </th>\r\n                <td mat-cell *matCellDef=\"let m\">{{m?.soortMeting?.naam}}</td>\r\n                </ng-container>\r\n\r\n                <ng-container matColumnDef=\"meting\">\r\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Meting </th>\r\n                    <td mat-cell *matCellDef=\"let m\">{{ m?.meting }}</td>\r\n                    </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"tijd\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let m\"> {{m?.tijd}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsMeting\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsMeting;\"></tr>\r\n            </table>\r\n            <mat-paginator #metingPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Events\">\r\n            <h2>Events</h2>\r\n            <table mat-table [dataSource]=\"dataSourceEvent\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortEventId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Event </th>\r\n                <td mat-cell *matCellDef=\"let e\">{{e?.soortEvent?.naam}}</td>\r\n                </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"datum\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let e\"> {{e?.datum}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsEvent\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsEvent;\"></tr>\r\n            </table>\r\n            <mat-paginator #eventsPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Alarmen en gebruikers\">\r\n            <h2>Alarmen en gebruikers</h2>\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceGebruiker\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"gebruikerId\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Gebruikers </th>\r\n                        <td mat-cell *matCellDef=\"let g\">{{g?.gebruiker?.voornaam}} {{g?.gebruiker?.naam}}</td>\r\n                        </ng-container>  \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsGebruiker\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsGebruiker;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #gebruikerPaginator [pageSizeOptions]=\"[5,  10, 25, 100]\"></mat-paginator>\r\n                </div>\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceAlarm\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"bericht\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Alarm </th>\r\n                        <td mat-cell *matCellDef=\"let a\">{{a?.bericht}}</td>\r\n                        </ng-container>\r\n                    \r\n                        <ng-container matColumnDef=\"datum\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                        <td mat-cell *matCellDef=\"let a\"> {{a?.datum}} </td>\r\n                        </ng-container>        \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsAlarm\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsAlarm;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #alarmPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n                </div>                \r\n            </div>\r\n          </mat-tab>\r\n\r\n          \r\n    </mat-tab-group>\r\n</div>\r\n\r\n";
     /***/
   },
 
@@ -4413,8 +4413,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function instantiateLists() {
           var _this42 = this;
 
-          this.openSnackBar();
-
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
@@ -4489,6 +4487,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           this._service.updateAlarmData(this.alarmdataModel);
+
+          this.openSnackBar();
         }
       }]);
 
@@ -4639,8 +4639,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function instantiateLists() {
           var _this45 = this;
 
-          this.openSnackBar();
-
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
@@ -4715,6 +4713,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           this._service.updateAlarmData(this.alarmdataModel);
+
+          this.openSnackBar();
         }
       }]);
 
@@ -5591,6 +5591,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function onSelect(id) {
           var _this58 = this;
 
+          this.processenNotl = [];
           this.instantiateLists();
 
           this._service.getAllAlarmDataGebruikers().subscribe(function (result) {
@@ -6396,21 +6397,55 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _services_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../services/services.service */
+    "./src/app/services/services.service.ts");
 
     var HomeComponent =
     /*#__PURE__*/
     function () {
-      function HomeComponent() {
+      function HomeComponent(router, _service) {
+        var _this63 = this;
+
         _classCallCheck(this, HomeComponent);
+
+        this.router = router;
+        this._service = _service;
+
+        this._service.isLoggedin.subscribe(function (e) {
+          _this63.login = e.valueOf();
+        });
       }
 
       _createClass(HomeComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "Login",
+        value: function Login() {
+          this.router.navigateByUrl('/login');
+        }
       }]);
 
       return HomeComponent;
     }();
+
+    HomeComponent.ctorParameters = function () {
+      return [{
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }, {
+        type: _services_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
+      }];
+    };
 
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-home',
@@ -6583,21 +6618,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this63 = this;
+          var _this64 = this;
 
           this._service.Authenticate(this.login).subscribe(function (result) {
-            _this63._service.isLoggedin.next(result.id ? true : false);
+            _this64._service.isLoggedin.next(result.id ? true : false);
 
             localStorage.setItem("token", result.id.toString());
 
-            _this63.router.navigateByUrl('');
+            _this64.router.navigateByUrl('');
 
-            _this63._service.setUser(result);
+            _this64._service.setUser(result);
 
             if (result.rolId == 1) {
-              _this63._service.setIsAdmin(true);
+              _this64._service.setIsAdmin(true);
             } else {
-              _this63._service.setIsAdmin(false);
+              _this64._service.setIsAdmin(false);
             }
           });
         }
@@ -7289,7 +7324,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function AddActieComponent(fb, _service, _snackBar) {
-        var _this64 = this;
+        var _this65 = this;
 
         _classCallCheck(this, AddActieComponent);
 
@@ -7311,14 +7346,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 proces.vat = vat;
               });
 
-              _this64.processenl.push(proces);
+              _this65.processenl.push(proces);
             }
           });
-          _this64.processen = _this64.makeObservable();
+          _this65.processen = _this65.makeObservable();
         });
 
         _service.getAllEventsoorten().subscribe(function (result) {
-          _this64.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+          _this65.events = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
         });
       }
 
@@ -7484,23 +7519,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this65 = this;
+          var _this66 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this65._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this66._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this65.processenl.push(proces);
+                _this66.processenl.push(proces);
               }
             });
-            _this65.processen = _this65.makeObservable();
+            _this66.processen = _this66.makeObservable();
           });
 
           this._service.getAllMetingsoorten().subscribe(function (result) {
-            _this65.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
+            _this66.metingen = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result.records);
           });
         }
       }, {
@@ -7637,24 +7672,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this66 = this;
+          var _this67 = this;
 
           this.processenl = new Array();
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               if (proces.actief == 1) {
-                _this66._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this67._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this66.processenl.push(proces);
-
-                console.log(proces);
+                _this67.processenl.push(proces);
               }
             });
-            _this66.processen = _this66.makeObservable();
-            console.log(_this66.processen);
+            _this67.processen = _this67.makeObservable();
           });
         }
       }, {
@@ -7668,18 +7700,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "Sluit",
         value: function Sluit(proces) {
-          var _this67 = this;
+          var _this68 = this;
 
           this.openSnackBar();
           proces.actief = 0;
 
           this._service.updateProcess(proces).subscribe(function (result) {
-            proces.vat = _this67._service.getVatById(proces.vatId);
+            proces.vat = _this68._service.getVatById(proces.vatId);
             proces.vat.subscribe(function (result) {
               result.inGebruik = 0;
 
-              _this67._service.updateVat(result).subscribe(function (result) {
-                _this67.instantiateLists();
+              _this68._service.updateVat(result).subscribe(function (result) {
+                _this68.instantiateLists();
               });
             });
           });
@@ -7850,7 +7882,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this68 = this;
+          var _this69 = this;
 
           this.procesModel = new src_app_models_process_model__WEBPACK_IMPORTED_MODULE_3__["Process"](0, null, null, 1, null, null, null, null, null, null, 0);
           this.vatenl = new Array();
@@ -7858,22 +7890,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this._service.getAllVaten().subscribe(function (result) {
             result.records.forEach(function (vat) {
               if (vat.inGebruik == 0) {
-                _this68.vatenl.push(vat);
+                _this69.vatenl.push(vat);
               }
             });
-            _this68.vaten = _this68.makeObservable();
+            _this69.vaten = _this69.makeObservable();
           });
 
           this._service.getAllDruifsoorten().subscribe(function (result) {
-            _this68.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this69.druiven = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
 
           this._service.getAllPersMethodes().subscribe(function (result) {
-            _this68.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this69.persen = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
 
           this._service.getAllWijnTypes().subscribe(function (result) {
-            _this68.wijntypes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
+            _this69.wijntypes = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["of"])(result.records);
           });
         }
       }, {
@@ -7887,27 +7919,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this69 = this;
+          var _this70 = this;
 
           this.openSnackBar();
 
           this._service.addProces(this.procesModel).subscribe(function (result) {
-            _this69.procesModel.vat = _this69._service.getVatById(_this69.procesModel.vatId);
+            _this70.procesModel.vat = _this70._service.getVatById(_this70.procesModel.vatId);
 
-            _this69.procesModel.vat.subscribe(function (result) {
+            _this70.procesModel.vat.subscribe(function (result) {
               console.log(result);
               result.inGebruik = 1;
 
-              _this69._service.updateVat(result).subscribe(function (result) {
-                _this69.instantiateLists();
+              _this70._service.updateVat(result).subscribe(function (result) {
+                _this70.instantiateLists();
 
-                _this69._service.getLastProcess().subscribe(function (result) {
+                _this70._service.getLastProcess().subscribe(function (result) {
                   for (var i = 1; i < 6; i++) {
-                    _this69._service.addAlarmData(new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, i, result.id, 51, 1, 1)).subscribe();
+                    _this70._service.addAlarmData(new src_app_models_alarm_data_model__WEBPACK_IMPORTED_MODULE_6__["AlarmData"](0, i, result.id, 51, 1, 1)).subscribe();
                   }
 
-                  _this69.druivenLijst.forEach(function (el) {
-                    _this69._service.addVinificatieDruif(new src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__["VinificatieDruif"](result.id, el.id));
+                  _this70.druivenLijst.forEach(function (el) {
+                    _this70._service.addVinificatieDruif(new src_app_models_vinificatie_druif_model__WEBPACK_IMPORTED_MODULE_8__["VinificatieDruif"](result.id, el.id));
                   });
                 });
               });
@@ -8957,12 +8989,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonDashboardComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this70 = this;
+          var _this71 = this;
 
           this.routeSub = this.route.params.subscribe(function (params) {
-            _this70.id = params['id'];
-            _this70.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=' + _this70.id;
-            console.log(_this70.id, _this70.iframe);
+            _this71.id = params['id'];
+            _this71.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=' + _this71.id;
+            console.log(_this71.id, _this71.iframe);
           });
         }
       }]);
@@ -9152,18 +9184,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonActieveVinificatiesComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this71 = this;
+          var _this72 = this;
 
           // var druiflijst = new Array<Druif[]>();
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               // proces.druif = new Observable<Druif>();
               if (proces.actief == 1) {
-                _this71._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this72._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this71._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
+                _this72._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
                   proces.wijnType = wijnType;
                 }); // this._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(result => { 
                 //   result.records.forEach(druifsoort => {
@@ -9179,10 +9211,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   proces.iframe = "http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&panelId=8&fullscreen&var-vat=" + proces.vatId;
                 }
 
-                _this71.processenl.push(proces);
+                _this72.processenl.push(proces);
               }
             });
-            _this71.processen = _this71.makeObservable();
+            _this72.processen = _this72.makeObservable();
           });
         }
       }, {
@@ -9308,7 +9340,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function ToonDetailsVinificatiesComponent(fb, _service, route, router) {
-        var _this72 = this;
+        var _this73 = this;
 
         _classCallCheck(this, ToonDetailsVinificatiesComponent);
 
@@ -9325,7 +9357,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.displayedColumnsAlarm = ['bericht', 'datum'];
         this.displayedColumnsGebruiker = ['gebruikerId'];
         this.routeSub = this.route.params.subscribe(function (params) {
-          _this72.id = params['id'];
+          _this73.id = params['id'];
         });
         this.getProcess();
         this.getEvents();
@@ -9337,110 +9369,110 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonDetailsVinificatiesComponent, [{
         key: "getProcess",
         value: function getProcess() {
-          var _this73 = this;
+          var _this74 = this;
 
           this._service.getProcesById(this.id).subscribe(function (proces) {
             var druiflijst = new Array();
-            _this73.process = proces;
+            _this74.process = proces;
 
-            _this73._service.getVatById(proces.vatId).subscribe(function (vat) {
-              _this73.process.vat = vat;
+            _this74._service.getVatById(proces.vatId).subscribe(function (vat) {
+              _this74.process.vat = vat;
             });
 
-            _this73._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
-              _this73.process.persmethode = persmethode;
+            _this74._service.getPersmethodeById(proces.persmethodeId).subscribe(function (persmethode) {
+              _this74.process.persmethode = persmethode;
             });
 
-            _this73._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
-              _this73.process.wijnType = wijnType;
+            _this74._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
+              _this74.process.wijnType = wijnType;
             });
 
-            _this73._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
+            _this74._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(function (result) {
               result.records.forEach(function (druifsoort) {
                 druiflijst.push(druifsoort);
               });
-              _this73.process.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(druiflijst);
+              _this74.process.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(druiflijst);
             });
 
-            console.log(_this73.process);
+            console.log(_this74.process);
           });
         }
       }, {
         key: "getEvents",
         value: function getEvents() {
-          var _this74 = this;
+          var _this75 = this;
 
           this._service.getAllEventsByVinificatieId(this.id).subscribe(function (result) {
             result.records.forEach(function (event) {
-              _this74._service.getSoortEventById(event.soortEventId).subscribe(function (soortEvent) {
+              _this75._service.getSoortEventById(event.soortEventId).subscribe(function (soortEvent) {
                 event.soortEvent = soortEvent;
               });
 
-              _this74.eventl.push(event);
+              _this75.eventl.push(event);
             });
-            _this74.events = _this74.makeObservable(_this74.eventl);
-            _this74.dataSourceEvent = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this74.eventl);
-            _this74.dataSourceEvent.paginator = _this74.eventsPaginator;
-            _this74.dataSourceEvent.sort = _this74.sort;
-            console.log(_this74.events);
+            _this75.events = _this75.makeObservable(_this75.eventl);
+            _this75.dataSourceEvent = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this75.eventl);
+            _this75.dataSourceEvent.paginator = _this75.eventsPaginator;
+            _this75.dataSourceEvent.sort = _this75.sort;
+            console.log(_this75.events);
           });
         }
       }, {
         key: "getHandmatigeMetingen",
         value: function getHandmatigeMetingen() {
-          var _this75 = this;
+          var _this76 = this;
 
           this._service.getAllHandmatigeMetingenByVinificatieId(this.id).subscribe(function (result) {
             result.records.forEach(function (meting) {
-              _this75._service.getSoortMetingById(meting.soortMetingId).subscribe(function (soortMeting) {
+              _this76._service.getSoortMetingById(meting.soortMetingId).subscribe(function (soortMeting) {
                 meting.soortMeting = soortMeting;
               });
 
-              _this75.metingl.push(meting);
+              _this76.metingl.push(meting);
             });
-            _this75.metingen = _this75.makeObservable(_this75.metingl);
-            _this75.dataSourceMeting = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this75.metingl);
-            _this75.dataSourceMeting.paginator = _this75.metingPaginator;
-            _this75.dataSourceMeting.sort = _this75.sort;
-            console.log(_this75.metingen);
+            _this76.metingen = _this76.makeObservable(_this76.metingl);
+            _this76.dataSourceMeting = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this76.metingl);
+            _this76.dataSourceMeting.paginator = _this76.metingPaginator;
+            _this76.dataSourceMeting.sort = _this76.sort;
+            console.log(_this76.metingen);
           });
         }
       }, {
         key: "getAlarmLog",
         value: function getAlarmLog() {
-          var _this76 = this;
+          var _this77 = this;
 
           this._service.getAlarmLogByVinificatieId(this.id).subscribe(function (result) {
             result.records.forEach(function (alarmLog) {
-              _this76.alarml.push(alarmLog);
+              _this77.alarml.push(alarmLog);
             });
-            _this76.alarmLog = _this76.makeObservable(_this76.alarml);
-            _this76.dataSourceAlarm = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this76.alarml);
-            _this76.dataSourceAlarm.paginator = _this76.alarmPaginator;
-            _this76.dataSourceAlarm.sort = _this76.sort;
-            console.log(_this76.alarmLog);
+            _this77.alarmLog = _this77.makeObservable(_this77.alarml);
+            _this77.dataSourceAlarm = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this77.alarml);
+            _this77.dataSourceAlarm.paginator = _this77.alarmPaginator;
+            _this77.dataSourceAlarm.sort = _this77.sort;
+            console.log(_this77.alarmLog);
           });
         }
       }, {
         key: "getGebruikers",
         value: function getGebruikers() {
-          var _this77 = this;
+          var _this78 = this;
 
           this._service.getAllVinificatieGebruiker().subscribe(function (result) {
             result.records.forEach(function (vinificatieGebruiker) {
-              if (vinificatieGebruiker.vinificatieId == _this77.id) {
-                _this77._service.getGebruikerById(vinificatieGebruiker.gebruikerId).subscribe(function (gebruiker) {
+              if (vinificatieGebruiker.vinificatieId == _this78.id) {
+                _this78._service.getGebruikerById(vinificatieGebruiker.gebruikerId).subscribe(function (gebruiker) {
                   vinificatieGebruiker.gebruiker = gebruiker;
                 });
 
-                _this77.gebruikerl.push(vinificatieGebruiker);
+                _this78.gebruikerl.push(vinificatieGebruiker);
               }
             });
-            _this77.gebruikers = _this77.makeObservable(_this77.gebruikerl);
-            _this77.dataSourceGebruiker = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this77.gebruikerl);
-            _this77.dataSourceGebruiker.paginator = _this77.gebruikerPaginator;
-            _this77.dataSourceGebruiker.sort = _this77.sort;
-            console.log(_this77.gebruikers);
+            _this78.gebruikers = _this78.makeObservable(_this78.gebruikerl);
+            _this78.dataSourceGebruiker = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this78.gebruikerl);
+            _this78.dataSourceGebruiker.paginator = _this78.gebruikerPaginator;
+            _this78.dataSourceGebruiker.sort = _this78.sort;
+            console.log(_this78.gebruikers);
           });
         }
       }, {
@@ -9594,29 +9626,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToonNonActieveVinificatiesComponent, [{
         key: "instantiateLists",
         value: function instantiateLists() {
-          var _this78 = this;
+          var _this79 = this;
 
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
               proces.druif = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
 
               if (proces.actief == 0) {
-                _this78._service.getVatById(proces.vatId).subscribe(function (vat) {
+                _this79._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
                 });
 
-                _this78._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
+                _this79._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
                   proces.wijnType = wijnType;
                 });
 
-                _this78.processenl.push(proces);
+                _this79.processenl.push(proces);
               }
             });
-            _this78.processen = _this78.makeObservable();
-            _this78.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this78.processenl);
-            _this78.dataSource.paginator = _this78.paginator;
-            _this78.dataSource.sort = _this78.sort;
-            console.log(_this78.dataSource);
+            _this79.processen = _this79.makeObservable();
+            _this79.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this79.processenl);
+            _this79.dataSource.paginator = _this79.paginator;
+            _this79.dataSource.sort = _this79.sort;
+            console.log(_this79.dataSource);
           });
         }
       }, {
