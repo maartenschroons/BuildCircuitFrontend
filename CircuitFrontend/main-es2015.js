@@ -370,7 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"card m-3 mb-5\" style=\"width: 100%;\">\r\n        <img src=\"../../assets/Logo.png\" class=\"card-img-top\" alt=\"circuit-breakers logo\">\r\n        \r\n        \r\n        <div class=\"card-body text-center\">\r\n        <h1 class=\"card-title center-title\">Vinificatie Monitoring</h1>\r\n        <div class=\"card-text\">\r\n            <h2 class=\"h5\">\r\n                Welkom op de vinificatiemontoring applicatie. Hier kan u virtueel wijnprocessen starten en opvolgen.\r\n            </h2>\r\n            <p>\r\n                Als u nog geen account heeft kan u aan een admin vragen om dit voor u aan te maken.</p>\r\n            <p>\r\n                Anders kan u zich aanmelden door op onderstaande knop te drukken.\r\n            </p>\r\n        \r\n            \r\n        </div>\r\n        </div>\r\n        <div class=\"card-body text-center\">\r\n        <button *ngIf=\"!login\" mat-raised-button color=\"primary\" (click)=\"Login()\" routerLink=\"/login\">\r\n            Ga naar login\r\n            </button>\r\n        </div>\r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"card m-3 mb-5\" style=\"width: 100%;\">\r\n        <img src=\"../../assets/Logo.png\" class=\"card-img-top\" alt=\"circuit-breakers logo\">\r\n        \r\n        \r\n        <div class=\"card-body text-center\">\r\n        <h1 class=\"card-title\">Vinificatie Monitoring</h1>\r\n        <div class=\"card-text\">\r\n            <h2 class=\"h5\">\r\n                Welkom op de vinificatiemontoring applicatie. Hier kan u virtueel wijnprocessen starten en opvolgen.\r\n            </h2>\r\n            <p>\r\n                Als u nog geen account heeft kan u aan een admin vragen om dit voor u aan te maken.</p>\r\n            <p>\r\n                Anders kan u zich aanmelden door op onderstaande knop te drukken.\r\n            </p>\r\n        \r\n            \r\n        </div>\r\n        </div>\r\n        <div class=\"card-body text-center\">\r\n        <button *ngIf=\"!login\" mat-raised-button color=\"primary\" (click)=\"Login()\" routerLink=\"/login\">\r\n            Ga naar login\r\n            </button>\r\n        </div>\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -383,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md\">\r\n            <mat-card class=\"login-card\">\r\n                <mat-card-title class=\"login-card-title\">Login</mat-card-title>\r\n                <mat-card-subtitle>Gelive in te loggen om de applicatie te gebruiken</mat-card-subtitle>\r\n                <form (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <div class=\"login-container center-block\">\r\n                        <p>\r\n                            <mat-form-field style=\"width:300px\">\r\n                                <input matInput placeholder=\"Email\" type=\"email\" name=\"email\"\r\n                                    [(ngModel)]=\"login.email\" />\r\n                            </mat-form-field>\r\n                        </p>\r\n\r\n                        <p>\r\n                            <mat-form-field style=\"width:300px\">\r\n                                <input matInput placeholder=\"Wachtwoord\" type=\"password\" name=\"password\"\r\n                                    [(ngModel)]=\"login.wachtwoord\" />\r\n                            </mat-form-field>\r\n                        </p>\r\n\r\n\r\n                        <mat-card-actions>\r\n                            <div>\r\n                                <button mat-raised-button color=\"primary\" class=\"login-card-button\"\r\n                                    type=\"submit\">Login</button>\r\n                            </div>\r\n\r\n                        </mat-card-actions>\r\n\r\n                    </div>\r\n                </form>\r\n            </mat-card>\r\n        </div>\r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md\">\r\n            <mat-card class=\"login-card\">\r\n                <mat-card-title class=\"login-card-title\">Login</mat-card-title>\r\n                <mat-card-subtitle>Gelive in te loggen om de applicatie te gebruiken</mat-card-subtitle>\r\n                <div *ngIf=\"showErrorMessage\" class=\"errorText\">\r\n                    Email of wachtwoord is incorrect!\r\n                </div>\r\n                <form (ngSubmit)=\"onSubmit()\">\r\n                    <div class=\"login-container center-block\">\r\n                        <p>\r\n                            <mat-form-field style=\"width:300px\">\r\n                                <input matInput placeholder=\"Email\" type=\"email\" name=\"email\"\r\n                                    [(ngModel)]=\"login.email\" />\r\n                            </mat-form-field>\r\n                        </p>\r\n                        <p>\r\n                            <mat-form-field style=\"width:300px\">\r\n                                <input matInput placeholder=\"Wachtwoord\" type=\"password\" name=\"password\"\r\n                                    [(ngModel)]=\"login.wachtwoord\" />\r\n                            </mat-form-field>\r\n                        </p>\r\n\r\n                        <mat-card-actions>\r\n                            <div>\r\n                                <button mat-raised-button color=\"primary\" class=\"login-card-button\"\r\n                                    type=\"submit\">Login</button>\r\n                            </div>\r\n                        </mat-card-actions>\r\n                    </div>\r\n                </form>\r\n            </mat-card>\r\n        </div>\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -3734,6 +3734,7 @@ let LoginComponent = class LoginComponent {
         this.fb = fb;
         this._service = _service;
         this.router = router;
+        this.showErrorMessage = false;
         this.login = new _models_user_login_model__WEBPACK_IMPORTED_MODULE_2__["UserLogin"]("", "");
         this.loginForm = this.fb.group({
             email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email]],
@@ -3754,6 +3755,8 @@ let LoginComponent = class LoginComponent {
             else {
                 this._service.setIsAdmin(false);
             }
+        }, (error) => {
+            this.showErrorMessage = true;
         });
     }
 };
@@ -5416,7 +5419,7 @@ let ToonActieveVinificatiesComponent = class ToonActieveVinificatiesComponent {
                     this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
                     this._service.getWijnTypeById(proces.wijnTypeId).subscribe(wijnType => { proces.wijnType = wijnType; });
                     {
-                        proces.iframe = "http://192.168.0.105:3000/d-solo/76B5JFZRz/vinificatie?orgId=1&refresh=5m&panelId=10&from=1582018104693&to=1582622904693&var-vat=" + proces.vatId;
+                        proces.iframe = "http://192.168.0.105:3000/d-solo/76B5JFZRz/vinificatie?orgId=1&refresh=5m&panelId=10&var-vat=" + proces.vatId;
                     }
                     this.processenl.push(proces);
                 }
