@@ -731,7 +731,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-6 col-lg-4 col-xl-3\" *ngFor=\"let p of (processen | async)\">\r\n            <div class=\"card mt-3 mb-3\">\r\n                <div class=\"card-header\">\r\n                <h5 class=\"card-title\">{{p.vat?.nummer}} - Vinificatie {{p.id}}</h5>\r\n                </div>\r\n                <iframe class=\"card-img-top\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <div class=\"card-body\">\r\n                    <ul>                        \r\n                        <li>Wijnsoort: {{p.wijnType?.naam}}</li>                    \r\n                        <li>Jaargang: {{p.jaargang}}</li>\r\n                        <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"card-footer\">\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" class=\"btn btn-primary\">Dashboard</a>\r\n                <a [routerLink]=\"['/detail/' + (p.vatId)]\" class=\"btn btn-primary float-right\">Details</a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-6 col-lg-4 col-xl-3\" *ngFor=\"let p of (processen | async)\">\r\n            <div class=\"card mt-3 mb-3\">\r\n                <div class=\"card-header\">\r\n                <h5 class=\"card-title\">{{p.vat?.nummer}} - Vinificatie {{p.id}}</h5>\r\n                </div>\r\n                <iframe class=\"card-img-top\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <div class=\"card-body\">\r\n                    <ul>                        \r\n                        <li>Wijnsoort: {{p.wijnType?.naam}}</li>                    \r\n                        <li>Jaargang: {{p.jaargang}}</li>\r\n                        <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"card-footer\">\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" class=\"btn btn-primary\">Dashboard</a>\r\n                <a [routerLink]=\"['/detail/' + (p.id)]\" class=\"btn btn-primary float-right\">Details</a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
     /***/
   },
 
@@ -9005,7 +9005,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           this.routeSub = this.route.params.subscribe(function (params) {
             _this71.id = params['id'];
-            _this71.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&var-vat=' + _this71.id;
+            _this71.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk=tv&var-vat=' + _this71.id;
             console.log(_this71.id, _this71.iframe);
           });
         }
@@ -9198,10 +9198,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function instantiateLists() {
           var _this72 = this;
 
-          // var druiflijst = new Array<Druif[]>();
           this._service.getAllProcessen().subscribe(function (result) {
             result.records.forEach(function (proces) {
-              // proces.druif = new Observable<Druif>();
               if (proces.actief == 1) {
                 _this72._service.getVatById(proces.vatId).subscribe(function (vat) {
                   proces.vat = vat;
@@ -9209,18 +9207,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                 _this72._service.getWijnTypeById(proces.wijnTypeId).subscribe(function (wijnType) {
                   proces.wijnType = wijnType;
-                }); // this._service.getAllDruifsoortenByVinificatieId(proces.id).subscribe(result => { 
-                //   result.records.forEach(druifsoort => {
-                //     console.log(druifsoort);
-                //     console.log(proces.id)
-                //     druiflijst.push(druifsoort);
-                //   });
-                //   proces.druif = of(druiflijst);
-                //  });
-
+                });
 
                 {
-                  proces.iframe = "http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk&panelId=8&fullscreen&var-vat=" + proces.vatId;
+                  proces.iframe = "http://192.168.0.105:3000/d-solo/76B5JFZRz/vinificatie?orgId=1&refresh=5m&panelId=10&from=1582018104693&to=1582622904693&var-vat=" + proces.vatId;
                 }
 
                 _this72.processenl.push(proces);
