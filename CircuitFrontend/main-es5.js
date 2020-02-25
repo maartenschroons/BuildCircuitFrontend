@@ -5676,10 +5676,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               _this60.AlarmDataGebruikerModel.alarmdataId = element.id;
 
               _this60._service.deleteAlarmDataGebruiker(_this60.AlarmDataGebruikerModel).subscribe();
-
-              _this60.onSelect(_this60.id);
             });
           });
+
+          this.onSelect(this.id);
         }
       }, {
         key: "CheckIfContains",
