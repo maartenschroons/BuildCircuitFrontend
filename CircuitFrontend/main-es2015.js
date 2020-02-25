@@ -4684,7 +4684,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const baselink = "http://192.168.0.105/api/";
+const baselink = "http://45/api/";
 let ServicesService = class ServicesService {
     constructor(http) {
         this.http = http;
@@ -5309,7 +5309,7 @@ let ToonDashboardComponent = class ToonDashboardComponent {
     ngOnInit() {
         this.routeSub = this.route.params.subscribe(params => {
             this.id = params['id'];
-            this.iframe = 'http://192.168.0.105:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk=tv&var-vat=' + this.id;
+            this.iframe = 'http://433:3000/d/76B5JFZRz/vinificatie?orgId=1&refresh=5m&from=now-7d&to=now&theme=light&kiosk=tv&var-vat=' + this.id;
         });
     }
 };
@@ -5419,7 +5419,7 @@ let ToonActieveVinificatiesComponent = class ToonActieveVinificatiesComponent {
                     this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
                     this._service.getWijnTypeById(proces.wijnTypeId).subscribe(wijnType => { proces.wijnType = wijnType; });
                     {
-                        proces.iframe = "http://192.168.0.105:3000/d-solo/76B5JFZRz/vinificatie?orgId=1&refresh=5m&panelId=10&var-vat=" + proces.vatId;
+                        proces.iframe = "http://444:3000/d-solo/76B5JFZRz/vinificatie?orgId=1&refresh=5m&panelId=10&var-vat=" + proces.vatId;
                     }
                     this.processenl.push(proces);
                 }
