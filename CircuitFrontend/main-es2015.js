@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div *ngFor=\"let druif of (druiven | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{druif.druifsoort}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button mat-raised-button color=\"primary\" (click)=\"open(content, druif)\">Edit</button>\r\n\r\n                <button mat-raised-button color=\"warn\" (click)=\"Delete(druif)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Druifsoort:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div *ngFor=\"let druif of (druiven | async)\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                {{druif.druifsoort}}\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n                <button class=\"button\" mat-raised-button color=\"primary\" (click)=\"open(content, druif)\">Edit</button>\r\n                <button class=\"button\" mat-raised-button color=\"warn\" (click)=\"Delete(druif)\">Delete</button>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ng-template #content let-modal>\r\n    <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\" id=\"modal-basic-title\">Druifsoort:</h4>\r\n        <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n        </button> -->\r\n    </div>\r\n    <div class=\"modal-body\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <form [formGroup]=\"createDruifSoortForm\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                    <p>\r\n                        <mat-form-field>\r\n                            <input matInput placeholder=\"Naam van de druif\" [(ngModel)]=\"druifModel.druifsoort\"\r\n                                formControlName=\"naam\" type=\"text\" name=\"DruifSoort\" />\r\n                        </mat-form-field>\r\n                    </p>\r\n                    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"Edit()\"\r\n                        (click)=\"modal.dismiss('Cross click')\">Save</button>\r\n                </form>\r\n            </div>\r\n        </form>\r\n    </div>\r\n\r\n</ng-template>");
 
 /***/ }),
 
@@ -357,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n\r\n                        <div *ngIf=\"login\">\r\n                        <!-- <div> -->\r\n                                <a mat-list-item routerLink=\"/createProcess\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        proces</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een\r\n                                        proces\r\n                                        af</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinificaties\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/actief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/nonactief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/addMeting\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\"\r\n                                                (click)=\"sidenav.toggle()\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n\r\n                                <div *ngIf=\"admin\">\r\n                                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                                Admin Data\r\n                                                <mat-icon>expand_more</mat-icon>\r\n                                        </a>\r\n                                        <mat-menu #admin=\"matMenu\">\r\n                                                <button mat-menu-item routerLink=\"/adminToevoegen\"\r\n                                                        (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        toevoegen</button>\r\n                                                <button mat-menu-item routerLink=\"/adminEdit\" (click)=\"sidenav.toggle()\"\r\n                                                        routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        beheren</button>\r\n                                        </mat-menu>\r\n                                </div>\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"sidenav.toggle()\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n        <mat-toolbar color=\"primary\">\r\n\r\n                <button mat-icon-button (click)=\"sidenav.toggle()\">\r\n                        <img margin=\"0\" src=\"../assets/Logo_small.png\" id=\"img\" height=\"40\" layout-align=\"right\" />\r\n                </button>\r\n                <h2 (click)=\"sidenav.toggle()\">CircuitBreakers</h2>\r\n        </mat-toolbar>\r\n</div>\r\n<mat-sidenav-container class=\"sidenav-container\" autosize>\r\n        <mat-sidenav mode=\"top\" class=\"nav\" opened=\"{{opened}}\">\r\n                <mat-nav-list>\r\n                        <a mat-list-item routerLink=\"/\" (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                [routerLinkActiveOptions]=\"{ exact: true }\">\r\n                                <img margin=\"0\" src=\"../assets/Logo.png\" width=\"270\" layout-align=\"right\" />\r\n                        </a>\r\n\r\n                        <div *ngIf=\"login\">\r\n                                <a mat-list-item routerLink=\"/createProcess\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Start een\r\n                                        proces</a>\r\n                                <a mat-list-item routerLink=\"/afsluiten\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Sluit een\r\n                                        proces\r\n                                        af</a>\r\n                                <a mat-list-item [matMenuTriggerFor]=\"vini\">\r\n                                        Vinificaties\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #vini=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/actief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Actieve\r\n                                                vinificaties</button>\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/nonactief\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voltooide\r\n                                                vinificaties</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"menu\">\r\n                                        Data toevoegen aan een proces\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #menu=\"matMenu\">\r\n                                        <button (click)=\"sidenav.toggle()\" mat-menu-item routerLink=\"/addMeting\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Voeg een meting\r\n                                                toe aan een proces</button>\r\n                                        <button mat-menu-item routerLink=\"/addActie\" routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\"\r\n                                                (click)=\"sidenav.toggle()\">Voeg een event\r\n                                                toe aan een proces</button>\r\n                                </mat-menu>\r\n\r\n                                <a mat-list-item [matMenuTriggerFor]=\"alarm\">\r\n                                        Alarmering aanpassen\r\n                                        <mat-icon>expand_more</mat-icon>\r\n                                </a>\r\n                                <mat-menu #alarm=\"matMenu\">\r\n                                        <button mat-menu-item routerLink=\"/alarmdata\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Verander de\r\n                                                alarmeringswaarden</button>\r\n                                        <button mat-menu-item routerLink=\"/alarmpersonen\" (click)=\"sidenav.toggle()\"\r\n                                                routerLinkActive=\"active\"\r\n                                                [routerLinkActiveOptions]=\"{ exact: true }\">Manage de\r\n                                                alarmeringspersonen</button>\r\n                                </mat-menu>\r\n\r\n                                <div *ngIf=\"admin\">\r\n                                        <a mat-list-item [matMenuTriggerFor]=\"admin\">\r\n                                                Admin Data\r\n                                                <mat-icon>expand_more</mat-icon>\r\n                                        </a>\r\n                                        <mat-menu #admin=\"matMenu\">\r\n                                                <button mat-menu-item routerLink=\"/adminToevoegen\"\r\n                                                        (click)=\"sidenav.toggle()\" routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        toevoegen</button>\r\n                                                <button mat-menu-item routerLink=\"/adminEdit\" (click)=\"sidenav.toggle()\"\r\n                                                        routerLinkActive=\"active\"\r\n                                                        [routerLinkActiveOptions]=\"{ exact: true }\">Data\r\n                                                        beheren</button>\r\n                                        </mat-menu>\r\n                                </div>\r\n                                <a mat-list-item routerLinkActive=\"active\" (click)=\"sidenav.toggle()\" (click)=\"logOut()\"\r\n                                        [routerLinkActiveOptions]=\"{ exact: true }\">Logout</a>\r\n                        </div>\r\n                        <div *ngIf=\"!login\">\r\n                                <a mat-list-item routerLink=\"/login\" (click)=\"sidenav.toggle()\"\r\n                                        routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Login</a>\r\n                        </div>\r\n                </mat-nav-list>\r\n        </mat-sidenav>\r\n        <mat-sidenav-content class=\"content\">\r\n                <router-outlet></router-outlet>\r\n        </mat-sidenav-content>\r\n</mat-sidenav-container>");
 
 /***/ }),
 
@@ -435,7 +435,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"center-title\">\r\n        <h1>Start een nieuw proces</h1>\r\n    </div>\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een vat</mat-label>\r\n                        <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                            <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                                {{vat.nummer}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een persmethode</mat-label>\r\n                        <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                            <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                                {{pers.methode}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies het wijntype</mat-label>\r\n                        <mat-select formControlName=\"wijntype\" [(ngModel)]=\"procesModel.wijnTypeId\">\r\n                            <mat-option *ngFor=\"let wijntype of (wijntypes | async)\" [value]=\"wijntype.id\">\r\n                                {{wijntype.naam}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\">\r\n                <div class=\"form-group\">\r\n                    <label for=\"options\">DruifSoorten :</label>\r\n                    <label *ngFor=\"let druif of (druiven| async)\" class=\"form-control\">\r\n                        <input type=\"checkbox\" name=\"options\" value=\"option\" (change)=\"onChange(druif)\" />\r\n                        {{druif.druifsoort}}\r\n                    </label>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\"\r\n                            formControlName=\"persHoeveelheid\" type=\"text\" name=\"persHoeveelheid\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\"\r\n                            [(ngModel)]=\"procesModel.oogst\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\"\r\n                            [(ngModel)]=\"procesModel.persDruk\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Jaargang\" formControlName=\"jaargang\" type=\"text\" name=\"jaargang\"\r\n                            [(ngModel)]=\"procesModel.jaargang\" />\r\n                    </mat-form-field>\r\n                </div>\r\n\r\n            </div>\r\n\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"center-button\">\r\n        <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n\r\n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"createProcessForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"center-title\">\r\n        <h1>Start een nieuw proces</h1>\r\n    </div>\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md\"></div>\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een vat</mat-label>\r\n                        <mat-select formControlName=\"vat\" [(ngModel)]=\"procesModel.vatId\">\r\n                            <mat-option *ngFor=\"let vat of (vaten | async)\" [value]=\"vat.id\">\r\n                                {{vat.nummer}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies een persmethode</mat-label>\r\n                        <mat-select formControlName=\"pers\" [(ngModel)]=\"procesModel.persmethodeId\">\r\n                            <mat-option *ngFor=\"let pers of (persen | async)\" [value]=\"pers.id\">\r\n                                {{pers.methode}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <mat-label>Kies het wijntype</mat-label>\r\n                        <mat-select formControlName=\"wijntype\" [(ngModel)]=\"procesModel.wijnTypeId\">\r\n                            <mat-option *ngFor=\"let wijntype of (wijntypes | async)\" [value]=\"wijntype.id\">\r\n                                {{wijntype.naam}}\r\n                            </mat-option>\r\n                        </mat-select>\r\n                    </mat-form-field>\r\n                </div>\r\n            </div>\r\n\r\n\r\n            <div class=\"col-md\">\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Pers hoeveelheid in L\" [(ngModel)]=\"procesModel.persHoeveelheid\"\r\n                            formControlName=\"persHoeveelheid\" type=\"text\" name=\"persHoeveelheid\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Oogst in kg\" formControlName=\"oogst\" type=\"text\" name=\"oogst\"\r\n                            [(ngModel)]=\"procesModel.oogst\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Bar\" formControlName=\"bar\" type=\"text\" name=\"bar\"\r\n                            [(ngModel)]=\"procesModel.persDruk\" />\r\n                    </mat-form-field>\r\n                </div>\r\n                <div>\r\n                    <mat-form-field>\r\n                        <input matInput placeholder=\"Jaargang\" formControlName=\"jaargang\" type=\"text\" name=\"jaargang\"\r\n                            [(ngModel)]=\"procesModel.jaargang\" />\r\n                    </mat-form-field>\r\n                </div>\r\n\r\n            </div>\r\n            <div class=\"col-md\">\r\n\r\n                <div class=\"form-group scroll\">\r\n                    <label for=\"options\">DruifSoorten :</label>\r\n                    <label *ngFor=\"let druif of (druiven| async)\" class=\"form-control\">\r\n                        <input type=\"checkbox\" name=\"options\" value=\"option\" (change)=\"onChange(druif)\" />\r\n                        {{druif.druifsoort}}\r\n                    </label>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"center-button\">\r\n        <button [disabled]=\"!createProcessForm.valid\" mat-raised-button color=\"primary\" type=\"submit\">Submit</button>\r\n    </div>\r\n\r\n</form>");
 
 /***/ }),
 
@@ -474,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-6 col-lg-4 col-xl-3\" *ngFor=\"let p of (processen | async)\">\r\n            <div class=\"card mt-3 mb-3\">\r\n                <div class=\"card-header\">\r\n                <h5 class=\"card-title\">{{p.vat?.nummer}} - Vinificatie {{p.id}}</h5>\r\n                </div>\r\n                <iframe class=\"card-img-top\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <div class=\"card-body\">\r\n                    <ul>\r\n                        \r\n                        <li>Wijnsoort: {{p.wijnType?.naam}}</li>                    \r\n                        <li>Jaargang: {{p.jaargang}}</li>\r\n                        <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"card-footer\">\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" class=\"btn btn-primary\">Dashboard</a>\r\n                <a [routerLink]=\"['/detail/' + (p.vatId)]\" class=\"btn btn-primary float-right\">Details</a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-6 col-lg-4 col-xl-3\" *ngFor=\"let p of (processen | async)\">\r\n            <div class=\"card mt-3 mb-3\">\r\n                <div class=\"card-header\">\r\n                <h5 class=\"card-title\">{{p.vat?.nummer}} - Vinificatie {{p.id}}</h5>\r\n                </div>\r\n                <iframe class=\"card-img-top\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(p.iframe)\" frameborder=\"0\" width=\"100%\" height=\"98%\"></iframe>\r\n                <div class=\"card-body\">\r\n                    <ul>                        \r\n                        <li>Wijnsoort: {{p.wijnType?.naam}}</li>                    \r\n                        <li>Jaargang: {{p.jaargang}}</li>\r\n                        <li>Pershoeveelheid: {{p.persHoeveelheid}}L</li>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"card-footer\">\r\n                <a [routerLink]=\"['/dashboard/' + (p.vatId)]\" class=\"btn btn-primary\">Dashboard</a>\r\n                <a [routerLink]=\"['/detail/' + (p.vatId)]\" class=\"btn btn-primary float-right\">Details</a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -487,7 +487,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container mb-5\">\r\n    <mat-tab-group>\r\n        <mat-tab label=\"Overzicht\">\r\n            <h1>Overzicht vinificatie {{process?.id}}</h1>\r\n            <div class=\"jumbotron\" m-3>\r\n                <h3 class=\"display-6\">Vinificatie \r\n                    <span *ngIf=\"process?.actief == 0\"  class=\"badge badge-pill badge-danger\">Voltooid</span>\r\n                    <span *ngIf=\"process?.actief == 1\"  class=\"badge badge-pill badge-success\">Actief</span>\r\n                </h3>\r\n                <ul>                        \r\n                    <li>Wijnsoort: {{process?.wijnType?.naam}}</li>                    \r\n                    <li>Jaargang: {{process?.jaargang}}</li>\r\n                    <li>Druifsoorten:</li>\r\n                    <ul> \r\n                        <li *ngFor=\"let d of (process?.druif | async)\">{{d?.druifsoort}}</li>\r\n                    </ul>\r\n                    <li>Oogst: {{process?.oogst}} Kg</li>\r\n                    <li>Persmethode: {{process?.persmethode?.methode}}</li>\r\n                    <li>Pershoeveelheid: {{process?.persHoeveelheid}}L</li>\r\n                    <li>Persdruk: {{process?.persDruk}} Bar</li>\r\n                </ul>\r\n                <hr class=\"my-4\">\r\n                <h3 class=\"display-6\">Vat</h3>\r\n                <ul>\r\n                    <li>{{process?.vat?.nummer}}</li>\r\n                    <li>Locatie: {{process?.vat?.locatie}}</li>\r\n                    <li *ngIf=\"process?.vat?.koelmantel == 0\">Koelmantel: Neen</li>\r\n                    <li *ngIf=\"process?.vat?.koelmantel == 1\">Koelmantel: Ja</li>\r\n                    <li *ngIf=\"process?.vat?.deksel == 0\">Deksel: Neen</li>\r\n                    <li *ngIf=\"process?.vat?.deksel == 1\">Deksel: Ja</li>\r\n                    <li *ngIf=\"process?.vat?.volume == 0\">Volume: Neen</li>\r\n                    <li *ngIf=\"process?.vat?.volume == 1\">Volume: Ja</li>\r\n                </ul>\r\n            </div>\r\n        </mat-tab>\r\n\r\n        <mat-tab label=\"Metingen\">\r\n            <h2>Handmatig ingemeten data</h2>\r\n            <table mat-table [dataSource]=\"dataSourceMeting\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortMetingId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort meting </th>\r\n                <td mat-cell *matCellDef=\"let m\">{{m?.soortMeting?.naam}}</td>\r\n                </ng-container>\r\n\r\n                <ng-container matColumnDef=\"meting\">\r\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Meting </th>\r\n                    <td mat-cell *matCellDef=\"let m\">{{ m?.meting }}</td>\r\n                    </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"tijd\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let m\"> {{m?.tijd}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsMeting\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsMeting;\"></tr>\r\n            </table>\r\n            <mat-paginator #metingPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Events\">\r\n            <h2>Events</h2>\r\n            <table mat-table [dataSource]=\"dataSourceEvent\" matSort>\r\n\r\n                <ng-container matColumnDef=\"soortEventId\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Event </th>\r\n                <td mat-cell *matCellDef=\"let e\">{{e?.soortEvent?.naam}}</td>\r\n                </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"datum\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let e\"> {{e?.datum}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsEvent\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsEvent;\"></tr>\r\n            </table>\r\n            <mat-paginator #eventsPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Alarmen en gebruikers\">\r\n            <h2>Alarmen en gebruikers</h2>\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceGebruiker\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"gebruikerId\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Gebruikers </th>\r\n                        <td mat-cell *matCellDef=\"let g\">{{g?.gebruiker?.voornaam}} {{g?.gebruiker?.naam}}</td>\r\n                        </ng-container>  \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsGebruiker\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsGebruiker;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #gebruikerPaginator [pageSizeOptions]=\"[5,  10, 25, 100]\"></mat-paginator>\r\n                </div>\r\n                <div class=\"col-lg-6\">\r\n                    <table mat-table [dataSource]=\"dataSourceAlarm\" matSort>\r\n\r\n                        <ng-container matColumnDef=\"bericht\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Alarm </th>\r\n                        <td mat-cell *matCellDef=\"let a\">{{a?.bericht}}</td>\r\n                        </ng-container>\r\n                    \r\n                        <ng-container matColumnDef=\"datum\">\r\n                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                        <td mat-cell *matCellDef=\"let a\"> {{a?.datum}} </td>\r\n                        </ng-container>        \r\n                    \r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumnsAlarm\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumnsAlarm;\"></tr>\r\n                    </table>\r\n                    <mat-paginator #alarmPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n                </div>                \r\n            </div>\r\n          </mat-tab>\r\n\r\n          \r\n    </mat-tab-group>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container mb-5\">\r\n    <mat-tab-group>\r\n        <mat-tab label=\"Overzicht\">\r\n            <h1>Overzicht vinificatie {{process?.id}}</h1>\r\n            <div class=\"jumbotron\" m-3>\r\n                \r\n                <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                        <h3 class=\"display-6\">Vinificatie \r\n                            <span *ngIf=\"process?.actief == 0\"  class=\"badge badge-pill badge-danger\">Voltooid</span>\r\n                            <span *ngIf=\"process?.actief == 1\"  class=\"badge badge-pill badge-success\">Actief</span>\r\n                        </h3>\r\n                        <ul>                        \r\n                            <li>Wijnsoort: {{process?.wijnType?.naam}}</li>                    \r\n                            <li>Jaargang: {{process?.jaargang}}</li>\r\n                            <li>Druifsoorten:</li>\r\n                            <ul> \r\n                                <li *ngFor=\"let d of (process?.druif | async)\">{{d?.druifsoort}}</li>\r\n                            </ul>\r\n                            <li>Oogst: {{process?.oogst}} Kg</li>\r\n                            <li>Persmethode: {{process?.persmethode?.methode}}</li>\r\n                            <li>Pershoeveelheid: {{process?.persHoeveelheid}}L</li>\r\n                            <li>Persdruk: {{process?.persDruk}} Bar</li>\r\n                        </ul>                        \r\n                    </div>\r\n                    <div class=\"col-md-6\">\r\n                        <h3 class=\"display-6\">Vat</h3>\r\n                        <ul>\r\n                            <li>{{process?.vat?.nummer}}</li>\r\n                            <li>Locatie: {{process?.vat?.locatie}}</li>\r\n                            <li *ngIf=\"process?.vat?.koelmantel == 0\">Koelmantel: Neen</li>\r\n                            <li *ngIf=\"process?.vat?.koelmantel == 1\">Koelmantel: Ja</li>\r\n                            <li *ngIf=\"process?.vat?.deksel == 0\">Deksel: Neen</li>\r\n                            <li *ngIf=\"process?.vat?.deksel == 1\">Deksel: Ja</li>\r\n                            <li *ngIf=\"process?.vat?.volume == 0\">Volume: Neen</li>\r\n                            <li *ngIf=\"process?.vat?.volume == 1\">Volume: Ja</li>\r\n                        </ul>\r\n                    </div>\r\n                </div>               \r\n            </div>\r\n        </mat-tab>\r\n\r\n        <mat-tab label=\"Metingen\">\r\n            <h2>Handmatig ingemeten data</h2>\r\n            <mat-form-field>\r\n                <mat-label>Filter soort meting</mat-label>\r\n                <input matInput (keyup)=\"applyFilterMeting($event.target.value)\" >\r\n            </mat-form-field>\r\n            <table mat-table #metingSort=\"matSort\" [dataSource]=\"dataSourceMeting\" matSort>\r\n                <ng-container matColumnDef=\"soortMeting.naam\">\r\n                <th mat-header-cell *matHeaderCellDef> Soort meting </th>\r\n                <td mat-cell *matCellDef=\"let m\">{{m?.soortMeting?.naam}}</td>\r\n                </ng-container>\r\n\r\n                <ng-container matColumnDef=\"meting\">\r\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Meting </th>\r\n                    <td mat-cell *matCellDef=\"let m\">{{ m?.meting }}</td>\r\n                    </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"tijd\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let m\"> {{m?.tijd | date:'dd-MM-yyyy HH:mm:ss'}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsMeting\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsMeting;\"></tr>\r\n            </table>\r\n            <mat-paginator #metingPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Events\">\r\n            <h2>Events</h2>\r\n            <mat-form-field>\r\n                <mat-label>Filter event</mat-label>\r\n                <input matInput (keyup)=\"applyFilterEvent($event.target.value)\" >\r\n            </mat-form-field>\r\n            <table mat-table #eventsSort=\"matSort\" [dataSource]=\"dataSourceEvent\" matSort>\r\n                <ng-container matColumnDef=\"soortEvent.naam\">\r\n                <th mat-header-cell *matHeaderCellDef> Event </th>\r\n                <td mat-cell *matCellDef=\"let e\">{{e?.soortEvent?.naam}}</td>\r\n                </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"datum\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let e\"> {{e?.datum | date:'dd-MM-yyyy HH:mm:ss'}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsEvent\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsEvent;\"></tr>\r\n            </table>\r\n            <mat-paginator #eventsPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n          </mat-tab>\r\n\r\n          <mat-tab label=\"Alarmen\">\r\n            <h2>Alarmen</h2>\r\n            <mat-form-field>\r\n                <mat-label>Filter alarm</mat-label>\r\n                <input matInput (keyup)=\"applyFilterAlarm($event.target.value)\" >\r\n            </mat-form-field>\r\n            <table mat-table #alarmSort=\"matSort\" [dataSource]=\"dataSourceAlarm\" matSort>\r\n                <ng-container matColumnDef=\"bericht\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Alarm </th>\r\n                <td mat-cell *matCellDef=\"let a\">{{a?.bericht}}</td>\r\n                </ng-container>\r\n            \r\n                <ng-container matColumnDef=\"datum\">\r\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum </th>\r\n                <td mat-cell *matCellDef=\"let a\"> {{a?.datum | date:'dd-MM-yyyy HH:mm:ss'}} </td>\r\n                </ng-container>        \r\n            \r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumnsAlarm\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumnsAlarm;\"></tr>\r\n            </table>\r\n            <mat-paginator #alarmPaginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n                \r\n          </mat-tab>\r\n\r\n          \r\n    </mat-tab-group>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
@@ -500,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container mb-5\">\r\n\r\n    <h1 class=\"header\">Voltooide vinificatieprocessen</h1>\r\n\r\n    <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n        <!-- vinificatienummer Column -->\r\n        <ng-container matColumnDef=\"id\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vinificatienummer </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> <a [routerLink]=\"['/detail/' + (proces.id)]\" >Vinificatie {{proces.id}}</a></td>\r\n        </ng-container>\r\n    \r\n        <!-- vat Column -->\r\n        <ng-container matColumnDef=\"vatId\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vat </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.vat?.nummer}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- wijnType Column -->\r\n        <ng-container matColumnDef=\"wijnTypeId\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort wijn </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.wijnType?.naam}}</td>\r\n        </ng-container>\r\n\r\n        <!-- jaargang Column -->\r\n        <ng-container matColumnDef=\"jaargang\">\r\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Jaargang </th>\r\n            <td mat-cell *matCellDef=\"let proces\"> {{proces.jaargang}}</td>\r\n            </ng-container>\r\n    \r\n        <!-- pershoeveelheid Column -->\r\n        <ng-container matColumnDef=\"persHoeveelheid\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Pershoeveelheid </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.persHoeveelheid}} L </td>\r\n        </ng-container>\r\n\r\n\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    </table>\r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container mb-5\">\r\n\r\n    <h1 class=\"header\">Voltooide vinificatieprocessen</h1>\r\n\r\n    <mat-form-field>\r\n        <mat-label>Filter soort meting</mat-label>\r\n        <input matInput (keyup)=\"applyFilter($event.target.value)\" >\r\n    </mat-form-field>\r\n    <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n        <!-- vinificatienummer Column -->\r\n        <ng-container matColumnDef=\"naam\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vinificatienummer </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> <a [routerLink]=\"['/detail/' + (proces.id)]\" >{{proces.naam}}</a></td>\r\n        </ng-container>\r\n    \r\n        <!-- vat Column -->\r\n        <ng-container matColumnDef=\"vat.nummer\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vat </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.vat?.nummer}} </td>\r\n        </ng-container>\r\n    \r\n        <!-- wijnType Column -->\r\n        <ng-container matColumnDef=\"wijnType.naam\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Soort wijn </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.wijnType?.naam}}</td>\r\n        </ng-container>\r\n\r\n        <!-- jaargang Column -->\r\n        <ng-container matColumnDef=\"jaargang\">\r\n            <th mat-header-cell *matHeaderCellDef mat-sort-header> Jaargang </th>\r\n            <td mat-cell *matCellDef=\"let proces\"> {{proces.jaargang}}</td>\r\n            </ng-container>\r\n    \r\n        <!-- pershoeveelheid Column -->\r\n        <ng-container matColumnDef=\"persHoeveelheid\">\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header> Aantal liter </th>\r\n        <td mat-cell *matCellDef=\"let proces\"> {{proces.persHoeveelheid}} L </td>\r\n        </ng-container>\r\n\r\n\r\n    \r\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    </table>\r\n    <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\r\n</div>");
 
 /***/ }),
 
@@ -3249,9 +3249,9 @@ let AlarmeringPersonenComponent = class AlarmeringPersonenComponent {
             result.records.forEach(element => {
                 this.AlarmDataGebruikerModel.alarmdataId = element.id;
                 this._service.deleteAlarmDataGebruiker(this.AlarmDataGebruikerModel).subscribe();
+                this.onSelect(this.id);
             });
         });
-        this.onSelect(this.id);
     }
     CheckIfContains(id) {
         this.processen.subscribe(result => {
@@ -3586,7 +3586,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _shared_shared_module__WEBPACK_IMPORTED_MODULE_8__["SharedModule"],
             _alarmering_alarmering_module__WEBPACK_IMPORTED_MODULE_18__["AlarmeringModule"],
             _toon_dashboard_toon_dashboard_module__WEBPACK_IMPORTED_MODULE_19__["ToonDashboardModule"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(appRoutes, { enableTracing: false }),
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(appRoutes, { enableTracing: false })
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -3933,13 +3933,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 
 class Meting {
-    constructor(id, soortMetingId, vinificatieId, gebruikerId, meting, tijd) {
+    constructor(id, soortMetingId, vinificatieId, gebruikerId, meting, tijd, soortMeting) {
         this.id = id;
         this.soortMetingId = soortMetingId;
         this.vinificatieId = vinificatieId;
         this.gebruikerId = gebruikerId;
         this.meting = meting;
         this.tijd = tijd;
+        this.soortMeting = soortMeting;
     }
 }
 
@@ -4277,7 +4278,7 @@ let AddMetingComponent = class AddMetingComponent {
         this._service = _service;
         this._snackBar = _snackBar;
         this.processenl = new Array();
-        this.metingModel = new src_app_models_meting_model__WEBPACK_IMPORTED_MODULE_5__["Meting"](0, null, null, null, null, new Date());
+        this.metingModel = new src_app_models_meting_model__WEBPACK_IMPORTED_MODULE_5__["Meting"](0, null, null, null, null, new Date(), null);
         this.addMetingForm = this.fb.group({
             vat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             soortMeting: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
@@ -4630,6 +4631,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_meting_add_meting_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./add-meting/add-meting.component */ "./src/app/process/add-meting/add-meting.component.ts");
 /* harmony import */ var _process_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./process.component */ "./src/app/process/process.component.ts");
 /* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-perfect-scrollbar */ "./node_modules/ngx-perfect-scrollbar/fesm2015/ngx-perfect-scrollbar.js");
+
 
 
 
@@ -4648,7 +4651,8 @@ ProcessModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSelectModule"],
-            _shared_shared_module__WEBPACK_IMPORTED_MODULE_9__["SharedModule"]
+            _shared_shared_module__WEBPACK_IMPORTED_MODULE_9__["SharedModule"],
+            ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_10__["PerfectScrollbarModule"]
         ]
     })
 ], ProcessModule);
@@ -5502,10 +5506,9 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
         this.metingl = new Array();
         this.alarml = new Array();
         this.gebruikerl = new Array();
-        this.displayedColumnsMeting = ['soortMetingId', 'meting', 'tijd'];
-        this.displayedColumnsEvent = ['soortEventId', 'datum'];
+        this.displayedColumnsMeting = ['soortMeting.naam', 'meting', 'tijd'];
+        this.displayedColumnsEvent = ['soortEvent.naam', 'datum'];
         this.displayedColumnsAlarm = ['bericht', 'datum'];
-        this.displayedColumnsGebruiker = ['gebruikerId'];
         this.routeSub = this.route.params.subscribe(params => {
             this.id = params['id'];
         });
@@ -5513,7 +5516,6 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
         this.getEvents();
         this.getHandmatigeMetingen();
         this.getAlarmLog();
-        this.getGebruikers();
     }
     getProcess() {
         this._service.getProcesById(this.id).subscribe(proces => {
@@ -5528,7 +5530,6 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
                 });
                 this.process.druif = Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(druiflijst);
             });
-            console.log(this.process);
         });
     }
     getEvents() {
@@ -5540,8 +5541,26 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
             this.events = this.makeObservable(this.eventl);
             this.dataSourceEvent = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.eventl);
             this.dataSourceEvent.paginator = this.eventsPaginator;
-            this.dataSourceEvent.sort = this.sort;
-            console.log(this.events);
+            this.dataSourceEvent.sort = this.eventsSort;
+            this.dataSourceEvent.filterPredicate = (event, filter) => {
+                let valid = false;
+                const transformedFilter = filter.trim().toLowerCase();
+                Object.keys(event).map(key => {
+                    if (key === 'soortEvent') {
+                        Object.keys(event[key]).map(naam => {
+                            if (('' + event[key][naam]).toLowerCase().includes(transformedFilter)) {
+                                valid = true;
+                            }
+                        });
+                    }
+                    else {
+                        if (('' + event[key]).toLowerCase().includes(transformedFilter)) {
+                            valid = true;
+                        }
+                    }
+                });
+                return valid;
+            };
         });
     }
     getHandmatigeMetingen() {
@@ -5553,8 +5572,26 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
             this.metingen = this.makeObservable(this.metingl);
             this.dataSourceMeting = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.metingl);
             this.dataSourceMeting.paginator = this.metingPaginator;
-            this.dataSourceMeting.sort = this.sort;
-            console.log(this.metingen);
+            this.dataSourceMeting.sort = this.metingSort;
+            this.dataSourceMeting.filterPredicate = (met, filter) => {
+                let valid = false;
+                const transformedFilter = filter.trim().toLowerCase();
+                Object.keys(met).map(key => {
+                    if (key === 'soortMeting') {
+                        Object.keys(met[key]).map(naam => {
+                            if (('' + met[key][naam]).toLowerCase().includes(transformedFilter)) {
+                                valid = true;
+                            }
+                        });
+                    }
+                    else {
+                        if (('' + met[key]).toLowerCase().includes(transformedFilter)) {
+                            valid = true;
+                        }
+                    }
+                });
+                return valid;
+            };
         });
     }
     getAlarmLog() {
@@ -5565,24 +5602,17 @@ let ToonDetailsVinificatiesComponent = class ToonDetailsVinificatiesComponent {
             this.alarmLog = this.makeObservable(this.alarml);
             this.dataSourceAlarm = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.alarml);
             this.dataSourceAlarm.paginator = this.alarmPaginator;
-            this.dataSourceAlarm.sort = this.sort;
-            console.log(this.alarmLog);
+            this.dataSourceAlarm.sort = this.alarmSort;
         });
     }
-    getGebruikers() {
-        this._service.getAllVinificatieGebruiker().subscribe(result => {
-            result.records.forEach(vinificatieGebruiker => {
-                if (vinificatieGebruiker.vinificatieId == this.id) {
-                    this._service.getGebruikerById(vinificatieGebruiker.gebruikerId).subscribe(gebruiker => { vinificatieGebruiker.gebruiker = gebruiker; });
-                    this.gebruikerl.push(vinificatieGebruiker);
-                }
-            });
-            this.gebruikers = this.makeObservable(this.gebruikerl);
-            this.dataSourceGebruiker = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.gebruikerl);
-            this.dataSourceGebruiker.paginator = this.gebruikerPaginator;
-            this.dataSourceGebruiker.sort = this.sort;
-            console.log(this.gebruikers);
-        });
+    applyFilterMeting(filterValue) {
+        this.dataSourceMeting.filter = filterValue;
+    }
+    applyFilterEvent(filterValue) {
+        this.dataSourceEvent.filter = filterValue;
+    }
+    applyFilterAlarm(filterValue) {
+        this.dataSourceAlarm.filter = filterValue;
     }
     ngOnInit() {
     }
@@ -5597,11 +5627,14 @@ ToonDetailsVinificatiesComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"], { static: true })
-], ToonDetailsVinificatiesComponent.prototype, "sort", void 0);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('eventsSort', { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "eventsSort", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('gebruikerPaginator', { static: true })
-], ToonDetailsVinificatiesComponent.prototype, "gebruikerPaginator", void 0);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('metingSort', { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "metingSort", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('alarmSort', { static: true })
+], ToonDetailsVinificatiesComponent.prototype, "alarmSort", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('eventsPaginator', { static: true })
 ], ToonDetailsVinificatiesComponent.prototype, "eventsPaginator", void 0);
@@ -5666,7 +5699,7 @@ let ToonNonActieveVinificatiesComponent = class ToonNonActieveVinificatiesCompon
         this._service = _service;
         this.router = router;
         this.processenl = new Array();
-        this.displayedColumns = ['id', 'vatId', 'wijnTypeId', 'jaargang', 'persHoeveelheid'];
+        this.displayedColumns = ['naam', 'vat.nummer', 'wijnType.naam', 'jaargang', 'persHoeveelheid'];
         this.instantiateLists();
     }
     instantiateLists() {
@@ -5676,15 +5709,44 @@ let ToonNonActieveVinificatiesComponent = class ToonNonActieveVinificatiesCompon
                 if (proces.actief == 0) {
                     this._service.getVatById(proces.vatId).subscribe(vat => { proces.vat = vat; });
                     this._service.getWijnTypeById(proces.wijnTypeId).subscribe(wijnType => { proces.wijnType = wijnType; });
+                    proces.naam = "Vinificatie " + proces.id;
                     this.processenl.push(proces);
                 }
             });
             this.processen = this.makeObservable();
             this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](this.processenl);
             this.dataSource.paginator = this.paginator;
+            this.dataSource.sortingDataAccessor = (item, property) => {
+                switch (property) {
+                    case 'vat.nummer': return item.vat.nummer;
+                    case 'wijnType.naam': return item.wijnType.naam;
+                    default: return item[property];
+                }
+            };
             this.dataSource.sort = this.sort;
-            console.log(this.dataSource);
+            this.dataSource.filterPredicate = (p, filter) => {
+                let valid = false;
+                const transformedFilter = filter.trim().toLowerCase();
+                Object.keys(p).map(key => {
+                    if (key === 'vat' || key == 'wijnType') {
+                        Object.keys(p[key]).map(naam => {
+                            if (('' + p[key][naam]).toLowerCase().includes(transformedFilter)) {
+                                valid = true;
+                            }
+                        });
+                    }
+                    else {
+                        if (('' + p[key]).toLowerCase().includes(transformedFilter)) {
+                            valid = true;
+                        }
+                    }
+                });
+                return valid;
+            };
         });
+    }
+    applyFilter(filterValue) {
+        this.dataSource.filter = filterValue;
     }
     ngOnInit() {
     }
