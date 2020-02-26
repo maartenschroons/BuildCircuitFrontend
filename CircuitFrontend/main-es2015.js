@@ -4840,7 +4840,7 @@ let ServicesService = class ServicesService {
         }));
     }
     getPersmethodeById(id) {
-        return this.http.get(baselink + "Persmethode/read_one.php?id=" + id);
+        return this.http.get(baselink + "PersMethode/read_one.php?id=" + id);
     }
     addMethode(methode) {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["from"])(// wrap the fetch in a from if you need an rxjs Observable
@@ -5840,4 +5840,3 @@ module.exports = __webpack_require__(/*! C:\Angular\Frontend\CircuitFrontend\src
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
-//# sourceMappingURL=main-es2015.js.map
