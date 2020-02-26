@@ -4753,7 +4753,7 @@ let ServicesService = class ServicesService {
         }));
     }
     getAllHandmatigeMetingenByVinificatieId(vinificatieId) {
-        return this.http.get(baselink + "HandmatigeMeting/getByVinificatieId.php?vinificatieId=" + vinificatieId);
+        return this.http.get(baselink + "HandmatigeMeting/GetByVinificatieId.php?vinificatieId=" + vinificatieId);
     }
     addMeting(meting) {
         //return this.http.post<Meting>(baselink + "", meting);

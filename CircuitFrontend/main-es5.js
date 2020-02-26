@@ -8300,7 +8300,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getAllHandmatigeMetingenByVinificatieId",
         value: function getAllHandmatigeMetingenByVinificatieId(vinificatieId) {
-          return this.http.get(baselink + "HandmatigeMeting/getByVinificatieId.php?vinificatieId=" + vinificatieId);
+          return this.http.get(baselink + "HandmatigeMeting/GetByVinificatieId.php?vinificatieId=" + vinificatieId);
         }
       }, {
         key: "addMeting",
